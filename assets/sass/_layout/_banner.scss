@@ -253,7 +253,7 @@
 			overflow: hidden;
 			position: relative;
 			z-index: 1;
-			background: linear-gradient(90deg, #0f0d1d -76.72%, #3c72fc 191.51%);
+			background: linear-gradient(90deg, #313131	-76.72%, #ebebeb 191.51%);
 			padding-top: 250px;
 			padding-bottom: 200px;
 			@include breakpoint(max-md) {
@@ -306,7 +306,12 @@
 		&__container {
 			max-width: 1350px;
 			padding: 30px;
-			margin: 0 auto;
+			margin: -100px auto 0;
+			h2 {
+				text-align: center;
+				font-size: 50px;
+				margin-bottom: 50px;	
+			}
 		}
 		&__video-btn {
 			a {
@@ -345,9 +350,9 @@
 		@extend .overlay;
 		z-index: 1;
 		&::before {
-			background: linear-gradient(270.07deg, #002b98 0.07%, #00060c 99.95%);
+			background: linear-gradient(270.07deg, #00060c 0.07%, #00060c 100%);
 			z-index: -1;
-			opacity: 0.75;
+			opacity: 0.15; // opacity of gradient
 		}
 		text-transform: capitalize;
 		@include breakpoint(max-md) {

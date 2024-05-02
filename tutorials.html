@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+    <!-- Favicon img -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <!-- Bootstarp min css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Mean menu css -->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!-- All min css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Swiper bundle min css -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Magnigic popup css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Nice select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+      .tutorials {
+        height: 800px;
+      }
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 350px;
+        background-color: #f1f1f1;
+        height: 800px;
+        position: relative;
+      }
+      
+      .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+      }
+      
+      .sidebar a.active {
+        background-color: #be0028;
+        color: white;
+      }
+      
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+      
+      div.tutorial-content {
+        margin-left: 350px;
+        margin-top: -800px;
+        padding: 1px 16px;
+        height: 800px;
+        display: none; /* Hide all tutorials by default */
+      }
+      
+      /* Show only the active tutorial */
+      div.tutorial-content.active {
+        display: block;
+      }
+      
+      @media screen and (max-width: 700px) {
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+        .sidebar a {float: left;}
+        div.content {margin-left: 0;}
+      }
+      
+      @media screen and (max-width: 400px) {
+        .sidebar a {
+          text-align: center;
+          float: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Preloader area start -->
+    <div class="loading">
+      <span class="text-capitalize">L</span>
+      <span>o</span>
+      <span>a</span>
+      <span>d</span>
+      <span>i</span>
+      <span>n</span>
+      <span>g</span>
+    </div>
+    <div id="preloader">
+    </div>
+    <!-- Preloader area end -->
+
+    <!-- Mouse cursor area start here -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- Mouse cursor area end here -->
+
+    <!-- Header area start here -->
+    <header class="header-area">
+      <div class="container header__container">
+        <div class="header__main">
+          <a href="home.html" class="logo">
+            <img src="assets/images/logo/logo-light.svg" alt="logo">
+          </a>
+          <div class="main-menu">
+            <nav>
+              <ul>
+                <!-- Home -->
+                <li>
+                  <a href="home.html">Home</a>
+                </li>
+                <!-- Explore APIs -->
+                <li>
+                  <a href="#0">Explore APIs</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="api-catalog.html">API Catalog</a>
+                    </li>
+                    <li>
+                      <a href="try-out.html">Try Out</a>
+                    </li>
+                    <li>
+                      <a href="tutorials.html">Tutorials</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- Use Cases -->
+                <li>
+                  <a href="use-cases.html">Use Cases</a>
+                </li>
+                <!-- API Analytics -->
+                <li>
+                  <a href="api-analytics.html">API Analytics</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="d-none d-lg-inline-block">
+            <a href="get-access.html" class="btn-one">Get Access <i class="fa-regular fa-arrow-right-long"></i></a>
+          </div>
+          <div class="bars d-block d-lg-none">
+            <i id="openButton" class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header area end here -->
+
+    <!-- Sidebar area start here -->
+    <div id="targetElement" class="sidebar-area sidebar__hide">
+      <div class="sidebar__overlay"></div>
+      <a href="home.html" class="logo mb-40">
+        <img src="assets/images/logo/logo.svg" alt="logo">
+      </a>
+      <div class="mobile-menu overflow-hidden"></div>
+      <ul class="info pt-40">
+        <li>
+          <i class="fa-solid primary-color fa-location-dot"></i> <a href="#0">Level 8, Menara KEN TTDI, 37, Jalan Burhanuddin Helmi, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</a>
+        </li>
+        <li class="py-2">
+          <i class="fa-solid primary-color fa-phone-volume"></i> <a href="tel:03-9212 5222">03-9212 5222</a>
+        </li>
+        <li>
+          <i class="fa-solid primary-color fa-paper-plane"></i> <a href="#0">https://www.dksh.com/my-en/home</a>
+        </li>
+      </ul>
+      <div class="social-icon mt-20">
+        <a title="Follow on LinkedIn" href="http://www.linkedin.com/company/dksh" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a title="Follow on Facebook" href="http://www.facebook.com/dkshgroup" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a title="Follow on Twitter" href="http://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=dkshgroup" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a title="Follow on YouTube" href="http://www.youtube.com/user/DKSHGroup?sub_confirmation=1" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a title="Follow on Instagram" href="https://www.instagram.com/dksh.group/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a title="Follow on TikTok" href="https://www.tiktok.com/@dkshgroup" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <button id="closeButton" class="text-white"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <!-- Sidebar area end here -->
+
+    <!-- Tutorials area end here -->
+    <section class="tutorials">
+      <div class="sidebar">
+        <a class="active" href="#tutorial-1" onclick="showTutorial('tutorial-1', this)">Tutorial 1</a>
+        <a href="#tutorial-2" onclick="showTutorial('tutorial-2', this)">Tutorial 2</a>
+        <a href="#tutorial-3" onclick="showTutorial('tutorial-3', this)">Tutorial 3</a>
+      </div>
+      
+      <div class="tutorial-content active" id="tutorial-1">
+        <h2>Tutorial 1</h2>
+        <video id="home-video" controls style="width: 991px; height: auto;">
+          <source src="assets/video/home-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p>This is the description for tutorial 1.</p>
+      </div>
+      
+      <div class="tutorial-content" id="tutorial-2">
+        <h2>Tutorial 2</h2>
+        <video id="home-video" controls style="width: 991px; height: auto;">
+          <source src="assets/video/home-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p>This is the description for tutorial 2.</p>
+      </div>
+      
+      <div class="tutorial-content" id="tutorial-3">
+        <h2>Tutorial 3</h2>
+        <video id="home-video" controls style="width: 991px; height: auto;">
+          <source src="assets/video/home-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p>This is the description for tutorial 3.</p>
+      </div>
+      
+      <script>
+        function showTutorial(tutorialId, clickedLink) {
+          // Prevent default anchor behavior
+          event.preventDefault();
+
+          // Remove active class from all links
+          var links = document.querySelectorAll('.sidebar a');
+          links.forEach(function(link) {
+            link.classList.remove('active');
+          });
+        
+          // Add active class to the clicked link
+          clickedLink.classList.add('active');
+        
+          // Hide all tutorials
+          var tutorials = document.querySelectorAll('.tutorial-content');
+          tutorials.forEach(function(tutorial) {
+            tutorial.classList.remove('active'); // Remove active class from all tutorials
+          });
+          
+          // Show the selected tutorial
+          var selectedTutorial = document.getElementById(tutorialId);
+          selectedTutorial.classList.add('active'); // Add active class to selected tutorial
+        }
+      </script>
+    </section>
+    <!-- Tutorials area end here -->
+    
+  </body>
+
+  <!-- Footer area start here -->
+  <footer class="footer-area secondary-bg">
+    <div class="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+      <img src="assets/images/shape/footer-regular-left.png" alt="shape">
+    </div>
+    <div class="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+      <img class="sway_Y__animation" src="assets/images/shape/footer-solid-left.png" alt="shape">
+    </div>
+    <div class="footer__shape-solid-right wow slideInRight" data-wow-delay="00ms" data-wow-duration="1500ms">
+      <img class="sway_Y__animation" src="assets/images/shape/footer-regular-right.png" alt="shape">
+    </div>
+    <div class="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+      <img src="assets/images/shape/footer-solid-right.png" alt="shape">
+    </div>
+    <div class="footer__shadow-shape">
+      <img src="assets/images/shape/footer-shadow-shape.png" alt="shodow">
+    </div>
+    <div class="container">
+      <div class="footer__wrp pt-100 pb-100">
+        <div class="footer__item item-big wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+          <a href="home.html" class="logo mb-30">
+            <img src="assets/images/logo/logo.svg" alt="image">
+          </a>
+          <p>Delivering Growth – in Asia and Beyond.<br>
+            © DKSH Holding Ltd.</p>
+          <div class="social-icon">
+            <a title="Follow on LinkedIn" href="http://www.linkedin.com/company/dksh" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a title="Follow on Facebook" href="http://www.facebook.com/dkshgroup" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a title="Follow on Twitter" href="http://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=dkshgroup" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a title="Follow on YouTube" href="http://www.youtube.com/user/DKSHGroup?sub_confirmation=1" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a title="Follow on Instagram" href="https://www.instagram.com/dksh.group/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a title="Follow on TikTok" href="https://www.tiktok.com/@dkshgroup" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Explore APIs</h3>
+          <ul>
+            <li><a href="service-details.html"><i class="fa-regular fa-angles-right me-1"></i> API Catalog</a></li>
+            <li><a href="try-out.html"><i class="fa-regular fa-angles-right me-1"></i> Try Out</a></li>
+            <li><a href="tutorials.html"><i class="fa-regular fa-angles-right me-1"></i> Tutorials</a></li>
+          </ul>
+        </div>
+        <div class="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Quick Link</h3>
+          <ul>
+            <li><a href="use-cases.html"><i class="fa-regular fa-angles-right me-1"></i> Use Cases</a></li>
+            <li><a href="api-analytics.html"><i class="fa-regular fa-angles-right me-1"></i> API Analytics</a></li>
+            <li><a href="pricing.html"><i class="fa-regular fa-angles-right me-1"></i> Our Team</a></li>
+          </ul>
+        </div>
+        <div class="footer__item item-big wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Contact Us</h3>
+          <p class="mb-20">Level 8, Menara KEN TTDI, 37, Jalan Burhanuddin Helmi, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa-regular fa-clock"></i>
+              <div class="info">
+                <h5>Opening Hours:</h5>
+                <p>Mon - Fri: 08:30 AM - 05:30 PM</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-duotone fa-phone"></i>
+              <div class="info">
+                <h5>Phone:</h5>
+                <p>03-9212 5222</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer area end here -->
+
+  <!-- Back to top area start here -->
+  <div class="scroll-up">
+    <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Back to top area end here -->
+
+  <!-- Jquery 3.7.0 Min Js -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap min Js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Mean menu Js -->
+  <script src="assets/js/meanmenu.js"></script>
+  <!-- Swiper bundle min Js -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Counterup min Js -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <!-- Wow min Js -->
+  <script src="assets/js/wow.min.js"></script>
+  <!-- Pace min Js -->
+  <script src="assets/js/pace.min.js"></script>
+  <!-- Magnific popup min Js -->
+  <script src="assets/js/magnific-popup.min.js"></script>
+  <!-- Nice select min Js -->
+  <script src="assets/js/nice-select.min.js"></script>
+  <!-- Isotope pkgd min Js -->
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <!-- Waypoints Js -->
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <!-- Script Js -->
+  <script src="assets/js/script.js"></script>
+  <!-- Try Out Js -->
+  <script src="assets/js/try-out.js"></script>
+</html>
