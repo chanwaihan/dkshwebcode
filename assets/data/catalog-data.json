@@ -1,0 +1,285 @@
+[
+   {
+      "category_name": "Customer API",
+      "title": "Get Product Detail",
+      "description": "Get Product Detail API allows you to retrieve product detail Stock, UOM, Price General, Price General Scale, FOC, FOC Scale.",
+      "request_body": {
+         "ShipToParty": "0101000001",
+         "SoldToParty": "104100000",
+         "BillToParty": "101000001",
+         "PayerParty": "104100000",
+         "SalesDocumentType": "ZOR",
+         "ProductExclusion": " ",
+         "ProductDetailsItem": [
+            {
+               "MaterialNumber": "100002127",
+               "SalesOrganization": "MY51",
+               "DistributionChannel": "03",
+               "Division": "MA",
+               "Plant": "MY51",
+               "StorageLocation": "",
+               "SalesUnit": ""
+            }
+         ]
+      },
+      "response": {
+         "ProductDetailsStock": [
+            {
+               "MaterialNumber": "000000000100002127",
+               "Plant": "MY51",
+               "StorageLocation": "",
+               "BatchNumber": "",
+               "ShelfLifeExpiration": "0000 - 00 - 00",
+               "OrderQuantity": "1000.0",
+               "OrderQuantityUnit": "PAC"
+            }
+         ],
+         "ProductDetailsUOM": [
+            {
+               "MaterialNumber": "000000000100002127",
+               "AlternativeUnit": "PAK",
+               "QuantityNumerator": "1",
+               "QuantityDenominator": "1"
+            }
+         ],
+         "ProductDetailsPriceGeneral": [
+            {
+               "MaterialNumber": "000000000100002127",
+               "Condition": "Price",
+               "ConditionType": "ZMS0",
+               "Rate": "0.0",
+               "CurrencyKey": "MYR",
+               "ConditionPricingUnit": "1",
+               "ConditionUnit": "PAC",
+               "ConditionIsInactive": ""
+            }
+         ],
+         "ProductDetailsFoc": [
+            {
+               "MaterialNumber": "000000000100002127",
+               "ConditionRecord": "0000000031",
+               "MinimumQuantity": "10.0",
+               "FreeGoodsQuantity": "10.0",
+               "FreeGoodsQuantityUnit": "EA",
+               "AdditionalQuantityForFreeGoods": "1.0",
+               "AdditionalQuantityForFreeGoodsUnit": "EA",
+               "AdditionalMaterialForFreeGoods": "",
+               "CalculationType": "001",
+               "FreeGoodsCategory": "2",
+               "Usage": "2",
+               "ConditionTable": "931",
+               "Application": "V",
+               "ConditionType": "ZM00",
+               "VariableKey": "MY51030101000001MDH",
+               "FreeGoodsDeliveryControl": ""
+            }
+         ],
+         "ProductDetailsFocScale": [
+            {
+               "ConditionRecord": "0000000031",
+               "SequentialLine": "0001",
+               "MinimumQuantity": "10.0",
+               "FreeGoodsQuantity": "10.0",
+               "FreeGoodsQuantityUnit": "EA",
+               "AdditionalQuantityForFreeGoods": "1.0",
+               "AdditionalQuantityForFreeGoodsUnit": "EA",
+               "AdditionalMaterialForFreeGoods": "",
+               "CalculationType": "001",
+               "FreeGoodsCategory": "2",
+               "FreeGoodsDeliveryControl": ""
+            }
+         ],
+         "resultCountProductDetailsStock": "3",
+         "resultCountProductDetailsUOM": "2",
+         "resultCountProductDetailsPriceGeneral": "2",
+         "resultCountProductDetailsPriceGeneralScale": "0",
+         "resultCountProductDetailsFoc": "1",
+         "resultCountProductDetailsFocScale": "1"
+      }
+   },
+   {
+      "category_name": "Customer API",
+      "title": "Sales Order Simulate",
+      "description": "Improve order simulation process by verifying pricing, stock, FOC, and item information to enhance operational efficiency. This API allows consumer to simulate sales orders and check stock availability from SAP ERP. The result structure include sales order item, pricing, stock and return messages.",
+      "request_body": {
+         "SalesOrderSimulateRequest": {
+            "SalesOrderSimulateFOC": {
+               "CalculationTypeForDeterminingFreeGoodQuantity": "",
+               "CumulativeOrderQuantity": "",
+               "CumulativeOrderQuantityTan": "",
+               "DistributionChannel": "",
+               "Division": "",
+               "FGSubGroup": "",
+               "FOCName": "",
+               "FocType": "",
+               "FreeGoodsCategory": "",
+               "Group": "",
+               "GroupNumber": "",
+               "HigherLevelItem": "",
+               "ItemNumberUnderlyingPurchaseOrder": "",
+               "MaterialDescription": "",
+               "MaterialGroup": "",
+               "MaterialGroup4": "",
+               "MaterialGroup5": "",
+               "MaterialNumber": "",
+               "MaterialNumberSale": "",
+               "MaterialType": "",
+               "MaxFreeGoodsValue": "",
+               "MinimumOrderValue": "",
+               "MinimumOrderValueFOC": "",
+               "MinimumPurchaseValue": "",
+               "MinimumPurchaseValueFOC": "",
+               "Netprice": "",
+               "Plant": "",
+               "PurchaseType": "",
+               "QuantityUnitForFreeGoodsAdditionalQuantity": "",
+               "SalesOrganization": "",
+               "SalesUnit": "",
+               "SalesUnitTan": "",
+               "SingleCharacterFlag": "",
+               "SubGroup": ""
+            },
+            "SalesOrderSimulateHeader": {
+               "CustomerConditionGroup4": "",
+               "CustomerPurchaseOrderType": "0001",
+               "IncotermsPart1": "",
+               "IncotermsPart2": "",
+               "OrderReason": "",
+               "PersonnelNumber": "10000000",
+               "SalesDocumentType": "ZORM",
+               "SalesGroup": "",
+               "SalesOffice": "",
+               "ShipToParty": "104100000",
+               "SoldToParty": "101000001",
+               "TaxDepartureCountry": "",
+               "TaxDestinationCountry": "",
+               "TermsOfPaymentKey": ""
+            },
+            "SalesOrderSimulateHeaderPricing": {
+               "ConditionType": "",
+               "Rate": ""
+            },
+            "SalesOrderSimulateItem": {
+               "Plant": "",
+               "Division": "MA",
+               "NetPrice": "",
+               "SalesUnit": "EA",
+               "ItemNumber": "10",
+               "OrderQuantity": "10",
+               "MaterialNumber": "100002280",
+               "StorageLocation": "",
+               "SalesOrganization": "MY51",
+               "DistributionChannel": "01"
+            },
+            "SalesOrderSimulateItemPricing": {
+               "Rate": "000010",
+               "ConditionType": "ZGS0",
+               "ConditionItemNumber": "000010"
+            },
+            "SalesOrderSimulateStock": {
+               "CheckStockAvailability": ""
+            }
+         }
+      },
+      "response": {
+         "SalesOrderSimulateItem": {
+            "ItemNumberUnderlyingPurchaseOrder": "8",
+            "ItemNumberSDDocument": "8",
+            "HigherLevelItem": "0",
+            "MaterialNumber": "000000000100002280",
+            "OrderItemShortText": "TEST ZSV2",
+            "OrderQuantity": "10",
+            "SalesUnit": "EA",
+            "DiscountAmount": "0",
+            "Surcharge": "0",
+            "NetValue": "120",
+            "TaxAmount": "7.2",
+            "CurrencyKey": "MYR",
+            "SalesDocumentItemCategory": "ZTAN",
+            "SalesOrganization": "MY51",
+            "Plant": "MY51",
+            "StorageLocation": "1165",
+            "ShippingPoint": "M201"
+         },
+         "SalesOrderSimulateFOC": {
+            "CalculationTypeForDeterminingFreeGoodQuantity": null,
+            "CumulativeOrderQuantity": null,
+            "CumulativeOrderQuantityTan": null,
+            "DistributionChannel": null,
+            "Division": null,
+            "FGSubGroup": null,
+            "FOCName": null,
+            "FocType": null,
+            "FreeGoodsCategory": null,
+            "Group": null,
+            "GroupNumber": null,
+            "HigherLevelItem": null,
+            "ItemNumberUnderlyingPurchaseOrder": null,
+            "MaterialDescription": null,
+            "MaterialGroup": null,
+            "MaterialGroup4": null,
+            "MaterialGroup5": null,
+            "MaterialNumber": null,
+            "MaterialNumberSale": null,
+            "MaterialType": null,
+            "MaxFreeGoodsValue": null,
+            "MinimumOrderValue": null,
+            "MinimumOrderValueFOC": null,
+            "MinimumPurchaseValue": null,
+            "MinimumPurchaseValueFOC": null,
+            "Netprice": null,
+            "Plant": null,
+            "PurchaseType": null,
+            "QuantityUnitForFreeGoodsAdditionalQuantity": null,
+            "SalesOrganization": null,
+            "SalesUnit": null,
+            "SalesUnitTan": null,
+            "SingleCharacterFlag": null,
+            "SubGroup": null
+         },
+         "SalesOrderSimulateHeaderFOC": {
+            "CalculationTypeForDeterminingFreeGoodQuantity": null,
+            "CumulativeOrderQuantity": null,
+            "FGSubGroup": null,
+            "FreeGoodsCategory": null,
+            "HigherLevelItem": null,
+            "ItemNumberUnderlyingPurchaseOrder": null
+         },
+         "SalesOrderSimulatePricing": [
+            {
+               "ItemNumberUnderlyingPurchaseOrder": "8",
+               "ConditionItemNumber": "8",
+               "ConditionType": "ZMS0",
+               "Name": "List Price ($)",
+               "CalculationType": "C",
+               "ConditionBaseValue": "100",
+               "Rate": "12",
+               "ConditionValue": "120",
+               "CurrencyKey": "MYR",
+               "ConditionPricingUnit": "1",
+               "ConditionUnit": "EA"
+            }
+         ],
+         "SalesOrderSimulateStock": [
+            {
+               "MaterialNumber": "000000000100002280",
+               "Plant": "MY51",
+               "StorageLocation": null,
+               "BatchNumber": null,
+               "ShelfLifeExpiration": "1899-11-30T00:00:00.000Z",
+               "OrderQuantity": "110",
+               "SalesUnit": "EA",
+               "WarehouseNumber": null,
+               "StorageTypeIndicatorForStockPlacement": null
+            }
+         ],
+         "SalesOrderSimulateReturn": [
+            {
+               "Type": "S",
+               "Number": "801",
+               "Message": "Pricing error Mandatory condition ZGS0 is missing"
+            }
+         ]
+      }
+   }
+]

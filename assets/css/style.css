@@ -3813,7 +3813,7 @@ input.main-search-input::placeholder {
 }
 .case-two__content {
   position: absolute;
-  bottom: 30px;
+  top: 30px;
   left: 30px;
   z-index: 1;
 }
