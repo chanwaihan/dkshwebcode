@@ -1,0 +1,97 @@
+{
+	"option1": {
+		"request": {
+			"Plant": "TH02",
+			"StorageLocation": "1151",
+			"MovementType": "601",
+			"PostingDatefrom": "2022-09-02",
+			"LanguageKey": "EN"
+		},
+		"response": {
+			"GetStockMovementDetails": [
+				{
+					"Material": "100454283",
+					"MaterialDescription": "900001",
+					"Plant": "TH02",
+					"Name1": "112005797",
+					"StorageLocation": "1151",
+					"MovementType": "411",
+					"MaterialDocument": "4900002257",
+					"DocumentDate": "2023-01-18",
+					"Item": "1",
+					"PostingDate": "2023-01-18",
+					"Time": "10:03:51",
+					"QtyinUnE": "400",
+					"Eun": "PC",
+					"Batch": "2410",
+					"CustomerCode": "",
+					"PurchaseOrder": "",
+					"Reference": ""
+				},
+				{
+					"Material": "100454286",
+					"MaterialDescription": "900001",
+					"Plant": "TH02",
+					"Name1": "112005797",
+					"StorageLocation": "1151",
+					"MovementType": "411",
+					"MaterialDocument": "4900002257",
+					"DocumentDate": "2023-01-18",
+					"Item": "1",
+					"PostingDate": "2023-01-18",
+					"Time": "10:05:51",
+					"QtyinUnE": "-200",
+					"Eun": "PC",
+					"Batch": "2410",
+					"CustomerCode": "",
+					"PurchaseOrder": "",
+					"Reference": ""
+				}
+				]
+		}
+	},
+	"option2": {
+		"request": {
+			"CompanyCode": "MY88",
+			"CustomerNumber": "0101000000",
+			"OpenItemsKeyDate": "",
+			"BillingDocumentNumber": ""
+			},
+		"response": {
+			"result": {
+				"PaymentRetrieveItemDetail": [
+					{
+						"CompanyCode": "MY88",
+						"AccountingDocumentNumber": "0100000008",
+						"FiscalYear": "2017",
+						"AccountingDocumentItemNumber": "001",
+						"AssignmentNumber": "1170000013",
+						"DocumentDate": "2017-10-25",
+						"NetDueDate": "2017-10-25",
+						"CustomerNumber": "0101000000",
+						"Name1": "MINES METRO OPT CTR C/O M/DESI",
+						"Name2": "MINES METRO KAJANG",
+						"Name3": "",
+						"Name4": "",
+						"CurrencyKey": "MYR",
+						"BusinessArea": "MY51",
+						"CreditControlArea": "MFMG",
+						"DocumentHeaderText": "",
+						"ReferenceDocumentNumber": "PDF E-INVOICE",
+						"Amount": "500.0",
+						"NetAmount": "500.0",
+						"ShipToParty": "0121092345",
+						"ShipToPartyName": "VINMART TIMES CITY",
+						"ShipmentNumber": "",
+						"Plant": "VN16",
+						"SalesOrganization": "VN03",
+						"DistributionChannel": "01",
+						"Type": "S",
+						"Message": "Document 1170000013 found"
+					}
+				]
+			},
+			"resultCount": "1"
+			}
+		}
+  }

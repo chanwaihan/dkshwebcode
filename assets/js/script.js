@@ -186,10 +186,10 @@ CSS TABLE OF CONTENTS
 			});
 		};
 		animated();
-		// init.on("slideChange", function () {
-		// 	$(sliderActive1 + " [data-animation]").removeClass("animated");
-		// });
-		// init.on("slideChange", animated);
+		init.on("slideChange", function () {
+			$(sliderActive1 + " [data-animation]").removeClass("animated");
+		});
+		init.on("slideChange", animated);
 	}
 	animated_swiper(sliderActive1, sliderInit1);
 	// Banner Two slider area end here ***

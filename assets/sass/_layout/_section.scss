@@ -223,7 +223,7 @@
 				border-radius: 0px;
 				background: linear-gradient(
 					180deg,
-					#3c72fc -93.57%,
+					#be0028 -93.57%,
 					#00060c 228.57%
 				);
 				margin: 0 auto;
@@ -244,7 +244,7 @@
 				height: 0%;
 				background: linear-gradient(
 					180deg,
-					#3c72fc -21.56%,
+					#be0028 -21.56%,
 					#00060c 252.19%
 				);
 				border-radius: 8px;
@@ -742,7 +742,7 @@
 				content: "";
 				background: linear-gradient(
 					0deg,
-					#3c72fc 0%,
+					#be0028 0%,
 					rgba(0, 0, 0, 0) 100%
 				);
 				transition: var(--transition);
@@ -901,7 +901,7 @@
 	&__icon {
 		@include radius(70px, 70px, 70px);
 		margin: 0 auto;
-		background: linear-gradient(180deg, #3c72fc -210.71%, #00060c 100%);
+		background: linear-gradient(180deg, #be0028 -210.71%, #00060c 100%);
 		margin-top: -35px;
 		transition: 1s;
 	}
@@ -962,7 +962,7 @@
 .brand {
 	&__wrp {
 		padding: 65px;
-		background: var(--gradient-bg);
+		background: #ebebeb;
 		margin-top: -85px;
 		position: relative;
 		z-index: 1;
@@ -975,9 +975,13 @@
 	}
 	&__image {
 		max-width: 175px;
+		display: block;
+		margin: auto;
+		line-height: 175px; /* Adjust to image height */
 	}
 	&-three {
 		&-area {
+			margin-top: -100px;
 			overflow: hidden;
 			position: relative;
 			z-index: 1;
@@ -1134,7 +1138,7 @@
 	}
 	&-two {
 		&-area {
-			margin-top: -300px;
+			margin-top: 50px;
 			position: relative;
 			z-index: 1;
 		}
@@ -1720,7 +1724,7 @@
 				}
 			}
 		}
-		background: linear-gradient(180deg, #3c72fc -1.09%, #00060c 175.27%);
+		background: linear-gradient(180deg, #be0028 -1.09%, #00060c 175.27%);
 		padding: 50px 40px;
 		.pricing-head {
 			padding-bottom: 30px;
@@ -1811,7 +1815,7 @@
 // Contact area start here ***
 .contact {
 	&__left-item {
-		padding: 50px;
+		padding-top: 50px;
 		ul {
 			li {
 				margin-bottom: 30px;
