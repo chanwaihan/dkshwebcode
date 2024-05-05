@@ -1,0 +1,95 @@
+.content-outer {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+}
+
+.content-outer .sidebar {
+   min-height: 100%;
+   width: 400px;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   padding: 20px 25px;
+   border-radius: 5px;
+   overflow: auto;
+   border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.sidebar div h3 {
+   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+}
+.sidebar div button {
+   padding: 10px;
+   font-size: 14px;
+   line-height: 16px;
+   width: 100%;
+   text-align: left;
+   border-radius: 5px;
+}
+
+.sidebar div button:hover {
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar div button:active {
+   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.content-outer .content {
+   min-height: 100%;
+   width: 100%;
+}
+
+.content .content-inner {
+   padding: 20px 0;
+   display: flex;
+   gap: 10px;
+   align-items: start;
+   justify-content: center;
+   padding-right: 20px;
+   height: 100%;
+}
+
+.content .content-inner .card {
+   width: 50%;
+   height: 100%;
+}
+.content .content-inner .card:nth-child(2) {
+   overflow: auto;
+   background: black;
+   overflow: auto;
+   max-height: 100vh;
+   max-width: 50%;
+}
+
+.content .content-inner .card:nth-child(2) .card-body {
+   padding: 10px;
+   color: white;
+}
+
+.card .url {
+   background: rgba(122, 122, 122, 0.1);
+   padding: 2px 5px;
+   display: block;
+   border-radius: 5px;
+}
+
+.card textarea {
+   height: 250px;
+   resize: vertical;
+   word-break: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+}
+.card #api-description {
+   margin-top: 10px;
+   font-size: 14px;
+}
+
+#status-badge {
+   float: right;
+   display: none;
+}

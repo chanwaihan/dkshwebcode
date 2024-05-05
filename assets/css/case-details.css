@@ -1,0 +1,49 @@
+#api-details {
+   padding: 50px 0;
+}
+
+#api-details .heading {
+   padding: 10px 0;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#api-details .content h4 {
+   padding: 10px 0;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#api-details .text-content p {
+   margin: 10px 0;
+}
+
+#api-details .request {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   margin-top: 15px;
+}
+
+#api-details .request .nice-select{
+   width: 50%;
+   padding: 0 15px;
+   border-radius: 5px;
+   background-color: rgba(0, 0, 0, 0.1);
+   border: 1px solid black;
+}
+
+#api-details #request-body-example {
+   height: 250px;
+   overflow: auto;
+   width: 100%;
+   background: #000;
+   border-radius: 5px;
+}
+
+#api-details #response-example {
+   height: 250px;
+   overflow: auto;
+   width: 100%;
+   border-radius: 5px;
+   background-color: #000;
+   margin-top: 15px;
+}

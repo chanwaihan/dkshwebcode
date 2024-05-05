@@ -26,19 +26,20 @@ const filter_btn = (text) =>
 const catalog_item = (
    filter_name,
    description,
-   item
+   item,
+   url
 ) => `<div class="case-two__item">
                             <div class="case-two__description">
                                 <p>${description}</p>
                             </div>
                             <div class="image case-two__image">
-                                <img src="assets/images/case/case-two-image1.jpg" alt="image">
+                                <img src="assets/images/api/${item}.jpg" alt="image">
                             </div>
                             <div class="case-two__content">
                             <span>${filter_name}</span>
                                 <h4><a href="case-details.html" class="text-white">${item}</a></h4>
                             </div>
-                            <a href="case-details.html" class="case-two__btn">
+                            <a href="${url}" class="case-two__btn">
                                 <i class="fa-regular fa-arrow-right"></i>
                             </a>
                         </div>`;
@@ -52,10 +53,10 @@ async function getFilteredCatalogue(e) {
    catalogue_item_parent.innerHTML = "";
 
    if (filter_name === "All") {
-      catalogue.forEach(({ category_name, title, description }) => {
+      catalogue.forEach(({ category_name, title, description, url }) => {
          let e = document.createElement("div");
          e.classList = "col-xl-4 col-lg-6 col-md-6";
-         e.innerHTML = catalog_item(category_name, description, title);
+         e.innerHTML = catalog_item(category_name, description, title, url);
          catalogue_item_parent.appendChild(e);
       });
    } else {
@@ -69,7 +70,8 @@ async function getFilteredCatalogue(e) {
          e.innerHTML = catalog_item(
             item.category_name,
             item.description,
-            item.title
+            item.title,
+            item.url
          );
          catalogue_item_parent.appendChild(e);
       });
@@ -95,7 +97,8 @@ async function getSearchedAPIs(e) {
       e.innerHTML = catalog_item(
          item.category_name,
          item.description,
-         item.title
+         item.title,
+         item.url
       );
       catalogue_item_parent.appendChild(e);
    });
