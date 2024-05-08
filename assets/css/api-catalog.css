@@ -2,8 +2,19 @@
    display: flex;
    justify-content: center;
    padding-top: 60px;
-   padding-bottom: 15px;
+   padding-bottom: 45px;
    gap: 15px;
+}
+.case-area .api_type_btn div button{
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.case-two__item {
+   height: 420px;
+}
+
+.case-two__item h4 {
+   max-width: 80%;
 }
 
 .case-two__description {
@@ -18,10 +29,35 @@
    opacity: 0;
    color: white;
    font-size: 18px;
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.case-two__content span {
+   background: var(--primary-color);
+   color: white;
+   border-radius: 8px;
+   padding: 5px 8px;
+   margin-bottom: 5px;
+}
+
+.case-two__image {
+   height: 100%;
+}
+
+.case-two__image img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   filter: brightness(50%);
 }
 
 .case-two__description p {
    line-height: 150%;
+}
+
+.case-two__item {
+   border-radius: 5px;
+   overflow: hidden;
 }
 
 .case-two__item:hover .case-two__description {
