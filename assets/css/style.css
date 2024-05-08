@@ -3298,25 +3298,32 @@ input.main-search-input::placeholder {
    padding: 30px;
    padding-top: 0;
 }
+.service-two__content .image {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
 .service-two__content .icon {
-   width: 70px;
-   height: 70px;
-   line-height: 70px;
-   text-align: center;
-   border-radius: 50%;
-   transition: var(--transition);
-   border-radius: 0;
-   background: var(--gradient-bg);
-   margin-bottom: 30px;
-   margin-top: -35px;
-   transition: 1s;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  border-radius: 0;
+  background: var(--gradient-bg);
+  margin-bottom: 30px;
+  margin-top: -35px;
+  transition: 1s;
 }
 .service-two__content .shape {
    position: absolute;
-   top: 35px;
+   top: -10px;
    right: 0;
    opacity: 0.3;
    transition: var(--transition);
+   z-index: 1
 }
 .service-two__content p {
    margin-top: 10px;
@@ -5379,3 +5386,11 @@ svg path{
       transform: scale(2);
    }
 } /*# sourceMappingURL=style.css.map */
+
+/* extras */
+#case-study-logo {
+  max-height: 50px;
+  width: auto;
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Horizontally center the items */
+}
