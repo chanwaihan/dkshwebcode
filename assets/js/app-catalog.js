@@ -37,7 +37,7 @@ const catalog_item = (
                             </div>
                             <div class="case-two__content">
                             <span>${filter_name}</span>
-                                <h4><a href="case-details.html" class="text-white">${item}</a></h4>
+                                <h4 class="text-white">${item}</h4>
                             </div>
                             <a href="${url}" class="case-two__btn">
                                 <i class="fa-regular fa-arrow-right"></i>

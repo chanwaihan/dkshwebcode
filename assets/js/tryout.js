@@ -6,22 +6,42 @@ const getCatalog = async () => {
    return catalog;
 };
 
+const li = (text) => `<li>${text}</li>`;
+
+const getOptions = (options) => {
+   let res = {};
+   let html = "";
+   options.forEach((option) => {
+      Object.entries(option.onchange).forEach(([key, value]) => {
+         if (!res[key]) res[key] = [];
+         res[key].push(...value);
+      });
+   });
+   Object.entries(res).forEach(([key, value]) => {
+      res[key] = [...new Set(res[key])];
+      html += li(key + ": " + [...res[key].map((val) => `<b>"${val}"</b>`)].join(", "));
+   });
+   return html;
+};
+
 const loadAPI = (e) => {
    const api_name = e.innerText;
    const api = try_catalog.filter((api) => api.title === api_name)[0];
-   const category_name = api.category_name;
    const url = api.api_url;
    const description = api.description;
+   const options = getOptions(api.req_res);
 
    document.getElementById("status-badge").style.display = "none";
    document.getElementById("api-request-body").value = "";
 
    const response_element = document.getElementById("api-response");
+   const paramerter_options = document.getElementById("parameter-options");
 
    response_element.innerHTML = "Click Run to get a response";
    document.getElementById("api-title").innerText = api_name;
    document.getElementById("api-url").innerText = url;
    document.getElementById("api-description").innerText = description;
+   paramerter_options.innerHTML = options;
 };
 
 const try_btn = (category, text) =>
@@ -55,24 +75,54 @@ const showResponse = (data) => {
    document.getElementById("status-badge").style.display = "block";
 };
 
+function findVal(object, key) {
+   var value;
+   Object.keys(object).some(function (k) {
+      if (k === key) {
+         value = object[k];
+         return true;
+      }
+      if (object[k] && typeof object[k] === "object") {
+         value = findVal(object[k], key);
+         return value !== undefined;
+      }
+   });
+   return value;
+}
+
+const getResponse = (req, api) => {
+   const allowed = api.req_res;
+   let response;
+   allowed.forEach((a) => {
+      let flag = true;
+      Object.entries(a.onchange).forEach(([key, value]) => {
+         if (!value.includes(findVal(req, key) || "")) {
+            flag = false;
+         }
+      });
+      if (flag) {
+         response = JSON.parse(
+            JSON.stringify(a.response).replaceAll(
+               /{{([\w+\s?]+)}}/g,
+               (_, group1) => findVal(req, group1) || ""
+            )
+         );
+      }
+   });
+   return response;
+};
+
 const handleRun = () => {
    const api_title = document.getElementById("api-title").innerText;
    const api = try_catalog.filter(({ title }) => title === api_title)[0];
-   const api_request_body =
-      document.getElementById("api-request-body").value || "{}";
-   let response = {};
-   if (
-      JSON.stringify(JSON.parse(api_request_body)) ===
-      JSON.stringify(api.request_body[0].body)
-   ) {
-      response = api.response;
-   } else {
-      response = {
-         success: false,
-         message: "Subscription is Required for further use of the API.",
-         process: "Contact the service provider",
-      };
-   }
+   const api_request_body = JSON.parse(
+      document.getElementById("api-request-body").value || "{}"
+   );
+   let response = getResponse(api_request_body, api) || {
+      message: "For more functionality, Subscribe our APIs.",
+      process: "For subscription, Create SR on NOVA.",
+   };
+
    showResponse(response);
 };
 
@@ -81,7 +131,7 @@ const loadSampleRequestBody = () => {
 
    const request_body = try_catalog.filter(
       ({ title }) => title === api_title
-   )[0].request_body[0].body;
+   )[0].req_res[0].request_body;
 
    const request_string = JSON.stringify(request_body, null, 4);
    document.getElementById("api-request-body").value = request_string;
