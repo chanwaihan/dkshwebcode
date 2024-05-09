@@ -146,7 +146,8 @@
       <div class="content">
          <div class="text-content">
             <h4>Introduction</h4>
-            <div><p>Optimize sales processes and drive revenue through Create Sales Order API supporting multiple business scenarios.</p>
+            <div><p>Maximize business efficiency with streamlined sales processes, precise data transmission, and versatile order type creation, optimizing operations for growth.</p>
+<p>This API allows consumer to create sales order. </p>
 <p>The following are sales order types that can be created using this API.</p>
 <li>Standard Order</li>
 <li>One Time Customer</li>
@@ -154,16 +155,18 @@
 <li>Create with reference to Sales Order Number</li>
 <li>Consignment Sales Order</li>
 <li>Credit Return Sales Order</li>
-<p></p>
-<p>Refer to the standard segment SalesOrderHeader, SalesOrderItem and SalesOrderParty that are required for sales order creation.</p>
-<p></p>
 <p>This API allows to create a single sales order per call.</p>
 <p></p></div>
          </div>
          <h4>Request Examples</h4>
          <div class="request">
             <select id="example-options" onchange="handleOptionOnChange()">
-               <option value="Example">Example</option>
+               <option value="StandardOrder">StandardOrder</option>
+<option value="One Time Customer">One Time Customer</option>
+<option value="Create with reference to Quotation">Create with reference to Quotation</option>
+<option value="Create with reference to Sales Order Number">Create with reference to Sales Order Number</option>
+<option value="Consignment Sales Order">Consignment Sales Order</option>
+<option value="Credit Return Sales Order">Credit Return Sales Order</option>
             </select>
             <div id="request-body-example"></div>
          </div>

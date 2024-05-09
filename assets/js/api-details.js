@@ -10,11 +10,16 @@ const option = (value) => `<option value="${value}">${value}</option>`;
 
 const displayRequestExample = async (api_name, option) => {
    const api = catalogue.filter((item) => item.title === api_name)[0];
-   const request_body = api.request_body.filter(
-      (body) => body.name === option
-   )[0].body;
+   const request = api.request_body.filter((body) => body.name === option)[0];
+   const request_body = request.body;
+   const response = request.response;
+
    const request_panel = document.getElementById("request-body-example");
    request_panel.innerHTML = jsontohtml(request_body);
+
+   if (response) {
+      showReponse(response);
+   }
 };
 
 const handleOptionOnChange = () => {
@@ -24,14 +29,15 @@ const handleOptionOnChange = () => {
    displayRequestExample(api_name, option_panel.value);
 };
 
-const showReponse = () => {
+const showReponse = (res) => {
    const response_panel = document.getElementById("response-example");
    const api_name = document.getElementById("api_name").innerText;
 
    const api = catalogue.filter((item) => item.title === api_name)[0];
-   const response = api.response;
+   const response = api.response || api.request_body[0].response;
 
-   response_panel.innerHTML = jsontohtml(response);
+   if (!res) response_panel.innerHTML = jsontohtml(response);
+   else response_panel.innerHTML = jsontohtml(res);
 };
 
 (async () => {
