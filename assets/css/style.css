@@ -2337,7 +2337,9 @@ input.main-search-input::placeholder {
 
 .header-area {
    position: relative;
-   background: rgba(0, 0, 0, 0.1);
+   z-index: 999;
+   box-shadow: var(--shadow);
+   /* background: rgba(0, 0, 0, 0.1); */
 }
 .header-area::after {
    position: absolute;
@@ -2942,9 +2944,12 @@ input.main-search-input::placeholder {
    }
 }
 .banner-two__circle-solid {
-   position: absolute;
-   bottom: 210px;
-   left: -100px;
+  position: absolute;
+  bottom: 110px;
+  left: -200px;
+  /* bottom: 210px; */
+  /* left: -100px; */
+  /* filter: hue-rotate(123deg) saturate(1.5); */
 }
 @media (max-width: 575px) {
    .banner-two__circle-solid {
@@ -2955,6 +2960,7 @@ input.main-search-input::placeholder {
    position: absolute;
    bottom: 210px;
    left: -100px;
+   filter: hue-rotate(123deg) saturate(1.5);
 }
 @media (max-width: 575px) {
    .banner-two__circle-regular {
@@ -3059,12 +3065,14 @@ input.main-search-input::placeholder {
    left: 20px;
    bottom: 80px;
    z-index: -1;
+   filter: hue-rotate(123deg) saturate(1.5);
 }
 .banner-three__shape-left {
    position: absolute;
    left: 0;
    bottom: 246px;
    z-index: -1;
+   filter: hue-rotate(123deg) saturate(1.5);
 }
 @media (max-width: 575px) {
    .banner-three__shape-left {
@@ -5393,4 +5401,77 @@ svg path{
   width: auto;
   display: flex; /* Use flexbox to align items */
   justify-content: center; /* Horizontally center the items */
+}
+
+#case-study-details-logo {
+  max-height: 50px;
+  width: auto;
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Horizontally center the items */
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.banner__inner-page {
+  position: relative;
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.banner__inner-page h2,
+.banner__inner-page .breadcrumb-list {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+  color: #ffffff; /* Set the color of the text */
+}
+
+#banner_shape1,
+#banner_shape2,
+#banner_shape3 {
+    position: absolute;
+    z-index: 2; /* Ensure the shapes are above the background but below the text */
+}
+
+#service-two-content-tutorial {
+  height: 115px;
+}
+
+#h4-tutorial {
+  position: absolute;
+  z-index: 2;
+  max-width: 280px;
+  margin-top: 10px;
+}
+
+#service-two-content-shape-tutorial {
+  top: 0px;
+  opacity: 0.25;
+}
+
+#tutorial-2-video {
+  display: block;  /* Ensures video behaves like a block-level element */
+  margin: 0 auto;  /* Sets left and right margins to 'auto' for centering */
+  width: 100%;
+  height: auto;
+}
+
+#tutorial-detail-area {
+  padding: 80px 0px;
+}
+
+.case-single__item #tutorial-details-info li:last-child {
+  margin-left: auto; /* Push the last li to the right */
+}
+
+.image img.tutorial-image {
+  border: 1px solid var(--black);  /* Adjust border style, width, and color as needed */
 }
