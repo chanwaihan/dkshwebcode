@@ -141,23 +141,27 @@
    <!-- Try Out area start here -->
    <main class="container" id="api-details">
       <div class="heading">
-         <h3 id="api_name">Customer Change Sales Order</h3>
+         <h3 id="api_name">Customer Sales Order Get Detail</h3>
       </div>
       <div class="content">
          <div class="text-content">
             <h4>Introduction</h4>
-            <div><p>Enhance sales order management efficiency with functions for updating, inserting, and deleting line items, maximizing operational effectiveness.</p>
-<p>This API allows consumer to update sales order.</p>
-<p>Change Sales Order API updates the Sales Order Header and Item level information. While changing Item level information, it can cover following scenarios:</p>
-<li>Update Line Item</li>
-<li>Insert New Item</li>
-<li>Delete Line Item</li>
-<p></p></div>
+            <div><p>Retrieve detailed sales order data, enabling comprehensive insights into customer transactions for informed decision-making and enhanced business performance.</p>
+<p>This API allows consumer to retrieve sales order detail from DKSH SAP.</p></div>
          </div>
          <h4>Request Examples</h4>
          <div class="request">
             <select id="example-options" onchange="handleOptionOnChange()">
-               <option value="Example">Example</option>
+               <option value="Sales Order Single Value">Sales Order Single Value</option>
+<option value="Sales Order Multiple Values">Sales Order Multiple Values</option>
+<option value="Sales Order With Batch">Sales Order With Batch</option>
+<option value="Delivery Order Single Value">Delivery Order Single Value</option>
+<option value="Delivery Order Multiple Value">Delivery Order Multiple Value</option>
+<option value="Delivery Order With Batch">Delivery Order With Batch</option>
+<option value="Invoice Single Value">Invoice Single Value</option>
+<option value="Invoice Multiple Value">Invoice Multiple Value</option>
+<option value="Invoice With Batch">Invoice With Batch</option>
+<option value="Invalid Document">Invalid Document</option>
             </select>
             <div id="request-body-example"></div>
          </div>
