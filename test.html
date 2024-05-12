@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/style1.css" type="text/css" />
+  </head>
+
+  <body>
+    <h2>Gallery</h2>
+    <div class="Gallery">
+      <img src="assets/images/banner/case-study-1-page-image.jpg" onclick="FullView(this.src)" />
+      <img src="assets/images/banner/case-study-2-page-image.jpg" onclick="FullView(this.src)" />
+      <img src="assets/images/banner/case-study-3-page-image.jpg" onclick="FullView(this.src)" />
+      <img src="assets/images/banner/case-study-4-page-image.jpg" onclick="FullView(this.src)" />
+      <img src="assets/images/banner/case-study-5-page-image.jpg" onclick="FullView(this.src)" />
+      <img src="assets/images/banner/case-study-6-page-image.jpg" onclick="FullView(this.src)" />
+    </div>
+    <div id="FullImageView">
+      <img id="FullImage" />
+      <span id="CloseButton" onclick="CloseFullView()">&times;</span>
+    </div>
+    <script type="text/javascript">
+      function FullView (ImgLink) {
+        document.getElementById("FullImage").src = ImgLink;
+        document.getElementById("FullImageView").style.display = "block";
+      }
+      function CloseFullView() {
+        document.getElementById("FullImageView").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
