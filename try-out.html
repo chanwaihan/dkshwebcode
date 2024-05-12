@@ -143,13 +143,17 @@
     <div class="content-outer">
       <div class="sidebar">
         <div>
-          <h3>Try out APIs</h3>
+          <h3>APIs to Test</h3>
           <ul id="try-out-apis">
             <!-- <li><button onclick="loadAPI(this)" data-category="Category_name">API_1</button></li> -->
           </ul>
         </div>
       </div>
       <div class="content">
+        <div>
+          <marquee>Disclaimer: All the values are hypothetical and meant for testing the user experience of API
+          </marquee>
+        </div>
         <div class="content-inner">
           <div class="card">
             <div class="card-header">
@@ -161,8 +165,10 @@
               <div>
                 <code class="url" id="api-url"></code>
                 <p id="api-description"></p>
+                <span class="form-label text-black mt-2">Possible Parameters in the body</span>
+                <ul id="parameter-options"></ul>
                 <div class="mb-3 mt-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Request body</label>
+                  <label for="exampleFormControlTextarea1" class="form-label text-black">Request body</label>
                   <textarea class="form-control" rows="3" id="api-request-body"></textarea>
                 </div>
                 <button class="btn btn-primary float-end" onclick="handleRun()">Run</button>

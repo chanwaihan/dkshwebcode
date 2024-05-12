@@ -7,7 +7,7 @@
 
 .content-outer .sidebar {
    min-height: 100%;
-   width: 400px;
+   min-width: 300px;
    display: flex;
    flex-direction: column;
    gap: 15px;
@@ -40,11 +40,11 @@
 
 .content-outer .content {
    min-height: 100%;
-   width: 100%;
+   width: calc(100% - 300px - 20px);
 }
 
 .content .content-inner {
-   padding: 20px 0;
+   padding: 5px 0;
    display: flex;
    gap: 10px;
    align-items: start;
@@ -70,15 +70,21 @@
    color: white;
 }
 
+.card-body ul li {
+   list-style-type: disc;
+   margin-left: 20px;
+}
+
 .card .url {
    background: rgba(122, 122, 122, 0.1);
    padding: 2px 5px;
    display: block;
    border-radius: 5px;
+   word-break: break-all;
 }
 
 .card textarea {
-   height: 250px;
+   height: 150px;
    resize: vertical;
    word-break: normal;
    word-wrap: normal;
