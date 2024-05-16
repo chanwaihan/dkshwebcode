@@ -2337,7 +2337,9 @@ input.main-search-input::placeholder {
 
 .header-area {
    position: relative;
-   background: rgba(0, 0, 0, 0.1);
+   z-index: 999;
+   box-shadow: var(--shadow);
+   /* background: rgba(0, 0, 0, 0.1); */
 }
 .header-area::after {
    position: absolute;
@@ -2942,9 +2944,12 @@ input.main-search-input::placeholder {
    }
 }
 .banner-two__circle-solid {
-   position: absolute;
-   bottom: 210px;
-   left: -100px;
+  position: absolute;
+  bottom: 110px;
+  left: -200px;
+  /* bottom: 210px; */
+  /* left: -100px; */
+  /* filter: hue-rotate(123deg) saturate(1.5); */
 }
 @media (max-width: 575px) {
    .banner-two__circle-solid {
@@ -2955,6 +2960,7 @@ input.main-search-input::placeholder {
    position: absolute;
    bottom: 210px;
    left: -100px;
+   filter: hue-rotate(123deg) saturate(1.5);
 }
 @media (max-width: 575px) {
    .banner-two__circle-regular {
@@ -3059,12 +3065,14 @@ input.main-search-input::placeholder {
    left: 20px;
    bottom: 80px;
    z-index: -1;
+   filter: hue-rotate(123deg) saturate(1.5);
 }
 .banner-three__shape-left {
    position: absolute;
    left: 0;
    bottom: 246px;
    z-index: -1;
+   filter: hue-rotate(123deg) saturate(1.5);
 }
 @media (max-width: 575px) {
    .banner-three__shape-left {
@@ -3138,6 +3146,7 @@ input.main-search-input::placeholder {
    z-index: 1;
    text-transform: capitalize;
 }
+
 .banner__inner-page .shape1 {
    position: absolute;
    left: 0;
@@ -3157,9 +3166,10 @@ input.main-search-input::placeholder {
    z-index: -1;
 }
 .banner__inner-page::before {
-   background: linear-gradient(270.07deg, #00060c 0.07%, #00060c 100%);
-   z-index: -1;
-   opacity: 0.15;
+  background: linear-gradient(270.07deg, #00060c 0.07%, #00060c 100%);
+  z-index: -1;
+  opacity: 0.15;
+  transition: background 0.5s ease-in-out; /* Smooth transition on hover */
 }
 @media (max-width: 767px) {
    .banner__inner-page {
@@ -3298,6 +3308,7 @@ input.main-search-input::placeholder {
    padding: 30px;
    padding-top: 0;
 }
+
 .service-two__content .image {
   min-height: 80px;
   display: flex;
@@ -3319,7 +3330,7 @@ input.main-search-input::placeholder {
 }
 .service-two__content .shape {
    position: absolute;
-   top: -10px;
+   top: -8px;
    right: 0;
    opacity: 0.3;
    transition: var(--transition);
@@ -5237,7 +5248,7 @@ svg path{
    width: 100%;
 }
 .footer__item.item-sm {
-   max-width: 170px;
+   max-width: 180px;
    width: 100%;
 }
 .footer__item .social-icon {
@@ -5393,4 +5404,202 @@ svg path{
   width: auto;
   display: flex; /* Use flexbox to align items */
   justify-content: center; /* Horizontally center the items */
+}
+
+#case-study-logo-uipath {
+  max-height: 100px; /* Set the maximum height */
+  width: auto;
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Horizontally center the items */
+  object-fit: contain; /* Maintain aspect ratio while fitting the image inside */
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+#case-study-details-logo {
+  max-height: 50px;
+  width: auto;
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Horizontally center the items */
+  margin-top: -50px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease-in-out;  /* Smooth transition effect */
+}
+
+#case-study-details-logo-uipath {
+  max-height: 120px;
+  width: auto;
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Horizontally center the items */
+  margin-top: -50px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease-in-out;  /* Smooth transition effect */
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.banner__inner-page h2,
+.banner__inner-page .breadcrumb-list {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+  color: #ffffff; /* Set the color of the text */
+}
+
+#banner_shape1,
+#banner_shape2,
+#banner_shape3 {
+    position: absolute;
+    z-index: 2; /* Ensure the shapes are above the background but below the text */
+}
+
+#service-two-content-tutorial {
+  height: 115px;
+  display: flex; /* Make the content a flexbox container */
+  align-items: center; /* Align items along the cross-axis (vertically) in the center */
+  justify-content: center; /* Align items along the main axis (horizontally) in the center (optional) */
+}
+
+#h4-tutorial {
+  position: absolute;
+  z-index: 2;
+  max-width: 280px;
+  margin-top: 10px;
+}
+
+#service-two-content-shape-tutorial {
+  top: 0px;
+  opacity: 0.25;
+}
+
+#tutorial-video {
+  display: block;  /* Ensures video behaves like a block-level element */
+  margin: 0 auto;  /* Sets left and right margins to 'auto' for centering */
+  width: 100%;
+  height: auto;
+}
+
+#tutorial-detail-area {
+  padding: 80px 0px;
+}
+
+.case-single__item #tutorial-details-info li:last-child {
+  margin-left: auto; /* Push the last li to the right */
+}
+
+.image img.tutorial-image {
+  border: 1px solid var(--black);  /* Adjust border style, width, and color as needed */
+}
+
+.tutorial-detail-link {
+  color: var(--primary-color);
+}
+
+.api-analytics-iframe {
+  width: 1280px;
+  height: 720px;
+  border: 1px solid black;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+}
+
+#api-analytics-area {
+  padding: 80px 0px;
+}
+
+#api-analytics-frame {
+  display: flex;
+  justify-content: center;
+}
+
+.service-two__item:hover .case-study-image {
+  transform: scale(1.1); /* Increase size by 10% */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.service-two__item .case-study-image { /* Target the image normally as well */
+  transition: transform 0.3s ease-in-out; /* Smooth transition back to original size */
+}
+
+.case-study-image-div {
+  overflow: hidden;
+}
+
+.banner__inner-page:hover .img1 {
+  transform: scale(1.6); /* Increase size by 60% */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.banner__inner-page:hover .img2 {
+  transform: scale(1.3); /* Increase size by 30% */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.banner__inner-page .img1,
+.banner__inner-page .img2 {
+  transition: transform 0.5s ease-in-out; /* Smooth transition on hover */
+}
+
+.service-two__item:hover #h4-tutorial {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+#case-study-details-logo:hover,
+#case-study-details-logo-uipath:hover {
+  transform: scale(1.2); /* Increase size by 20% */
+  transition: transform 0.3s ease-in-out;  /* Smooth transition effect */
+}
+
+.tutorial-image-container:hover img {
+  cursor: pointer;
+  transform: scale(1.1); /* Increase size by 5% */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Apply shadow */
+}
+
+.tutorial-image-container img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  /* Smooth transition effect for both transform and box-shadow */
+}
+
+#FullImageView {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.9);
+  text-align: center;
+  z-index: 9999;
+}
+#FullImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 80%;
+  max-width: 99%;
+  max-height: 99%;
+}
+#CloseButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+#form1 {
+  position: relative;
+  z-index: 9998;
 }

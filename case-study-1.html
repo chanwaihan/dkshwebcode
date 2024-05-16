@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managing Disconnected Data Flows with API-Led Automation</title>
+  <!-- Favicon img -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+  <!-- Bootstarp min css -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Mean menu css -->
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <!-- All min css -->
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <!-- Swiper bundle min css -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!-- Magnigic popup css -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!-- Animate css -->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <!-- Nice select css -->
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <!-- Style css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- Preloader area start -->
+  <div class="loading">
+    <span class="text-capitalize">L</span>
+    <span>o</span>
+    <span>a</span>
+    <span>d</span>
+    <span>i</span>
+    <span>n</span>
+    <span>g</span>
+  </div>
+  <div id="preloader">
+  </div>
+  <!-- Preloader area end -->
+
+  <!-- Mouse cursor area start here -->
+  <div class="mouse-cursor cursor-outer"></div>
+  <div class="mouse-cursor cursor-inner"></div>
+  <!-- Mouse cursor area end here -->
+
+  <!-- Header area start here -->
+  <header class="header-area">
+    <div class="container header__container">
+      <div class="header__main">
+        <a href="home.html" class="logo">
+          <img src="assets/images/logo/logo-light.svg" alt="logo">
+        </a>
+        <div class="main-menu">
+          <nav>
+            <ul>
+              <!-- Home -->
+              <li>
+                <a href="home.html">Home</a>
+              </li>
+              <!-- API Catalog -->
+              <li>
+                <a href="api-catalog.html">API Catalog</a>
+              </li>
+              <!-- Learn & Explore -->
+              <li>
+                <a href="#0">Learn & Explore</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="try-out.html">Try Out</a>
+                  </li>
+                  <li>
+                    <a href="tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="case-studies.html">Case Studies</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- API Analytics -->
+              <li>
+                <a href="api-analytics.html">API Analytics</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="d-none d-lg-inline-block">
+          <a href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank" class="btn-one">Get Access <i class="fa-regular fa-arrow-right-long"></i></a>
+        </div>
+        <div class="bars d-block d-lg-none">
+          <i id="openButton" class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header area end here -->
+
+  <!-- Sidebar area start here -->
+  <div id="targetElement" class="sidebar-area sidebar__hide">
+    <div class="sidebar__overlay"></div>
+    <a href="home.html" class="logo mb-40">
+      <img src="assets/images/logo/logo.svg" alt="logo">
+    </a>
+    <div class="mobile-menu overflow-hidden"></div>
+    <ul class="info pt-40">
+      <li>
+        <i class="fa-solid primary-color fa-user-circle"></i> <a href="#0">Grp TD SAP API</a>
+      </li>
+      <li class="py-2">
+        <i class="fa-solid primary-color fa-envelope"></i> <a href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a>
+      </li>
+      <li>
+        <i class="fa-solid primary-color fa-location-arrow"></i> <a href="#0">DKSH CSSC</a>
+      </li>
+    </ul>
+    <div class="social-icon mt-20">
+      <a title="Follow on LinkedIn" href="http://www.linkedin.com/company/dksh" target="_blank"><i
+          class="fa-brands fa-linkedin-in"></i></a>
+      <a title="Follow on Facebook" href="http://www.facebook.com/dkshgroup" target="_blank"><i
+          class="fa-brands fa-facebook-f"></i></a>
+      <a title="Follow on Twitter"
+        href="http://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=dkshgroup" target="_blank"><i
+          class="fa-brands fa-twitter"></i></a>
+      <a title="Follow on YouTube" href="http://www.youtube.com/user/DKSHGroup?sub_confirmation=1" target="_blank"><i
+          class="fa-brands fa-youtube"></i></a>
+      <a title="Follow on Instagram" href="https://www.instagram.com/dksh.group/" target="_blank"><i
+          class="fa-brands fa-instagram"></i></a>
+      <a title="Follow on TikTok" href="https://www.tiktok.com/@dkshgroup" target="_blank"><i
+          class="fa-brands fa-tiktok"></i></a>
+    </div>
+    <button id="closeButton" class="text-white"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <!-- Sidebar area end here -->
+
+  <!-- Case Study 1 details area start here -->
+  <main>
+    <!-- Page banner area start here -->
+    <section class="banner__inner-page bg-image pt-180 pb-180 bg-image"
+      data-background="assets/images/banner/case-study-1-page-image.jpg">
+      <div class="shape2 wow slideInLeft" id="banner_shape2" data-wow-delay="00ms" data-wow-duration="1500ms">
+        <img src="assets/images/banner/inner-banner-shape2.png" class="img2" alt="shape">
+      </div>
+      <div class="shape1 wow slideInLeft" id="banner_shape1" data-wow-delay="200ms" data-wow-duration="1500ms">
+        <img src="assets/images/banner/inner-banner-shape1.png" class="img1" alt="shape">
+      </div>
+      <div class="shape3 wow slideInRight" id="banner_shape3" data-wow-delay="200ms" data-wow-duration="1500ms">
+        <img class="sway__animationX" src="assets/images/banner/inner-banner-shape3.png" alt="shape">
+      </div>
+      <div class="container">
+        <h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Managing Disconnected Data Flows with API-Led Automation</h2>
+        <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <a href="home.html">Home</a><span><i class="fa-regular fa-angles-right mx-2"></i></span><a href="case-studies.html">Case Studies</a>
+        </div>
+      </div>
+    </section>
+    <!-- Page banner area end here -->
+
+    <!-- Case area start here -->
+    <section class="case-single-area pt-120 pb-120">
+      <div class="container">
+        <div class="image">
+          <img src="assets/images/service/gigamed-logo.png" id="case-study-details-logo" alt="image">
+        </div>
+        <div class="case-single__item">
+          <ul class="case-date py-4 bor-top bor-bottom mt-40">
+            <li><span>Market:</span> Vietnam</li>
+          </ul>
+          <h3 class="case-single__title mt-40 mb-30">Challenge</h3>
+          <p>
+            The company is facing a tough task: staying on top of the surging customer demand in healthcare.
+            But here's the catch - the data they need from sales, inventory, and materials is stored in different systems.
+            To step up their game and make things easier for customers, they're planning to launch a mobile app for their online marketplace.
+            But here's the challenge: they need to gather all that scattered data into one spot so they can deliver updates to customers in real-time.
+          </p>
+          <h3 class="case-single__title mt-40 mb-30">Solution</h3>
+          <p>
+            We offer them access to 10 APIs, enabling businesses to unlock a new level of omnichannel experience:
+            <div class="case-challenge-list mt-30">
+              <ul class="case-challenge">
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Customer Create Sales Order API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Trace Order Get Status API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Customer Get Master Detail API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Customer Sales Order Get Detail API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Customer Simulate Sales Order API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Customer Get Product Detail API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Product Get Product Stock Detail API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Product Get Full Product Detail API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Trace Order Get List API</li>
+                <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-regular"></i>Product Get Full Product List API</li>
+              </ul>
+            </div>
+          </p>
+          <h3 class="case-single__title mt-40 mb-30">Result</h3>
+          <div class="case-challenge-list mt-30">
+            <ul class="case-challenge">
+              <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-check"></i>The integration solution plays a key role in launching of a new mobile app for ecommerce.</li>
+              <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-check"></i>Improve process inefficiencies with integrated environment and automation.</li>
+              <li class="mb-3" style="display: flex; align-items: center;"><i class="fa-solid fa-check"></i>Accessing near-real-time information on sales, materials, etc., and enhances availability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Case area end here -->
+
+    <!-- Service area start here -->
+    <section class="service-two-area secondary-bg pt-120 pb-120">
+
+      <div class="service-two__shape-left sway_Y__animationY">
+        <img src="assets/images/shape/service-two-shape-left.png" alt="shape">
+      </div>
+
+      <div class="service-two__shape-right sway_Y__animation">
+        <img src="assets/images/shape/service-two-shape-right.png" alt="shape">
+      </div>
+
+      <div class="container">
+        <div class="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-60">
+          <div class="section-header">
+            <h5 class="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+              <svg class="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.75" y="0.750061" width="18.5" height="10.5" rx="5.25" stroke="#3C72FC"
+                  stroke-width="1.5" />
+                <mask id="path-2-inside-1_670_477" fill="white">
+                  <path
+                      d="M3 6.00006C3 3.79092 4.79086 2.00006 7 2.00006H13C15.2091 2.00006 17 3.79092 17 6.00006C17 8.2092 15.2091 10.0001 13 10.0001H7C4.79086 10.0001 3 8.2092 3 6.00006Z" />
+                </mask>
+                <path
+                  d="M3 6.00006C3 2.96249 5.46243 0.500061 8.5 0.500061H11.5C14.5376 0.500061 17 2.96249 17 6.00006C17 4.61935 15.2091 3.50006 13 3.50006H7C4.79086 3.50006 3 4.61935 3 6.00006ZM17 6.00006C17 9.03763 14.5376 11.5001 11.5 11.5001H8.5C5.46243 11.5001 3 9.03763 3 6.00006C3 7.38077 4.79086 8.50006 7 8.50006H13C15.2091 8.50006 17 7.38077 17 6.00006ZM3 10.0001V2.00006V10.0001ZM17 2.00006V10.0001V2.00006Z"
+                  fill="#3C72FC" mask="url(#path-2-inside-1_670_477)" />
+              </svg>
+                READ MORE BELOW
+            </h5>
+            <h2 class="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">More Case Studies</h2>
+          </div>
+          <div class="arry-btn  d-flex gap-3 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+              <button class="arry-prev service__arry-prev"><i class="fa-light fa-chevron-left"></i></button>
+              <button class="arry-next service__arry-next active"><i
+                      class="fa-light fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="swiper service-two__slider">
+          <div class="swiper-wrapper">
+            <!-- Case Study 2 -->
+            <div class="swiper-slide">
+              <div class="service-two__item">
+                <a href="case-study-2.html">
+                  <div class="image case-study-image-div">
+                    <img src="assets/images/service/service-image2.jpg" class="case-study-image" alt="image">
+                  </div>
+                  <div class="service-two__content">
+                    <div class="shape"><img src="assets/images/shape/service-two-item-shape.png" alt="shape"></div>
+                    <div class="image">
+                      <img src="assets/images/service/quqo-logo.png" class="case-study-image" id="case-study-logo" alt="image">
+                    </div>
+                    <p>Optimize Traditional Trade Channels with API Digital Solutions</p>
+                    <a class="read-more-btn">Read More <i
+                        class="fa-regular fa-arrow-right-long"></i></a>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Case Study 3 -->
+            <div class="swiper-slide">
+              <div class="service-two__item">
+                <a href="case-study-3.html">
+                  <div class="image case-study-image-div">
+                    <img src="assets/images/service/service-image3.jpg" class="case-study-image" alt="image">
+                  </div>
+                  <div class="service-two__content">
+                    <div class="shape"><img src="assets/images/shape/service-two-item-shape.png" alt="shape"></div>
+                    <div class="image">
+                      <img src="assets/images/service/maurice-lacroix-logo.png" class="case-study-image" id="case-study-logo" alt="image">
+                    </div>
+                    <p>Efficiently Reduce Work Complexity to Drive Global Market Sales</p>
+                    <a class="read-more-btn">Read More <i
+                        class="fa-regular fa-arrow-right-long"></i></a>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Case Study 4 -->
+            <div class="swiper-slide">
+              <div class="service-two__item">
+                <a href="case-study-4.html">
+                  <div class="image case-study-image-div">
+                    <img src="assets/images/service/service-image4.jpg" class="case-study-image" alt="image">
+                  </div>
+                  <div class="service-two__content">
+                    <div class="shape"><img src="assets/images/shape/service-two-item-shape.png" alt="shape"></div>
+                    <div class="image">
+                      <img src="assets/images/service/psphere-logo.png" class="case-study-image" id="case-study-logo" alt="image">
+                    </div>
+                    <p>Accelerate Sales Order Management and Real-Time Management</p>
+                    <a class="read-more-btn">Read More <i
+                        class="fa-regular fa-arrow-right-long"></i></a>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Case Study 5 -->
+            <div class="swiper-slide">
+              <div class="service-two__item">
+                <a href="case-study-5.html">
+                  <div class="image case-study-image-div">
+                    <img src="assets/images/service/service-image5.jpg" class="case-study-image" alt="image">
+                  </div>
+                  <div class="service-two__content">
+                    <div class="shape"><img src="assets/images/shape/service-two-item-shape.png" alt="shape"></div>
+                    <div class="image">
+                      <img src="assets/images/service/salesforce-logo.png" class="case-study-image" id="case-study-logo" alt="image">
+                    </div>
+                    <p>Simplify Quotation Module to Expedite Customer Delivery Times</p>
+                    <a class="read-more-btn">Read More <i
+                        class="fa-regular fa-arrow-right-long"></i></a>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Case Study 6 -->
+            <div class="swiper-slide">
+              <div class="service-two__item">
+                <a href="case-study-6.html">
+                  <div class="image case-study-image-div">
+                    <img src="assets/images/service/service-image6.jpg" class="case-study-image" alt="image">
+                  </div>
+                  <div class="service-two__content">
+                    <div class="shape"><img src="assets/images/shape/service-two-item-shape.png" alt="shape"></div>
+                    <div class="image">
+                      <img src="assets/images/service/uipath-logo.png" class="case-study-image" id="case-study-logo-uipath" alt="image">
+                    </div>
+                    <p>API-Assisted Delivers Ease of Work to Get Data for the RPA System</p>
+                    <a class="read-more-btn">Read More <i
+                        class="fa-regular fa-arrow-right-long"></i></a>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Service area end here -->
+  </main>
+  <!-- Case Study 1 details area end here -->
+
+  <!-- Footer area start here -->
+  <footer class="footer-area secondary-bg">
+    <div class="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+      <img src="assets/images/shape/footer-regular-left.png" alt="shape">
+    </div>
+    <div class="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+      <img class="sway_Y__animation" src="assets/images/shape/footer-solid-left.png" alt="shape">
+    </div>
+    <div class="footer__shape-solid-right wow slideInRight" data-wow-delay="00ms" data-wow-duration="1500ms">
+      <img class="sway_Y__animation" src="assets/images/shape/footer-regular-right.png" alt="shape">
+    </div>
+    <div class="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+      <img src="assets/images/shape/footer-solid-right.png" alt="shape">
+    </div>
+    <div class="footer__shadow-shape">
+      <img src="assets/images/shape/footer-shadow-shape.png" alt="shadow">
+    </div>
+    <div class="container">
+      <div class="footer__wrp pt-100 pb-100">
+        <div class="footer__item item-big wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+          <a href="home.html" class="logo mb-30">
+            <img src="assets/images/logo/logo.svg" alt="image">
+          </a>
+          <p>Delivering Growth – in Asia and Beyond.<br>
+            © DKSH Holding Ltd.</p>
+          <div class="social-icon">
+            <a title="Follow on LinkedIn" href="http://www.linkedin.com/company/dksh" target="_blank"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a title="Follow on Facebook" href="http://www.facebook.com/dkshgroup" target="_blank"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a title="Follow on Twitter"
+              href="http://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=dkshgroup" target="_blank"><i
+                class="fa-brands fa-twitter"></i></a>
+            <a title="Follow on YouTube" href="http://www.youtube.com/user/DKSHGroup?sub_confirmation=1"
+              target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a title="Follow on Instagram" href="https://www.instagram.com/dksh.group/" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a title="Follow on TikTok" href="https://www.tiktok.com/@dkshgroup" target="_blank"><i
+                class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul>
+            <li><a href="api-catalog.html"><i class="fa-regular fa-angles-right me-1"></i> API Catalog</a></li>
+            <li><a href="api-analytics.html"><i class="fa-regular fa-angles-right me-1"></i> API Analytics</a></li>
+            <li><a href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank"><i class="fa-regular fa-angles-right me-1"></i> Get Access</a></li>
+          </ul>
+        </div>
+        <div class="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Learn & Explore</h3>
+          <ul>
+            <li><a href="try-out.html"><i class="fa-regular fa-angles-right me-1"></i> Try Out</a></li>
+            <li><a href="tutorials.html"><i class="fa-regular fa-angles-right me-1"></i> Tutorials</a></li>
+            <li><a href="case-studies.html"><i class="fa-regular fa-angles-right me-1"></i> Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer__item item-big wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <div class="info">
+                <h5>Group:</h5>
+                <p>Grp TD SAP API</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <div class="info">
+                <h5>Email:</h5>
+                <p><a href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a></p>
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-location-arrow" aria-hidden="true"></i>
+              <div class="info">
+                <h5>Location:</h5>
+                <p>DKSH CSSC</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer area end here -->
+
+  <!-- Back to top area start here -->
+  <div class="scroll-up">
+    <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Back to top area end here -->
+
+  <!-- Jquery 3.7.0 Min Js -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap min Js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Mean menu Js -->
+  <script src="assets/js/meanmenu.js"></script>
+  <!-- Swiper bundle min Js -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Counterup min Js -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <!-- Wow min Js -->
+  <script src="assets/js/wow.min.js"></script>
+  <!-- Pace min Js -->
+  <script src="assets/js/pace.min.js"></script>
+  <!-- Magnific popup min Js -->
+  <script src="assets/js/magnific-popup.min.js"></script>
+  <!-- Nice select min Js -->
+  <script src="assets/js/nice-select.min.js"></script>
+  <!-- Isotope pkgd min Js -->
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <!-- Waypoints Js -->
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <!-- Script Js -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
