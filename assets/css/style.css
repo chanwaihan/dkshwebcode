@@ -33,10 +33,10 @@ CSS TABLE OF CONTENTS
 ------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-   --kumbh: "Kumbh Sans", sans-serif;
-   --primary-color: #be0028;
+   --kumbh: "Noto Sans", sans-serif;
+   --primary-color: #EF233C;
    --primary10: rgba(60, 114, 252, 0.1);
-   --gradient-bg: linear-gradient(90deg, #be0028 -10.59%, #00060c 300.59%);
+   --gradient-bg: linear-gradient(90deg, #EF233C -10.59%, #00060c 300.59%);
    --secondary-color: #0f0d1d;
    --main-bg: #ffffff;
    --sub-bg: #f3f7fb;
@@ -51,11 +51,18 @@ CSS TABLE OF CONTENTS
    --transition: all 0.3s ease-in-out;
    --shadow: 0px 4px 25px 0px #0000000f;
 }
-
+:root, [data-bs-theme=light] {
+   --bs-border-radius: 0px;
+   --bs-border-radius-sm: 0px;
+    --bs-border-radius-lg: 0px;
+    --bs-border-radius-xl: 0px;
+    --bs-border-radius-xxl: 0px;
+    --bs-border-radius-2xl: 0px;
+}
 :root[data-theme="dark"] {
-   --primary-color: #be0028;
+   --primary-color: #EF233C;
    --primary10: rgba(60, 114, 252, 0.1);
-   --gradient-bg: linear-gradient(90deg, #be0028 -10.59%, #00060c 300.59%);
+   --gradient-bg: linear-gradient(90deg, #EF233C -10.59%, #00060c 300.59%);
    --secondary-color: #0f0d1d;
    --main-bg: #151327;
    --sub-bg: #16142c;
@@ -68,9 +75,9 @@ CSS TABLE OF CONTENTS
 }
 
 :root[data-theme="dark"] .light-area {
-   --primary-color: #be0028;
+   --primary-color: #EF233C;
    --primary10: rgba(60, 114, 252, 0.1);
-   --gradient-bg: linear-gradient(90deg, #be0028 -10.59%, #00060c 300.59%);
+   --gradient-bg: linear-gradient(90deg, #EF233C -10.59%, #00060c 300.59%);
    --secondary-color: #0f0d1d;
    --main-bg: #ffffff;
    --sub-bg: #f3f7fb;
@@ -1638,7 +1645,6 @@ button {
 }
 .nice-select {
    width: 100%;
-   border-radius: 10px;
    height: 50px;
    line-height: 50px;
 }
@@ -1720,7 +1726,7 @@ button {
 .accordion .accordion-button::before {
    position: absolute;
    content: "\f068";
-   font-family: "Font Awesome 6 Pro";
+   font-family: "Noto Sans";
    font-weight: 700;
    top: 20px;
    right: 25px;
@@ -2038,7 +2044,7 @@ input.main-search-input::placeholder {
 }
 .scroll-up::after {
    position: absolute;
-   font-family: "Font Awesome 6 Pro";
+   font-family: "Noto Sans";
    content: "\f176";
    text-align: center;
    line-height: 50px;
@@ -2067,6 +2073,22 @@ input.main-search-input::placeholder {
    opacity: 1;
    visibility: visible;
    transform: translateY(0);
+}
+
+.btn-primary{
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ef233ba8;
+    --bs-btn-hover-border-color: var(--primary-color);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--primary-color);
+    --bs-btn-active-border-color: var(--primary-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--primary-color);
+    --bs-btn-disabled-border-color: var(--primary-color);
 }
 
 .btn-one {
@@ -2346,7 +2368,7 @@ input.main-search-input::placeholder {
    top: 0;
    left: 0;
    width: 30%;
-   background: linear-gradient(270deg, #be0028 6.32%, #00060c 216.42%);
+   background: linear-gradient(270deg, #EF233C 6.32%, #00060c 216.42%);
    height: 100%;
    content: "";
    z-index: -1;
@@ -2547,7 +2569,7 @@ input.main-search-input::placeholder {
    display: none;
 }
 .header-two-area.menu-fixed {
-   background: linear-gradient(90deg, #0f0d1d -76.72%, #be0028 191.51%);
+   background: linear-gradient(90deg, #0f0d1d -76.72%, #EF233C 191.51%);
    border-bottom: none;
 }
 .header-two-area .header__main .main-menu ul li a {
@@ -2567,7 +2589,7 @@ input.main-search-input::placeholder {
    display: none;
 }
 .header-three-area.menu-fixed {
-   background: linear-gradient(90deg, #0f0d1d -76.72%, #be0028 191.51%);
+   background: linear-gradient(90deg, #0f0d1d -76.72%, #EF233C 191.51%);
    border-bottom: none;
 }
 .header-three-area .header__main .main-menu ul li a {
@@ -2579,7 +2601,7 @@ input.main-search-input::placeholder {
    content: "";
    background: linear-gradient(
       0.49deg,
-      #be0028 -126.52%,
+      #EF233C -126.52%,
       rgba(60, 114, 252, 0) 92.35%
    );
    width: 85px;
@@ -3165,20 +3187,16 @@ input.main-search-input::placeholder {
    bottom: 0;
    z-index: -1;
 }
-.banner__inner-page::before {
-  background: linear-gradient(270.07deg, #00060c 0.07%, #00060c 100%);
-  z-index: -1;
-  opacity: 0.15;
-  transition: background 0.5s ease-in-out; /* Smooth transition on hover */
-}
+
 @media (max-width: 767px) {
    .banner__inner-page {
       padding: 80px 0;
    }
 }
-.banner__inner-page h2 {
-   margin-bottom: 10px;
-   color: var(--white);
+.banner__inner-page h1 {
+   color: white;
+   font-size: 60px;
+   line-height: 55px;
 }
 .banner__inner-page span {
    color: var(--white);
@@ -3383,16 +3401,14 @@ input.main-search-input::placeholder {
    right: 0;
    transform: translateY(-50%);
 }
-.service-three__image img {
-   border-radius: 8px;
-}
+/* .service-three__image img {
+} */
 .service-three__content {
    background-color: var(--white);
    padding: 20px 30px;
    display: flex;
    align-items: center;
    width: 85%;
-   border-radius: 8px;
    box-shadow: var(--shadow);
    position: absolute;
    bottom: -40px;
@@ -3429,12 +3445,12 @@ input.main-search-input::placeholder {
    border-radius: 50%;
    transition: var(--transition);
    border-radius: 0px;
-   background: linear-gradient(180deg, #be0028 -93.57%, #00060c 228.57%);
+   background: linear-gradient(180deg, #EF233C -93.57%, #00060c 228.57%);
    margin: 0 auto;
 }
 .service-three__item {
    position: relative;
-   border-radius: 8px;
+   /* border-radius: 8px; */
    z-index: 1;
 }
 .service-three__item::before {
@@ -3444,8 +3460,8 @@ input.main-search-input::placeholder {
    left: 0;
    width: 100%;
    height: 0%;
-   background: linear-gradient(180deg, #be0028 -21.56%, #00060c 252.19%);
-   border-radius: 8px;
+   background: linear-gradient(180deg, #EF233C -21.56%, #00060c 252.19%);
+   /* border-radius: 8px; */
    transition: var(--transition);
 }
 .service-three__item:hover .service-three__content {
@@ -3918,7 +3934,7 @@ input.main-search-input::placeholder {
 .case-two__content {
    position: absolute;
    top: 30px;
-   left: 30px;
+   left: 0px;
    z-index: 1;
 }
 .case-two__content span {
@@ -4115,7 +4131,7 @@ input.main-search-input::placeholder {
    border-radius: 50%;
    transition: var(--transition);
    margin: 0 auto;
-   background: linear-gradient(180deg, #be0028 -210.71%, #00060c 100%);
+   background: linear-gradient(180deg, #EF233C -210.71%, #00060c 100%);
    margin-top: -35px;
    transition: 1s;
 }
@@ -4933,7 +4949,7 @@ svg path{
    overflow: hidden;
    position: relative;
    z-index: 1;
-   background: linear-gradient(180deg, #be0028 -1.09%, #00060c 175.27%);
+   background: linear-gradient(180deg, #EF233C -1.09%, #00060c 175.27%);
    padding: 50px 40px;
 }
 .pricing__item .item-shape {
@@ -5012,7 +5028,7 @@ svg path{
 }
 .banner-video__wrp::before {
    background-color: var(--heading-color);
-   border-radius: 20px;
+   /* border-radius: 20px; */
    opacity: 0.5;
 }
 .banner-video__video-btn,
@@ -5090,13 +5106,13 @@ svg path{
    margin-bottom: 30px;
    padding: 18px 20px;
    height: 70px;
-   border-radius: 5px;
+   border-radius: 0px;
 }
 .contact__form form .nice-select .list {
    width: 100%;
 }
 .contact__form form label {
-   font-family: var(--quicksand);
+   font-family: var(--kumbh);
    color: var(--heading-color);
    margin-bottom: 15px;
    font-weight: 700;
@@ -5106,7 +5122,7 @@ svg path{
    width: 100%;
    padding: 18px 20px;
    background-color: var(--sub-bg);
-   border-radius: 4px;
+   /* border-radius: 4px; */
    margin-bottom: 30px;
 }
 .contact__form form textarea {
@@ -5447,11 +5463,15 @@ svg path{
   z-index: 1;
 }
 
-.banner__inner-page h2,
+.banner__inner-page h1,
 .banner__inner-page .breadcrumb-list {
   position: relative;
   z-index: 2; /* Ensure the text is above the overlay */
-  color: #ffffff; /* Set the color of the text */
+  color: #1a1a1a; /* Set the color of the text */
+}
+
+.banner__inner-page .breadcrumb-list *{
+   color: #1a1a1a;
 }
 
 #banner_shape1,
@@ -5513,7 +5533,7 @@ svg path{
 }
 
 #api-analytics-area {
-  padding: 80px 0px;
+  padding: 40px 0px 80px 0px;
 }
 
 #api-analytics-frame {
@@ -5602,4 +5622,5 @@ svg path{
 #form1 {
   position: relative;
   z-index: 9998;
+  height: 50px;
 }
