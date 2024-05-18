@@ -17,10 +17,10 @@ const filter_btn = (text) =>
       ...new Set(catalogue.map(({ category_name }) => category_name)),
    ];
    category_names.forEach((category_name) => {
-      let e = document.createElement("div");
-      e.innerHTML = filter_btn(category_name);
-      filter_parent.appendChild(e);
+      filter_parent.innerHTML += filter_btn(category_name);
    });
+
+   getFilteredCatalogue({ innerText: "All" });
 })();
 
 const catalog_item = (
@@ -28,7 +28,9 @@ const catalog_item = (
    description,
    item,
    url
-) => `<div class="case-two__item">
+) => `<div class="case-two__item" onclick="window.location.href = './${url.trim(
+   " "
+)}'">
                             <div class="case-two__description">
                                 <p>${description}</p>
                             </div>
@@ -44,6 +46,10 @@ const catalog_item = (
                             </a>
                         </div>`;
 
+function goto(url) {
+   console.log(url);
+}
+
 async function getFilteredCatalogue(e) {
    if (!catalogue) {
       catalogue = await getCatalog();
@@ -51,6 +57,15 @@ async function getFilteredCatalogue(e) {
    const filter_name = e.innerText;
    const catalogue_item_parent = document.getElementById("catalog-items");
    catalogue_item_parent.innerHTML = "";
+
+   const all_btns = document.querySelectorAll("#filter-btns button");
+   all_btns.forEach((btn) => {
+      if (btn.innerText === filter_name) {
+         btn.style.background = "#EF233C";
+      } else {
+         btn.style.background = "#EBEBEB";
+      }
+   });
 
    if (filter_name === "All") {
       catalogue.forEach(({ category_name, title, description, url }) => {
@@ -77,8 +92,6 @@ async function getFilteredCatalogue(e) {
       });
    }
 }
-
-getFilteredCatalogue({ innerText: "All" });
 
 async function getSearchedAPIs(e) {
    if (!catalogue) catalogue = await getCatalog();

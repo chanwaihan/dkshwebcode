@@ -19,7 +19,9 @@ const getOptions = (options) => {
    });
    Object.entries(res).forEach(([key, value]) => {
       res[key] = [...new Set(res[key])];
-      html += li(key + ": " + [...res[key].map((val) => `<b>"${val}"</b>`)].join(", "));
+      html += li(
+         key + ": " + [...res[key].map((val) => `<b>"${val}"</b>`)].join(", ")
+      );
    });
    return html;
 };
@@ -28,7 +30,6 @@ const loadAPI = (e) => {
    const api_name = e.innerText;
    const api = try_catalog.filter((api) => api.title === api_name)[0];
    const url = api.api_url;
-   const description = api.description;
    const options = getOptions(api.req_res);
 
    document.getElementById("status-badge").style.display = "none";
@@ -39,9 +40,25 @@ const loadAPI = (e) => {
 
    response_element.innerHTML = "Click Run to get a response";
    document.getElementById("api-title").innerText = api_name;
+   document
+      .getElementById("api-title")
+      .parentNode.setAttribute(
+         "href",
+         `/apis/${api_name.toLowerCase().replaceAll(" ", "-")}.html`
+      );
    document.getElementById("api-url").innerText = url;
-   document.getElementById("api-description").innerText = description;
    paramerter_options.innerHTML = options;
+
+   const all_btns = document.querySelectorAll("#try-out-apis li button");
+   all_btns.forEach((btn) => {
+      if (btn.innerText === api_name) {
+         btn.style.background = "#EBEBEB";
+      } else {
+         btn.style.background = "unset";
+      }
+   });
+
+   loadSampleRequestBody()
 };
 
 const try_btn = (category, text) =>
@@ -69,6 +86,9 @@ const showResponse = (data) => {
       line_numbers: { show: false },
       retractors: { space_from_left: "0px" },
       comments: { show: false },
+      colors:{
+         background: "#1a1a1a"
+      }
    });
    const response_element = document.getElementById("api-response");
    response_element.innerHTML = html;
