@@ -139,8 +139,7 @@ const handleRun = () => {
       document.getElementById("api-request-body").value || "{}"
    );
    let response = getResponse(api_request_body, api) || {
-      message: "For more functionality, Subscribe our APIs.",
-      process: "For subscription, Create SR on NOVA.",
+      message: "For full API access and functionality, request for API access on Nova.",
    };
 
    showResponse(response);

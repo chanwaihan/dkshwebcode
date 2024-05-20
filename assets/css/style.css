@@ -5624,3 +5624,7 @@ svg path{
   z-index: 9998;
   height: 50px;
 }
+
+.invisible {
+   display: none;
+}
