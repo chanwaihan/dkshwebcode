@@ -22,43 +22,27 @@
   <link rel="stylesheet" href="assets/css/animate.css">
   <!-- Nice select css -->
   <link rel="stylesheet" href="assets/css/nice-select.css">
+  <!-- DKSH Font -->
+  <link  rel='stylesheet' href='https://fonts.googleapis.com/css?family=Noto Sans'>
   <!-- Style css -->
   <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
-  <!-- Preloader area start -->
-  <div class="loading">
-    <span class="text-capitalize">L</span>
-    <span>o</span>
-    <span>a</span>
-    <span>d</span>
-    <span>i</span>
-    <span>n</span>
-    <span>g</span>
-  </div>
-  <div id="preloader">
-  </div>
-  <!-- Preloader area end -->
-
-  <!-- Mouse cursor area start here -->
-  <div class="mouse-cursor cursor-outer"></div>
-  <div class="mouse-cursor cursor-inner"></div>
-  <!-- Mouse cursor area end here -->
-
   <!-- Header area start here -->
   <header class="header-area">
     <div class="container header__container">
       <div class="header__main">
-        <a href="home.html" class="logo">
-          <img src="assets/images/logo/logo-light.svg" alt="logo">
+        <a href="#" class="logo">
+          <img src="assets/images/logo/logo-white.svg" id="logo-header" alt="logo">
         </a>
         <div class="main-menu">
           <nav>
             <ul>
               <!-- Home -->
               <li>
-                <a href="home.html">Home</a>
+                <a href="#">Home</a>
               </li>
               <!-- API Catalog -->
               <li>
@@ -66,7 +50,8 @@
               </li>
               <!-- Learn & Explore -->
               <li>
-                <a href="#0">Learn & Explore</a>
+                <a id="learn-explore" href="#0">Learn & Explore</a>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
                 <ul class="sub-menu">
                   <li>
                     <a href="try-out.html">Try Out</a>
@@ -86,9 +71,7 @@
             </ul>
           </nav>
         </div>
-        <div class="d-none d-lg-inline-block">
-          <a href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank" class="btn-one">Get Access <i class="fa-regular fa-arrow-right-long"></i></a>
-        </div>
+        <a id="get-access" href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank" class="btn-one">Get Access <i class="fa-regular fa-arrow-right-long"></i></a>
         <div class="bars d-block d-lg-none">
           <i id="openButton" class="fa-solid fa-bars"></i>
         </div>
@@ -100,19 +83,19 @@
   <!-- Sidebar area start here -->
   <div id="targetElement" class="sidebar-area sidebar__hide">
     <div class="sidebar__overlay"></div>
-    <a href="home.html" class="logo mb-40">
-      <img src="assets/images/logo/logo.svg" alt="logo">
+    <a href="#" class="logo mb-40">
+      <img src="assets/images/logo/logo-white.svg" alt="logo">
     </a>
     <div class="mobile-menu overflow-hidden"></div>
     <ul class="info pt-40">
       <li>
-        <i class="fa-solid primary-color fa-user-circle"></i> <a href="#0">Grp TD SAP API</a>
+        <i class="fa-solid primary-color fa-user-circle"></i> <a href="https://nova.dksh.com/a/catalog/request-items/120" target=_blank">Grp TD SAP API</a>
       </li>
       <li class="py-2">
         <i class="fa-solid primary-color fa-envelope"></i> <a href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a>
       </li>
       <li>
-        <i class="fa-solid primary-color fa-location-arrow"></i> <a href="#0">DKSH CSSC</a>
+        <i class="fa-solid primary-color fa-location-arrow"></i> <a href="https://maps.app.goo.gl/T8qZSqXfGyPe1j1y5" target="_blank">DKSH CSSC</a>
       </li>
     </ul>
     <div class="social-icon mt-20">
@@ -137,227 +120,516 @@
   <main>
     <!-- Banner area start here -->
     <div class="banner-three-area">
-      <div class="banner-three__bg">
-        <img class="sway_Y__animation" src="assets/images/bg/banner-three-bg.png" alt="bg-image">
-      </div>
-      <div class="banner-three__shape-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-        <img class="sway_Y__animationY" src="assets/images/banner/banner-three-left-shape.png" alt="shapes">
-      </div>
-      <div class="banner-three__shape-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-        <img class="sway__animationX" src="assets/images/banner/banner-three-right-shape.png" alt="image">
-      </div>
       <div class="banner-three__container">
-        <div class="row align-items-center">
-          <h2 class="mb-20">
-            Seamless Integration, Infinite Possibilities
-          </h2>
-          <div class="banner-two__line-left" data-animation="slideInLeft" data-duration="3s" data-delay=".3s">
-            <img src="assets/images/banner/banner-two-left-line.png" alt="shape">
+          <div class="row align-items-center">
+              <div id="about-left" class="col-lg-7 order-2 order-lg-1">
+                  <div class="banner-three__content pt-0 pb-0">
+                      <h4 class="wow fadeInUp mb-20" data-wow-delay="100ms" data-wow-duration="1500ms">
+                          DKSH API Catalog
+                      </h4>
+                      <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                          Seamless Integration,<br>Infinite Possibilities
+                      </h2>
+                      <p class="wow fadeInUp mt-20" id="about-p" data-wow-delay="400ms" data-wow-duration="1500ms">
+                        Discover our directory of APIs for seamless integration between your apps and SAP.
+                        Simplify integration and unlock new possibilities with our extensive catalog of APIs.
+                      </p>
+                      <p class="wow fadeInUp mt-20" id="about-p" data-wow-delay="400ms" data-wow-duration="1500ms">
+                        Watch this video to learn more about APIs, or click below to begin exploring our catalog.
+                      </p>
+                      <div class="banner-three__info wow fadeInUp mt-50" data-wow-delay="600ms"
+                          data-wow-duration="1500ms">
+                          <a class="wow fadeInUp btn-one mt-0" data-delay="1s" href="api-catalog.html">Explore
+                              Now <i class="fa-regular fa-arrow-right-long"></i></a>
+                          </div>
+                  </div>
+              </div>
+              <div id="about-right" class="col-lg-5 order-1 order-lg-2 wow fadeInLeft" data-wow-delay="200ms"
+                  data-wow-duration="1500ms">
+                  <div id="home-video-container" class="container pl-20">
+                    <video id="home-video" autoplay muted controls>
+                      <source src="assets/video/home-video.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+              </div>
           </div>
-          <div>
-            <div class="banner-two__shape2" data-animation="slideInRight" data-duration="2s" data-delay=".3s">
-              <img src="assets/images/banner/banner-two-solid-right-down.png" alt="shape">
-            </div>
-            <div class="banner-two__shape1" data-animation="slideInRight" data-duration="2s" data-delay=".5s">
-              <img src="assets/images/banner/banner-two-solid-right-up.png" alt="shape">
-            </div>
-          </div>
-          <div class="banner-two__right-shape wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <img class="sway_Y__animation" src="assets/images/banner/banner-two-right-shape.png" alt="shape">
-          </div>
-          <div>
-
-            <div class="banner-two__circle-solid">
-              <img class="animation__rotate" src="assets/images/banner/banner-two-circle-solid.png" alt="shapes">
-            </div>
-            <div class="banner-two__circle-regular">
-              <img class="animation__rotateY" src="assets/images/banner/banner-two-circle-regular.png" alt="shapes">
-            </div>
-          </div>
-          <video id="home-video" controls autoplay muted>
-            <source src="assets/video/home-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="col-lg-7 order-2 order-lg-1">
-            <div class="banner-three__content pt-0 pb-0"></div>
-          </div>
-          <div class="col-lg-5 order-1 order-lg-2 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-          </div>
-        </div>
-
       </div>
-      <div class="brand__wrp">
-        <div class="container">
-          <div class="swiper brand__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="brand__image image">
-                  <img src="assets/images/brand/gigamed-logo.png" alt="gigamed" title="Gigamed">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="brand__image image">
-                  <img src="assets/images/brand/quqo-logo.png" alt="quqo" tite="Quqo">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="brand__image image">
-                  <img src="assets/images/brand/maurice-lacroix-logo.png" alt="maurice-lacroix" title="Maurice Lacroix">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="brand__image image">
-                  <img src="assets/images/brand/psphere-logo.png" alt="psphere" title="PSPhere">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="brand__image image">
-                  <img src="assets/images/brand/salesforce-logo.png" alt="salesforce" title="salesforce">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="brand__image image">
-                  <img src="assets/images/brand/uipath-logo.png" alt="uipath" title="uipath">
-                </div>
-              </div>
+  </div>
+  <!-- Banner area end here -->
+
+  <!-- Brand logo area start here -->
+  <div class="brand__wrp">
+    <div class="container">
+      <div class="swiper brand__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="brand__image image">
+              <img src="assets/images/brand/gigamed-logo.png" alt="gigamed" title="Gigamed">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand__image image">
+              <img src="assets/images/brand/quqo-logo.png" alt="quqo" tite="Quqo">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand__image image">
+              <img src="assets/images/brand/maurice-lacroix-logo.png" alt="maurice-lacroix" title="Maurice Lacroix">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand__image image">
+              <img src="assets/images/brand/psphere-logo.png" alt="psphere" title="PSPhere">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand__image image">
+              <img src="assets/images/brand/salesforce-logo.png" alt="salesforce" title="salesforce">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand__image image">
+              <img src="assets/images/brand/uipath-logo.png" alt="uipath" title="uipath">
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Banner area end here -->
+  </div>
+  <!-- Brand logo area end here -->
+
+  <!-- Service area start here -->
+  <section class="service-two-area secondary-bg pt-50 pb-60">
+    <div class="container">
+        <div class="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-60">
+            <div class="section-header">
+                <h4 id="home-h4" class="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    How our Solutions Deliver</h4>
+            </div>
+            <div class="arry-btn  d-flex gap-3 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <button class="arry-prev service__arry-prev"><i class="fa-light fa-chevron-left"></i></button>
+                <button class="arry-next service__arry-next"><i
+                        class="fa-light fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="swiper service-two__slider">
+            <div class="swiper-wrapper">
+                <!-- Case Study 1 -->
+                <div class="swiper-slide">
+                  <a href="case-study-1.html">
+                    <div class="service-two__item">
+                      <div class="image case-study-image">
+                        <img src="assets/images/service/service-image1.jpg" alt="image">
+                      </div>
+                      <div class="service-two__content">
+                        <h6 class="home-case-study-h6">Case Study 1</h6>
+                        <p>Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac
+                          iaculis.</p>
+                        <p class="read-more-btn">Read More <i
+                          class="fa-regular fa-arrow-right-long"></i></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Case Study 2 -->
+                <div class="swiper-slide">
+                  <a href="case-study-2.html">
+                    <div class="service-two__item">
+                      <div class="image case-study-image">
+                        <img src="assets/images/service/service-image2.jpg" alt="image">
+                      </div>
+                      <div class="service-two__content">
+                        <h6 class="home-case-study-h6">Case Study 2</h6>
+                        <p>Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac
+                          iaculis.</p>
+                        <p class="read-more-btn">Read More <i
+                          class="fa-regular fa-arrow-right-long"></i></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Case Study 3 -->
+                <div class="swiper-slide">
+                  <a href="case-study-3.html">
+                    <div class="service-two__item">
+                      <div class="image case-study-image">
+                        <img src="assets/images/service/service-image3.jpg" alt="image">
+                      </div>
+                      <div class="service-two__content">
+                        <h6 class="home-case-study-h6">Case Study 3</h6>
+                        <p>Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac
+                          iaculis.</p>
+                        <p class="read-more-btn">Read More <i
+                          class="fa-regular fa-arrow-right-long"></i></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Case Study 4 -->
+                <div class="swiper-slide">
+                  <a href="case-study-4.html">
+                    <div class="service-two__item">
+                      <div class="image case-study-image">
+                        <img src="assets/images/service/service-image4.jpg" alt="image">
+                      </div>
+                      <div class="service-two__content">
+                        <h6 class="home-case-study-h6">Case Study 4</h6>
+                        <p>Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac
+                          iaculis.</p>
+                        <p class="read-more-btn">Read More <i
+                          class="fa-regular fa-arrow-right-long"></i></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Case Study 5 -->
+                <div class="swiper-slide">
+                  <a href="case-study-5.html">
+                    <div class="service-two__item">
+                      <div class="image case-study-image">
+                        <img src="assets/images/service/service-image5.jpg" alt="image">
+                      </div>
+                      <div class="service-two__content">
+                        <h6 class="home-case-study-h6">Case Study 5</h6>
+                        <p>Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac
+                          iaculis.</p>
+                        <p class="read-more-btn">Read More <i
+                          class="fa-regular fa-arrow-right-long"></i></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Case Study 6 -->
+                <div class="swiper-slide">
+                  <a href="case-study-6.html">
+                    <div class="service-two__item">
+                      <div class="image case-study-image">
+                        <img src="assets/images/service/service-image6.jpg" alt="image">
+                      </div>
+                      <div class="service-two__content">
+                        <h6 class="home-case-study-h6">Case Study 6</h6>
+                        <p>Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac
+                          iaculis.</p>
+                        <p class="read-more-btn">Read More <i
+                          class="fa-regular fa-arrow-right-long"></i></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Service area end here -->
 
     <!-- Testimonial area start here -->
-    <section class="testimonial-two-area pb-120">
+    <section class="testimonial-two-area pt-50 pb-60">
       <div class="container">
         <div class="section-header text-center mb-40">
-          <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-            <svg class="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.75" y="0.75" width="18.5" height="10.5" rx="5.25" stroke="#3C72FC" stroke-width="1.5" />
-              <mask id="path-2-inside-1_869_295" fill="white">
-                <path
-                  d="M3 6C3 3.79086 4.79086 2 7 2H13C15.2091 2 17 3.79086 17 6C17 8.20914 15.2091 10 13 10H7C4.79086 10 3 8.20914 3 6Z" />
-              </mask>
-              <path
-                d="M3 6C3 2.96243 5.46243 0.5 8.5 0.5H11.5C14.5376 0.5 17 2.96243 17 6C17 4.61929 15.2091 3.5 13 3.5H7C4.79086 3.5 3 4.61929 3 6ZM17 6C17 9.03757 14.5376 11.5 11.5 11.5H8.5C5.46243 11.5 3 9.03757 3 6C3 7.38071 4.79086 8.5 7 8.5H13C15.2091 8.5 17 7.38071 17 6ZM3 10V2V10ZM17 2V10V2Z"
-                fill="#3C72FC" mask="url(#path-2-inside-1_869_295)" />
-            </svg>
-            Testimonials
-          </h5>
-          <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">What Our
-            Users Say
-            About Us
-          </h2>
+          <h4 id="home-h4" class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">What Our Users Say About Us</h4>
         </div>
         <div class="swiper testimonial-two__slider">
           <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
             <div class="swiper-slide">
               <div class="testimonial-two__item">
-                <div class="star mb-10">
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star disable"></i>
-                </div>
-                <p class="mb-30">“ I love APIs.<br>
-                  Wow amazing! ”</p>
+                <p class="mb-30">“The API played a critical role in launching our ecommerce mobile app by streamlining the process of getting data from multiple sources.”</p>
                 <div class="d-flex align-items-center gap-3">
-                  <img src="assets/images/testimonial/testimonial-two-image1.png" alt="Shane Chan" title="Shane Chan"
-                    width="78px" height="78px">
+                  <!-- <img src="assets/images/testimonial/testimonial-two-image1.png" alt="Khanh HoPhi Pham" title="Khanh HoPhi Pham"
+                    width="78px" height="78px"> -->
                   <div class="con">
-                    <h4>Shane Chan</h4>
-                    <span>Management Associate</span>
+                    <h6>Khanh HoPhi Pham</h6>
+                    <span>Manager</span>
                   </div>
                 </div>
-                <svg class="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
+                <!-- <svg class="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z" fill="#3C72FC" />
-                </svg>
+                </svg> -->
+                <div class="testimonial-logo-container">
+                  <img class="testimonial-logo" height="37" src="assets/images/service/gigamed-logo.png">
+                </div>
               </div>
             </div>
+            <!-- Testimonial 2 -->
             <div class="swiper-slide">
               <div class="testimonial-two__item">
-                <div class="star mb-10">
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star disable"></i>
-                </div>
-                <p class="mb-30">“ API is amazing!<br>
-                  Cool beans! ”</p>
+                <p class="mb-30">“The API is top notch. It helps in eliminating non-value-added manual tasks, automates data flow, and enables us to meet our time-to-market expectations”</p>
                 <div class="d-flex align-items-center gap-3">
-                  <img src="assets/images/testimonial/testimonial-two-image2.png" alt="Andrea Joe" title="Andrea Joe"
-                    width="78px" height="78px">
                   <div class="con">
-                    <h4>Andrea Joe</h4>
-                    <span>HTML Pro</span>
+                    <h6>PIC TBC</h6>
+                    <span>PIC TBC</span>
                   </div>
                 </div>
-                <svg class="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
+                <!-- <svg class="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z" fill="#3C72FC" />
-                </svg>
+                </svg> -->
+                <div class="testimonial-logo-container">
+                  <img class="testimonial-logo" height="37" src="assets/images/service/quqo-logo.png">
+                </div>
               </div>
             </div>
+            <!-- Testimonial 3 -->
             <div class="swiper-slide">
               <div class="testimonial-two__item">
-                <div class="star mb-10">
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star"></i>
-                  <i class="fa-sharp fa-solid fa-star disable"></i>
-                </div>
-                <p class="mb-30">“ API is love. API is life.<br>
-                  API!!! ”</p>
+                <p class="mb-30">“The use of APIs to centralize SAP data for different applications has reduced our operational complexity in data management”</p>
                 <div class="d-flex align-items-center gap-3">
-                  <img src="assets/images/testimonial/testimonial-two-image3.png" alt="Jakku Jacob" title="Jakku Jacob"
-                    width="78px" height="78px">
                   <div class="con">
-                    <h4>Jakku Jacob</h4>
-                    <span>Legendary Senior</span>
+                    <h6>PIC TBC</h6>
+                    <span>PIC TBC</span>
                   </div>
                 </div>
-                <svg class="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
+                <!-- <svg class="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z" fill="#3C72FC" />
-                </svg>
+                </svg> -->
+                <div class="testimonial-logo-container">
+                  <img class="testimonial-logo" height="37" src="assets/images/service/maurice-lacroix-logo.png">
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-two__item">
+                <p class="mb-30">“After using the API for a year, we saw 300% increase in quotations sent to customers, and our employees became more productive”</p>
+                <div class="d-flex align-items-center gap-3">
+                  <div class="con">
+                    <h6>Wei Ken Wooi</h6>
+                    <span>Senior Manager</span>
+                  </div>
+                </div>
+                <!-- <svg class="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z" fill="#3C72FC" />
+                </svg> -->
+                <div class="testimonial-logo-container">
+                  <img class="testimonial-logo" height="50" src="assets/images/service/salesforce-logo.png">
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-two__item">
+                <p class="mb-30">“Thanks to the API, our back-office tasks are now automated, reducing the time needed for data retrieval between applications.”</p>
+                <div class="d-flex align-items-center gap-3">
+                  <div class="con">
+                    <h6>Hong Chen Yeap</h6>
+                    <span>Senior Manager</span>
+                  </div>
+                </div>
+                <!-- <svg class="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z" fill="#3C72FC" />
+                </svg> -->
+                <div class="testimonial-logo-container">
+                  <img class="testimonial-logo" height="60" src="assets/images/service/uipath-logo.png">
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-center mt-40">
+        <div class="mt-40 text-center wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
           <div class="dot testimonial__dot"></div>
         </div>
       </div>
     </section>
     <!-- Testimonial area end here -->
+
+    <!-- Quote area start here -->
+    <section class="quote-area">
+      <div class="container">
+          <div class="quote__wrp blue-bg">
+              <div class="d-flex flex-wrap gap-4 align-items-center justify-content-between">
+                  <div class="section-header">
+                      <h6 class="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Discover new possibilities</h6>
+                      <h4 class="wow fadeInLeft mt-20" data-wow-delay="200ms" data-wow-duration="1500ms">Try Out Our APIs Now</h4>
+                  </div>
+                  <a href="try-out.html" class="btn-one wow fadeInUp" data-wow-delay="200ms"
+                      data-wow-duration="1500ms">Try Now<i class="fa-regular fa-arrow-right-long"></i></a>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- Quote area end here -->
+
+    <!-- Process area start here -->
+    <section class="process-area pt-175 pb-50">
+      <div class="container">
+          <div class="section-header text-center mb-60">
+              <h4 id="home-h4" class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Get Started Today</h4>
+          </div>
+          <div class="row g-4">
+              <div class="col-lg-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                  <div class="process__item mb-100">
+                      <div class="process__image">
+                          <img src="assets/images/process/process-image1.png" alt="image">
+                          <span class="process-number">1</span>
+                      </div>
+                      <div class="process__content">
+                          <h6 class="mt-25 mb-10">
+                              Get Access
+                          </h6>
+                          <p>Click on the Get Access button to request for access via IGA.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                  <div class="process__item mb-100">
+                      <div class="process__image">
+                          <img src="assets/images/process/process-image2.png" alt="image">
+                          <span class="process-number">2</span>
+                      </div>
+                      <div class="process__content">
+                          <h6 class="mt-25 mb-10">
+                              Talk to Us
+                          </h6>
+                          <p>Define your requirements with us.<br>
+                            We'll schedule the meeting.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                  <div class="process__item mb-100">
+                      <div class="process__image">
+                          <img src="assets/images/process/process-image3.png" alt="image">
+                          <span class="process-number">3</span>
+                      </div>
+                      <div class="process__content">
+                          <h6 class="mt-25 mb-10">
+                              Start Building
+                          </h6>
+                          <p>Seamlessly integrate your apps with SAP using our APIs.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- Process area end here -->
+
+    <!-- Faq area start here -->
+    <section class="faq-area blue-bg pt-75 pb-75">
+      <div class="container">
+          <div class="row g-4">
+              <div class="col-lg-5 pe-2 pe-lg-5">
+                  <div class="faq__image image wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                      <img src="assets/images/faq/faq-image.png" alt="image">
+                  </div>
+              </div>
+              <div class="col-lg-7 mt-60">
+                  <div class="section-header mb-40">
+                      <h4 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Commonly Asked Questions</h4>
+                  </div>
+                  <div class="faq__item">
+                      <div class="accordion" id="accordionExample">
+                          <div class="accordion-item wow fadeInDown shadow border-none" data-wow-delay="00ms"
+                              data-wow-duration="1500ms">
+                              <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                      data-bs-target="#collapseOne" aria-expanded="true"
+                                      aria-controls="collapseOne">
+                                      Where should I incorporate my business?
+                                  </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show"
+                                  aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      <p>It is a long established fact that a reader be distracted by
+                                          the readable content of a page when looking a its layout.
+                                          Many desktop publishing packages and web page editors now use Lorem
+                                          Ipsum
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="accordion-item wow fadeInDown shadow border-none" data-wow-delay="200ms"
+                              data-wow-duration="1500ms">
+                              <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button"
+                                      data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                      aria-expanded="false" aria-controls="collapseTwo">
+                                      What happens my free trial?
+                                  </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse"
+                                  aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      <p>It is a long established fact that a reader be distracted by
+                                          the readable content of a page when looking a its layout.
+                                          Many desktop publishing packages and web page editors now use Lorem
+                                          Ipsum
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="accordion-item wow fadeInDown shadow border-none" data-wow-delay="400ms"
+                              data-wow-duration="1500ms">
+                              <h2 class="accordion-header" id="headingthree">
+                                  <button class="accordion-button collapsed" type="button"
+                                      data-bs-toggle="collapse" data-bs-target="#collapsethree"
+                                      aria-expanded="false" aria-controls="collapsethree">
+                                      What is included in your services?
+                                  </button>
+                              </h2>
+                              <div id="collapsethree" class="accordion-collapse collapse"
+                                  aria-labelledby="headingthree" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      <p>It is a long established fact that a reader be distracted by
+                                          the readable content of a page when looking a its layout.
+                                          Many desktop publishing packages and web page editors now use Lorem
+                                          Ipsum
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="accordion-item wow fadeInDown shadow border-none" data-wow-delay="600ms"
+                              data-wow-duration="1500ms">
+                              <h2 class="accordion-header" id="headingFour">
+                                  <button class="accordion-button collapsed" type="button"
+                                      data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                      aria-expanded="false" aria-controls="collapseFour">
+                                      What type of company is measured?
+                                  </button>
+                              </h2>
+                              <div id="collapseFour" class="accordion-collapse collapse"
+                                  aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                      <p>It is a long established fact that a reader be distracted by
+                                          the readable content of a page when looking a its layout.
+                                          Many desktop publishing packages and web page editors now use Lorem
+                                          Ipsum
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Faq area end here -->
+
+  <!-- CTA area start here -->
+    <div class="container pt-50 pb-50">
+      <div class="text-center">
+        <h4 id="home-h4" class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Start Building Today</h4>
+        <a href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank" class="btn-one wow fadeInUp mt-50" data-wow-delay="200ms"
+          data-wow-duration="1500ms">Get Access<i class="fa-regular fa-arrow-right-long"></i></a>
+      </div>
+    </div>
+    <!-- CTA area end here -->
   </main>
 
   <!-- Footer area start here -->
   <footer class="footer-area secondary-bg">
-    <div class="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-      <img src="assets/images/shape/footer-regular-left.png" alt="shape">
-    </div>
-    <div class="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-      <img class="sway_Y__animation" src="assets/images/shape/footer-solid-left.png" alt="shape">
-    </div>
-    <div class="footer__shape-solid-right wow slideInRight" data-wow-delay="00ms" data-wow-duration="1500ms">
-      <img class="sway_Y__animation" src="assets/images/shape/footer-regular-right.png" alt="shape">
-    </div>
-    <div class="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-      <img src="assets/images/shape/footer-solid-right.png" alt="shape">
-    </div>
-    <div class="footer__shadow-shape">
-      <img src="assets/images/shape/footer-shadow-shape.png" alt="shadow">
-    </div>
-    <div class="container">
-      <div class="footer__wrp pt-100 pb-100">
+    <div class="container" id="footer-container">
+      <div class="footer__wrp pt-75 pb-75">
         <div class="footer__item item-big wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-          <a href="home.html" class="logo mb-30">
-            <img src="assets/images/logo/logo.svg" alt="image">
+          <a href="#" class="logo mb-30">
+            <img src="assets/images/logo/logo-white.svg" alt="image">
           </a>
           <p>Delivering Growth – in Asia and Beyond.<br>
             © DKSH Holding Ltd.</p>
@@ -378,7 +650,7 @@
           </div>
         </div>
         <div class="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <h3 class="footer-title">Quick Links</h3>
+          <h6 class="footer-title">Quick Links</h6>
           <ul>
             <li><a href="api-catalog.html"><i class="fa-regular fa-angles-right me-1"></i> API Catalog</a></li>
             <li><a href="api-analytics.html"><i class="fa-regular fa-angles-right me-1"></i> API Analytics</a></li>
@@ -386,7 +658,7 @@
           </ul>
         </div>
         <div class="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-          <h3 class="footer-title">Learn & Explore</h3>
+          <h6 class="footer-title">Learn & Explore</h6>
           <ul>
             <li><a href="try-out.html"><i class="fa-regular fa-angles-right me-1"></i> Try Out</a></li>
             <li><a href="tutorials.html"><i class="fa-regular fa-angles-right me-1"></i> Tutorials</a></li>
@@ -394,27 +666,27 @@
           </ul>
         </div>
         <div class="footer__item item-big wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-          <h3 class="footer-title">Contact Us</h3>
+          <h6 class="footer-title">Contact Us</h6>
           <ul class="footer-contact">
             <li>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
               <div class="info">
-                <h5>Group:</h5>
-                <p>Grp TD SAP API</p>
+                <h6 class="footer-info-title">Group:</h6>
+                <p><a href="https://nova.dksh.com/a/catalog/request-items/120" target=_blank">Grp TD SAP API</a></p>
               </div>
             </li>
             <li>
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <div class="info">
-                <h5>Email:</h5>
+                <h6 class="footer-info-title">Email:</h6>
                 <p><a href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a></p>
               </div>
             </li>
             <li>
               <i class="fa fa-location-arrow" aria-hidden="true"></i>
               <div class="info">
-                <h5>Location:</h5>
-                <p>DKSH CSSC</p>
+                <h6 class="footer-info-title">Location:</h6>
+                <p><a href="https://maps.app.goo.gl/T8qZSqXfGyPe1j1y5" target="_blank">DKSH CSSC</a></p>
               </div>
             </li>
           </ul>
@@ -425,8 +697,8 @@
   <!-- Footer area end here -->
 
   <!-- Back to top area start here -->
-  <div class="scroll-up">
-    <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+  <div class="scroll-up invisible">
+    <svg>
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,266 +24,275 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!-- Style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-    <style>
-      .dashboard-title {
-        text-align: center;
-      }
-      
-      .dashboard-container {
-        width: 1280px; /* Adjust width as needed */
-        height: 720px; /* Adjust height as needed */
-        margin: 0 auto; /* Center the container horizontally */
-        display: flex; /* Use flexbox for centering */
-        justify-content: center; /* Center content horizontally */
-        align-items: center; /* Center content vertically */
-      }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-  </head>
+<body>
 
-  <body>
     <!-- Preloader area start -->
     <div class="loading">
-      <span class="text-capitalize">L</span>
-      <span>o</span>
-      <span>a</span>
-      <span>d</span>
-      <span>i</span>
-      <span>n</span>
-      <span>g</span>
+        <span class="text-capitalize">L</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
     </div>
     <div id="preloader">
     </div>
     <!-- Preloader area end -->
 
     <!-- Mouse cursor area start here -->
-    <div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
+    <!-- <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div> -->
     <!-- Mouse cursor area end here -->
 
-    <!-- Header area start here -->
-    <header class="header-area">
-      <div class="container header__container">
-        <div class="header__main">
-          <a href="home.html" class="logo">
-            <img src="assets/images/logo/logo-light.svg" alt="logo">
-          </a>
-          <div class="main-menu">
-            <nav>
-              <ul>
-                <!-- Home -->
-                <li>
-                  <a href="home.html">Home</a>
-                </li>
-                <!-- Explore APIs -->
-                <li>
-                  <a href="#0">Explore APIs</a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="api-catalog.html">API Catalog</a>
-                    </li>
-                    <li>
-                      <a href="try-out.html">Try Out</a>
-                    </li>
-                    <li>
-                      <a href="tutorials.html">Tutorials</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- Use Cases -->
-                <li>
-                  <a href="use-cases.html">Use Cases</a>
-                </li>
-                <!-- API Analytics -->
-                <li>
-                  <a href="api-analytics.html">API Analytics</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="d-none d-lg-inline-block">
-            <a href="get-access.html" class="btn-one">Get Access <i class="fa-regular fa-arrow-right-long"></i></a>
-          </div>
-          <div class="bars d-block d-lg-none">
-            <i id="openButton" class="fa-solid fa-bars"></i>
-          </div>
+  <!-- Header area start here -->
+  <header class="header-area">
+    <div class="container header__container">
+      <div class="header__main">
+        <a href="home.html" class="logo">
+          <img src="assets/images/logo/logo-light.svg" alt="logo">
+        </a>
+        <div class="main-menu">
+          <nav>
+            <ul>
+              <!-- Home -->
+              <li>
+                <a href="home.html">Home</a>
+              </li>
+              <!-- API Catalog -->
+              <li>
+                <a href="api-catalog.html">API Catalog</a>
+              </li>
+              <!-- Learn & Explore -->
+              <li>
+                <a href="#0">Learn & Explore</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="try-out.html">Try Out</a>
+                  </li>
+                  <li>
+                    <a href="tutorials.html">Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="case-studies.html">Case Studies</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- API Analytics -->
+              <li>
+                <a href="api-analytics.html">API Analytics</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="d-none d-lg-inline-block">
+          <a href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank" class="btn-one">Get Access <i class="fa-regular fa-arrow-right-long"></i></a>
+        </div>
+        <div class="bars d-block d-lg-none">
+          <i id="openButton" class="fa-solid fa-bars"></i>
         </div>
       </div>
-    </header>
-    <!-- Header area end here -->
-
-    <!-- Sidebar area start here -->
-    <div id="targetElement" class="sidebar-area sidebar__hide">
-      <div class="sidebar__overlay"></div>
-      <a href="home.html" class="logo mb-40">
-        <img src="assets/images/logo/logo.svg" alt="logo">
-      </a>
-      <div class="mobile-menu overflow-hidden"></div>
-      <ul class="info pt-40">
-        <li>
-          <i class="fa-solid primary-color fa-location-dot"></i> <a href="#0">Level 8, Menara KEN TTDI, 37, Jalan Burhanuddin Helmi, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</a>
-        </li>
-        <li class="py-2">
-          <i class="fa-solid primary-color fa-phone-volume"></i> <a href="tel:03-9212 5222">03-9212 5222</a>
-        </li>
-        <li>
-          <i class="fa-solid primary-color fa-paper-plane"></i> <a href="#0">https://www.dksh.com/my-en/home</a>
-        </li>
-      </ul>
-      <div class="social-icon mt-20">
-        <a title="Follow on LinkedIn" href="http://www.linkedin.com/company/dksh" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a title="Follow on Facebook" href="http://www.facebook.com/dkshgroup" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-        <a title="Follow on Twitter" href="http://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=dkshgroup" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        <a title="Follow on YouTube" href="http://www.youtube.com/user/DKSHGroup?sub_confirmation=1" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <a title="Follow on Instagram" href="https://www.instagram.com/dksh.group/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a title="Follow on TikTok" href="https://www.tiktok.com/@dkshgroup" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-      </div>
-      <button id="closeButton" class="text-white"><i class="fa-solid fa-xmark"></i></button>
     </div>
-    <!-- Sidebar area end here -->
+  </header>
+  <!-- Header area end here -->
 
-    <!-- Dashboard area end here -->
-    <h1 class="dashboard-title">Power BI Dashboard</h1>
-    <iframe title="QuotaDashboard2024" width="1140" height="541.25" src="
-https://app.powerbi.com/reportEmbed?reportId=637d3792-0b41-491a-bca2-3e1197cec621&autoAuth=true&ctid=fe9c4641-3b53-43d0-af72-8f3e64d3aa05"
-frameborder="0" allowFullScreen="true"></iframe>
-    <!-- <div class="dashboard-container">
-      <canvas id="myChart"></canvas>
+  <!-- Sidebar area start here -->
+  <div id="targetElement" class="sidebar-area sidebar__hide">
+    <div class="sidebar__overlay"></div>
+    <a href="home.html" class="logo mb-40">
+      <img src="assets/images/logo/logo.svg" alt="logo">
+    </a>
+    <div class="mobile-menu overflow-hidden"></div>
+    <ul class="info pt-40">
+      <li>
+        <i class="fa-solid primary-color fa-user-circle"></i> <a href="#0">Grp TD SAP API</a>
+      </li>
+      <li class="py-2">
+        <i class="fa-solid primary-color fa-envelope"></i> <a href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a>
+      </li>
+      <li>
+        <i class="fa-solid primary-color fa-location-arrow"></i> <a href="#0">DKSH CSSC</a>
+      </li>
+    </ul>
+    <div class="social-icon mt-20">
+      <a title="Follow on LinkedIn" href="http://www.linkedin.com/company/dksh" target="_blank"><i
+          class="fa-brands fa-linkedin-in"></i></a>
+      <a title="Follow on Facebook" href="http://www.facebook.com/dkshgroup" target="_blank"><i
+          class="fa-brands fa-facebook-f"></i></a>
+      <a title="Follow on Twitter"
+        href="http://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=dkshgroup" target="_blank"><i
+          class="fa-brands fa-twitter"></i></a>
+      <a title="Follow on YouTube" href="http://www.youtube.com/user/DKSHGroup?sub_confirmation=1" target="_blank"><i
+          class="fa-brands fa-youtube"></i></a>
+      <a title="Follow on Instagram" href="https://www.instagram.com/dksh.group/" target="_blank"><i
+          class="fa-brands fa-instagram"></i></a>
+      <a title="Follow on TikTok" href="https://www.tiktok.com/@dkshgroup" target="_blank"><i
+          class="fa-brands fa-tiktok"></i></a>
     </div>
-    <script>
-      var ctx = document.getElementById('myChart').getContext('2d');
-      var myChart = new Chart(ctx, {
-        type: 'bar', // You can choose from various chart types (bar, line, pie, etc.)
-        data: {
-          labels: ['Data 1', 'Data 2', 'Data 3'],
-          datasets: [{
-            label: 'Sample Dataset',
-            data: [10, 20, 30],
-            backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true
-              }
-            }]
-          }
-        }
-      });
-    </script> -->
-    <!-- Dashboard area end here -->
+    <button id="closeButton" class="text-white"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <!-- Sidebar area end here -->
 
-    <!-- Footer area start here -->
-    <footer class="footer-area secondary-bg">
-      <div class="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-        <img src="assets/images/shape/footer-regular-left.png" alt="shape">
+  <main>
+    <!-- Page banner area start here -->
+    <section class="banner__inner-page bg-image pt-180 pb-180 bg-image"
+      data-background="assets/images/banner/banner-inner-page.jpg">
+      <div class="shape2 wow slideInLeft" id="banner_shape2" data-wow-delay="00ms" data-wow-duration="1500ms">
+        <img src="assets/images/banner/inner-banner-shape2.png" class="img2" alt="shape">
       </div>
-      <div class="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-        <img class="sway_Y__animation" src="assets/images/shape/footer-solid-left.png" alt="shape">
+      <div class="shape1 wow slideInLeft" id="banner_shape1" data-wow-delay="200ms" data-wow-duration="1500ms">
+        <img src="assets/images/banner/inner-banner-shape1.png" class="img1" alt="shape">
       </div>
-      <div class="footer__shape-solid-right wow slideInRight" data-wow-delay="00ms" data-wow-duration="1500ms">
-        <img class="sway_Y__animation" src="assets/images/shape/footer-regular-right.png" alt="shape">
-      </div>
-      <div class="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-        <img src="assets/images/shape/footer-solid-right.png" alt="shape">
-      </div>
-      <div class="footer__shadow-shape">
-        <img src="assets/images/shape/footer-shadow-shape.png" alt="shodow">
+      <div class="shape3 wow slideInRight" id="banner_shape3" data-wow-delay="200ms" data-wow-duration="1500ms">
+        <img class="sway__animationX" src="assets/images/banner/inner-banner-shape3.png" alt="shape">
       </div>
       <div class="container">
-        <div class="footer__wrp pt-100 pb-100">
-          <div class="footer__item item-big wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-            <a href="home.html" class="logo mb-30">
-              <img src="assets/images/logo/logo.svg" alt="image">
-            </a>
-            <p>Delivering Growth – in Asia and Beyond.<br>
-              © DKSH Holding Ltd.</p>
-            <div class="social-icon">
-              <a title="Follow on LinkedIn" href="http://www.linkedin.com/company/dksh" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a title="Follow on Facebook" href="http://www.facebook.com/dkshgroup" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-              <a title="Follow on Twitter" href="http://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=dkshgroup" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-              <a title="Follow on YouTube" href="http://www.youtube.com/user/DKSHGroup?sub_confirmation=1" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-              <a title="Follow on Instagram" href="https://www.instagram.com/dksh.group/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-              <a title="Follow on TikTok" href="https://www.tiktok.com/@dkshgroup" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-          </div>
-          <div class="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <h3 class="footer-title">Explore APIs</h3>
-            <ul>
-              <li><a href="service-details.html"><i class="fa-regular fa-angles-right me-1"></i> API Catalog</a></li>
-              <li><a href="try-out.html"><i class="fa-regular fa-angles-right me-1"></i> Try Out</a></li>
-              <li><a href="tutorials.html"><i class="fa-regular fa-angles-right me-1"></i> Tutorials</a></li>
-            </ul>
-          </div>
-          <div class="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-            <h3 class="footer-title">Quick Link</h3>
-            <ul>
-              <li><a href="use-cases.html"><i class="fa-regular fa-angles-right me-1"></i> Use Cases</a></li>
-              <li><a href="api-analytics.html"><i class="fa-regular fa-angles-right me-1"></i> API Analytics</a></li>
-              <li><a href="pricing.html"><i class="fa-regular fa-angles-right me-1"></i> Our Team</a></li>
-            </ul>
-          </div>
-          <div class="footer__item item-big wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-            <h3 class="footer-title">Contact Us</h3>
-            <p class="mb-20">Level 8, Menara KEN TTDI, 37, Jalan Burhanuddin Helmi, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
-            <ul class="footer-contact">
-              <li>
-                <i class="fa-regular fa-clock"></i>
-                <div class="info">
-                  <h5>Opening Hours:</h5>
-                  <p>Mon - Fri: 08:30 AM - 05:30 PM</p>
-                </div>
-              </li>
-              <li>
-                <i class="fa-duotone fa-phone"></i>
-                <div class="info">
-                  <h5>Phone:</h5>
-                  <p>03-9212 5222</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+        <h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">API Analytics</h2>
+        <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <a href="index.html">Home</a><span><i class="fa-regular fa-angles-right mx-2"></i></span><a href="api-analytics.html">API Analytics</a>
         </div>
       </div>
-    </footer>
-    <!-- Footer area end here -->
+    </section>
+    <!-- Page banner area end here -->
 
-    <!-- Back to top area start here -->
-    <div class="scroll-up">
-      <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-      </svg>
+    <!-- API Analytics area start here -->
+    <section class="case-single-area" id="api-analytics-area">
+        <div class="container">
+          <div class="case-single__item" id="api-analytics-frame">
+            <iframe class="api-analytics-iframe" title="API_summary" width="1800" height="700.25" src="
+https://app.powerbi.com/reportEmbed?reportId=755839ca-0b55-4032-ad5a-737715b06073&autoAuth=true&ctid=fe9c4641-3b53-43d0-af72-8f3e64d3aa05"
+frameborder="0" allowFullScreen="true"></iframe>
+            <!-- <iframe class="api-analytics-iframe" title="ApplicationSummary" width="1140" height="541.25" src="
+https://app.powerbi.com/reportEmbed?reportId=0f8e6ded-e5f0-44bb-90fa-fbbca3f4ccdb&autoAuth=true&ctid=fe9c4641-3b53-43d0-af72-8f3e64d3aa05"
+frameborder="0" allowFullScreen="true"></iframe> -->
+          </div>
+        </div>
+    </section>
+    <!-- API Analytics area end here -->
+  </main>
+
+  <!-- Footer area start here -->
+  <footer class="footer-area secondary-bg">
+    <div class="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+      <img src="assets/images/shape/footer-regular-left.png" alt="shape">
     </div>
-    <!-- Back to top area end here -->
+    <div class="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+      <img class="sway_Y__animation" src="assets/images/shape/footer-solid-left.png" alt="shape">
+    </div>
+    <div class="footer__shape-solid-right wow slideInRight" data-wow-delay="00ms" data-wow-duration="1500ms">
+      <img class="sway_Y__animation" src="assets/images/shape/footer-regular-right.png" alt="shape">
+    </div>
+    <div class="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+      <img src="assets/images/shape/footer-solid-right.png" alt="shape">
+    </div>
+    <div class="footer__shadow-shape">
+      <img src="assets/images/shape/footer-shadow-shape.png" alt="shadow">
+    </div>
+    <div class="container">
+      <div class="footer__wrp pt-100 pb-100">
+        <div class="footer__item item-big wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+          <a href="home.html" class="logo mb-30">
+            <img src="assets/images/logo/logo.svg" alt="image">
+          </a>
+          <p>Delivering Growth – in Asia and Beyond.<br>
+            © DKSH Holding Ltd.</p>
+          <div class="social-icon">
+            <a title="Follow on LinkedIn" href="http://www.linkedin.com/company/dksh" target="_blank"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a title="Follow on Facebook" href="http://www.facebook.com/dkshgroup" target="_blank"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a title="Follow on Twitter"
+              href="http://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=dkshgroup" target="_blank"><i
+                class="fa-brands fa-twitter"></i></a>
+            <a title="Follow on YouTube" href="http://www.youtube.com/user/DKSHGroup?sub_confirmation=1"
+              target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a title="Follow on Instagram" href="https://www.instagram.com/dksh.group/" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a title="Follow on TikTok" href="https://www.tiktok.com/@dkshgroup" target="_blank"><i
+                class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul>
+            <li><a href="api-catalog.html"><i class="fa-regular fa-angles-right me-1"></i> API Catalog</a></li>
+            <li><a href="api-analytics.html"><i class="fa-regular fa-angles-right me-1"></i> API Analytics</a></li>
+            <li><a href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank"><i class="fa-regular fa-angles-right me-1"></i> Get Access</a></li>
+          </ul>
+        </div>
+        <div class="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Learn & Explore</h3>
+          <ul>
+            <li><a href="try-out.html"><i class="fa-regular fa-angles-right me-1"></i> Try Out</a></li>
+            <li><a href="tutorials.html"><i class="fa-regular fa-angles-right me-1"></i> Tutorials</a></li>
+            <li><a href="case-studies.html"><i class="fa-regular fa-angles-right me-1"></i> Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer__item item-big wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <div class="info">
+                <h5>Group:</h5>
+                <p>Grp TD SAP API</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <div class="info">
+                <h5>Email:</h5>
+                <p><a href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a></p>
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-location-arrow" aria-hidden="true"></i>
+              <div class="info">
+                <h5>Location:</h5>
+                <p>DKSH CSSC</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer area end here -->
 
-    <!-- Jquery 3.7.0 Min Js -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap min Js -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Mean menu Js -->
-    <script src="assets/js/meanmenu.js"></script>
-    <!-- Swiper bundle min Js -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- Counterup min Js -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Wow min Js -->
-    <script src="assets/js/wow.min.js"></script>
-    <!-- Pace min Js -->
-    <script src="assets/js/pace.min.js"></script>
-    <!-- Magnific popup min Js -->
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <!-- Nice select min Js -->
-    <script src="assets/js/nice-select.min.js"></script>
-    <!-- Isotope pkgd min Js -->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!-- Waypoints Js -->
-    <script src="assets/js/jquery.waypoints.js"></script>
-    <!-- Script Js -->
-    <script src="assets/js/script.js"></script>
-    <!-- Try Out Js -->
-    <script src="assets/js/try-out.js"></script>
-  </body>
+  <!-- Back to top area start here -->
+  <div class="scroll-up">
+    <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Back to top area end here -->
+
+  <!-- Jquery 3.7.0 Min Js -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap min Js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Mean menu Js -->
+  <script src="assets/js/meanmenu.js"></script>
+  <!-- Swiper bundle min Js -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Counterup min Js -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <!-- Wow min Js -->
+  <script src="assets/js/wow.min.js"></script>
+  <!-- Pace min Js -->
+  <script src="assets/js/pace.min.js"></script>
+  <!-- Magnific popup min Js -->
+  <script src="assets/js/magnific-popup.min.js"></script>
+  <!-- Nice select min Js -->
+  <script src="assets/js/nice-select.min.js"></script>
+  <!-- Isotope pkgd min Js -->
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <!-- Waypoints Js -->
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <!-- Script Js -->
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
