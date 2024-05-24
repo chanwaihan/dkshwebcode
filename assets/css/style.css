@@ -3038,6 +3038,7 @@ button {
    /* border-top-left-radius: 50px;
    border-bottom-right-radius: 50px; */
    overflow: hidden;
+   position: relative;
 }
 .service-two__item:hover .icon {
    transform: rotateX(-360deg);
@@ -3976,7 +3977,7 @@ button {
    background-color: var(--white);
 }
 .process__image {
-   max-width: 178px;
+   /* max-width: 178px; */
    padding: 10px;
    margin: 0 auto;
    position: relative;
@@ -5131,29 +5132,8 @@ svg path{
 
 /* extras */
 
-
-#case-study-logo-uipath {
-  max-height: 100px; /* Set the maximum height */
-  width: auto;
-  display: flex; /* Use flexbox to align items */
-  justify-content: center; /* Horizontally center the items */
-  object-fit: contain; /* Maintain aspect ratio while fitting the image inside */
-  margin-top: -10px;
-  margin-bottom: -10px;
-}
-
 #case-study-details-logo {
   max-height: 50px;
-  width: auto;
-  display: flex; /* Use flexbox to align items */
-  justify-content: center; /* Horizontally center the items */
-  margin-top: -50px;
-  margin-bottom: 50px;
-  /* transition: transform 0.3s ease-in-out; */
-}
-
-#case-study-details-logo-uipath {
-  max-height: 120px;
   width: auto;
   display: flex; /* Use flexbox to align items */
   justify-content: center; /* Horizontally center the items */
@@ -5283,12 +5263,6 @@ svg path{
   transition: transform 0.5s ease-in-out; /* Smooth transition on hover */
 }
 
-/* #case-study-details-logo:hover,
-#case-study-details-logo-uipath:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
-} */
-
 .tutorial-image-container:hover img {
   cursor: pointer;
   transform: scale(1.1); /* Increase size by 5% */
@@ -5376,6 +5350,7 @@ svg path{
 
 #about-p {
   color: var(--black);
+  font-size: 18px;
 }
 
 #about-left {
@@ -5469,4 +5444,22 @@ svg path{
 .home-case-study-h6 {
   font-size: 20px;
   padding-top: 20px;
+}
+
+.case-study-tag {
+  position: absolute;
+  top: 30px;
+  margin-left: 0px;
+  background-color: var(--active-red);
+  color: var(--white);
+  z-index: 1;
+  padding: 5px 10px;
+}
+
+.faq-a {
+  color: var(--active-red);
+}
+
+.faq-a:hover {
+  color: var(--primary-color);
 }
