@@ -8,6 +8,13 @@ const getCatalog = async () => {
 
 const option = (value) => `<option value="${value}">${value}</option>`;
 
+const json_options = {
+   colors: { background: "#1a1a1a" },
+   comments: {
+      show: false
+   }
+};
+
 const displayRequestExample = async (api_name, option) => {
    const api = catalogue.filter((item) => item.title === api_name)[0];
    const request = api.request_body.filter((body) => body.name === option)[0];
@@ -15,7 +22,7 @@ const displayRequestExample = async (api_name, option) => {
    const response = request.response;
 
    const request_panel = document.getElementById("request-body-example");
-   request_panel.innerHTML = jsontohtml(request_body);
+   request_panel.innerHTML = jsontohtml(request_body, json_options);
 
    if (response) {
       showReponse(response);
@@ -36,8 +43,8 @@ const showReponse = (res) => {
    const api = catalogue.filter((item) => item.title === api_name)[0];
    const response = api.response || api.request_body[0].response;
 
-   if (!res) response_panel.innerHTML = jsontohtml(response);
-   else response_panel.innerHTML = jsontohtml(res);
+   if (!res) response_panel.innerHTML = jsontohtml(response, json_options);
+   else response_panel.innerHTML = jsontohtml(res, json_options);
 };
 
 (async () => {

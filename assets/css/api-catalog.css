@@ -35,9 +35,13 @@
 .case-two__content span {
    background: var(--primary-color);
    color: white;
-   border-radius: 8px;
    padding: 5px 8px;
    margin-bottom: 5px;
+   margin-left: 0px;
+}
+
+.case-two__content * {
+   margin-left: 30px;
 }
 
 .case-two__image {
@@ -56,10 +60,15 @@
 }
 
 .case-two__item {
-   border-radius: 5px;
    overflow: hidden;
 }
 
 .case-two__item:hover .case-two__description {
    opacity: 1;
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 95%;
+    }
 }

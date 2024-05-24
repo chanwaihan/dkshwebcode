@@ -5,7 +5,7 @@
       "description": "Optimize operations with real-time access to product details including stock, pricing, and unit measurements, enhancing efficiency and decision-making.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "ShipToParty": "0101000001",
                "SoldToParty": "104100000",
@@ -109,7 +109,7 @@
       "description": "Enhance business efficiency with streamlined sales processes through order simulation, ensuring precise pricing, availability, and effective inventory management.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "SalesOrderSimulateRequest": {
                   "SalesOrderSimulateFOC": {
@@ -1366,7 +1366,7 @@
       "description": "Streamline operations with efficient customer data retrieval from SAP ERP, ensuring comprehensive access for enhanced management and efficiency.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "CustomerNumber": "0101021422",
                "SalesOrganization": "MY51",
@@ -1516,7 +1516,7 @@
       "description": "Maximize your business's potential with accurate and comprehensive product pricing and FOC details, empowering informed decision-making and optimized sales strategies.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "ShipToParty": "0101000001",
                "SoldToParty": "104100000",
@@ -1951,7 +1951,7 @@
       "description": "Streamline inventory management by retrieving up-to-date product master stock with sales area, sales partner and item data.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "ShipToParty": "0101000001",
                "SoldToParty": "104100000",
@@ -1991,7 +1991,7 @@
       "description": "Retrieve customer data with targeted material information, enhancing decision making processes for business efficiency.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "Customer": "101000006",
                "SalesOrganization": "MY51",
@@ -2146,7 +2146,7 @@
       "description": "Retrieve credit master information to adeptly manage the customer risk and promoting better business engagement.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "CustomerNumber": "0101021422",
                "SalesOrganization": "MY51",
@@ -2261,7 +2261,7 @@
       "description": "Retrieve essential company code data with sales area, customer-specific information for seamless business transaction.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "CustomerNumber": "0101021422",
                "SalesOrganization": "",
@@ -2304,7 +2304,7 @@
       "description": "Access real-time sales organization data specific to customer sales and distribution, empowering informed decision-making for enhanced operational efficiency.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "CustomerNumber": "101000006",
                "SalesOrganization": "MY01,MY03,AU01",
@@ -2397,7 +2397,7 @@
       "description": "Access comprehensive customer data including contact details and classifications, facilitating targeted sales strategies and improved customer relationship management.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "CustomerNumber": "103012857",
                "SalesOrganization": "MY17,MY19,MY21",
@@ -2587,7 +2587,7 @@
       "description": "Enhance sales order management efficiency with functions for updating, inserting, and deleting line items, maximizing operational effectiveness.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "SalesOrderHeader": {
                   "SalesOrder": "1110570834",
@@ -2774,7 +2774,7 @@
       "description": "Ensure robust business risk management by accessing current credit limit information for specific customers, enhancing informed decision-making.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "CreditControlArea": "MY9B",
                "CustomerNumber": "12345678",
@@ -2803,7 +2803,7 @@
       "title": "Product Get Purchase Order Detail",
       "description": "Access detailed purchase order data, encompassing item specifics, totals, schedules, and history, to enhance operational efficiency and informed decision-making.",
       "request_body": [
-         { "name": "Example", "body": { "PurchaseOrder": "7120908267" } }
+         { "name": "Request", "body": { "PurchaseOrder": "7120908267" } }
       ],
       "response": {
          "result": {
@@ -3190,7 +3190,7 @@
       "description": "Enhance business operations by accessing comprehensive product information, including classification and stock details, streamlining decision-making processes.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "SalesOrganization": "MY01",
                "DistributionChannel": "01",
@@ -3423,7 +3423,7 @@
       "description": "Efficiently access product lists by material number and name, accommodating diverse material scenarios, optimizing business processes.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "SalesOrganization": "MY01",
                "DistributionChannel": "01",
@@ -3471,7 +3471,7 @@
       "description": "Efficiently manage inventory by accessing product and stock information, including vendor consignment, sales orders, and purchase orders, optimizing operations.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "SalesOrganization": "TH54",
                "DistributionChannel": "03",
@@ -3604,7 +3604,7 @@
       "description": "Optimize inventory tracking with detailed stock movement retrieval, ensuring data accuracy and facilitating smooth business operations.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "Plant": "TH02",
                "StorageLocation": "1151",
@@ -4270,7 +4270,7 @@
       "description": "Optimize inventory management by generating goods receipts, leveraging two-point destination storage locations and batches, enhancing accuracy and operational efficiency.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "GoodsMovementHeader": {
                   "PostingDate": "2023-06-02",
@@ -4437,7 +4437,7 @@
       "description": "Enhance warehouse efficiency by promptly updating stock balances, ensuring precise inventory control for streamlined operations.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "Item": [
                   [
@@ -4490,7 +4490,7 @@
       "description": "Enhance inventory management precision by generating goods receipts with detailed storage, batch, and serial number information for streamlined operations.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "GoodsMovementRequest": {
                   "GoodsMovementHeader": {
@@ -4724,7 +4724,7 @@
       "description": "Automate payment processing and invoice clearing, streamlining settlement creation for efficient financial management and smoother operations.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": {
                "PaymentDetailsHeader": { "Payment": "X", "Settlement": "" },
                "PaymentDetailsItem": [
@@ -4828,7 +4828,7 @@
       "description": "Improve financial engagement by accessing customer statements within defined date ranges, fostering transparency and trust in business interactions.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": { "SOAReference": "SOAMY88210928000002" }
          }
       ],
@@ -5737,7 +5737,7 @@
       "description": "Access essential IBAN details swiftly to ensure accurate banking transactions, enhancing financial operations and regulatory compliance.",
       "request_body": [
          {
-            "name": "Example",
+            "name": "Request",
             "body": { "IBAN": "IT40E0569610903000010915X45" }
          }
       ],
@@ -5756,7 +5756,7 @@
       "title": "Trace Order Get Status",
       "description": "Improve order tracking accuracy and visibility by efficiently monitoring the status of single or multiple sales orders, enhancing operational efficiency.",
       "request_body": [
-         { "name": "Example", "body": { "SalesOrderList": "1017606250" } }
+         { "name": "Request", "body": { "SalesOrderList": "1017606250" } }
       ],
       "response": {
          "result": {

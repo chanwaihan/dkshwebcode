@@ -139,19 +139,12 @@
 
     <main>
         <!-- Page banner area start here -->
-        <section class="banner__inner-page bg-image pt-180 pb-180 bg-image"
-            data-background="assets/images/banner/api-image.jpeg">
-            <div class="shape2 wow slideInLeft" id="banner_shape2" data-wow-delay="00ms" data-wow-duration="1500ms">
-                <img src="assets/images/banner/inner-banner-shape2.png" class="img2" alt="shape">
-            </div>
-            <div class="shape1 wow slideInLeft" id="banner_shape1" data-wow-delay="200ms" data-wow-duration="1500ms">
-                <img src="assets/images/banner/inner-banner-shape1.png" class="img1" alt="shape">
-            </div>
-            <div class="shape3 wow slideInRight" id="banner_shape3" data-wow-delay="200ms" data-wow-duration="1500ms">
-                <img class="sway__animationX" src="assets/images/banner/inner-banner-shape3.png" alt="shape">
-            </div>
+        <section class="banner__inner-page pt-50">
             <div class="container">
-                <h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">DKSH API Catalog</h2>
+                <h1 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">DKSH API Catalog</h1>
+                <div class="breadcrumb-list mt-3 mb-3" data-wow-delay="200ms" data-wow-duration="1500ms">
+                  <a href="home.html">Home</a><span><i class="fa-regular fa-angles-right mx-2"></i>API Catalog</span>
+                </div>
                 <div class="form-outline" data-mdb-input-init>
                     <input type="search" id="form1" class="form-control" placeholder="Search APIs" aria-label="Search"
                         onchange="getSearchedAPIs(this)" onkeydown="getSearchedAPIs(this)" />
@@ -164,10 +157,8 @@
         <section class="case-area pb-120">
             <div class="container">
                 <div class="api_type_btn" id="filter-btns">
-                    <div>
                         <button type="button" class="btn btn-light btn-lg"
                             onclick="getFilteredCatalogue(this)">All</button>
-                    </div>
                 </div>
                 <div class="row g-4" id="catalog-items">
                 </div>
