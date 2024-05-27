@@ -5483,3 +5483,24 @@ svg path{
 .card-body-api-title:hover {
   color: var(--active-red);
 }
+
+.category-btn button {
+  text-align: center;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.category-btn button[aria-selected="true"] {
+  background-color: var(--active-red);
+  color: var(--white);
+}
+
+.category-btn button[aria-selected="false"] {
+  background-color: #ebebeb;
+}
+
+.category-btn button[aria-selected="false"]:hover {
+  color: var(--primary-color);
+}

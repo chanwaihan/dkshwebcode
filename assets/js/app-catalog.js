@@ -7,7 +7,7 @@ const getCatalog = async () => {
 };
 
 const filter_btn = (text) =>
-   `<button type="button" class="btn btn-light btn-lg" onclick="getFilteredCatalogue(this)">${text}</button>`;
+   `<button type="button" class="btn btn-light btn-lg" onclick="getFilteredCatalogue(this)" aria-selected="false">${text}</button>`;
 
 (async () => {
    catalogue = await getCatalog();
@@ -39,7 +39,7 @@ const catalog_item = (
                             </div>
                             <div class="case-two__content">
                             <span>${filter_name}</span>
-                                <h4 class="text-white">${item}</h4>
+                                <h6 class="text-white pt-30">${item}</h6>
                             </div>
                             <a href="${url}" class="case-two__btn">
                                 <i class="fa-regular fa-arrow-right"></i>
@@ -61,9 +61,11 @@ async function getFilteredCatalogue(e) {
    const all_btns = document.querySelectorAll("#filter-btns button");
    all_btns.forEach((btn) => {
       if (btn.innerText === filter_name) {
-         btn.style.background = "#EF233C";
+         btn.style.background = "#ef233c";
+         btn.style.color = "white";
       } else {
-         btn.style.background = "#EBEBEB";
+         btn.style.background = "#ebebeb";
+         btn.style.color = "black";
       }
    });
 
@@ -91,6 +93,16 @@ async function getFilteredCatalogue(e) {
          catalogue_item_parent.appendChild(e);
       });
    }
+
+   const buttons = document.querySelectorAll('.api_type_btn button');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(otherButton => otherButton.setAttribute('aria-selected', false));
+      button.setAttribute('aria-selected', true);
+    });
+  });
+
 }
 
 async function getSearchedAPIs(e) {

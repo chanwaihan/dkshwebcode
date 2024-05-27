@@ -5,12 +5,35 @@
    padding-bottom: 45px;
    gap: 15px;
 }
+
+.api_type_btn button {
+  text-align: center;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.api_type_btn button[aria-selected="true"] {
+  background-color: var(--active-red) !important;
+  color: var(--white) !important;
+}
+
+.api_type_btn button[aria-selected="false"] {
+  background-color: #ebebeb !important;
+}
+
+.api_type_btn button[aria-selected="false"]:hover {
+  color: var(--primary-color) !important;
+}
+
 .case-area .api_type_btn div button{
    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .case-two__item {
    height: 420px;
+   overflow: hidden;
+   cursor: pointer;
 }
 
 .case-two__item h4 {
@@ -57,10 +80,6 @@
 
 .case-two__description p {
    line-height: 150%;
-}
-
-.case-two__item {
-   overflow: hidden;
 }
 
 .case-two__item:hover .case-two__description {
