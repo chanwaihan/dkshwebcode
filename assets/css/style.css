@@ -3655,7 +3655,7 @@ button {
    z-index: 1;
 }
 .case-two__content span {
-   color: var(--primary-color);
+   color: var(--active-red);
    font-weight: 500;
    transition: var(--transition);
 }
@@ -3721,7 +3721,7 @@ button {
 }
 .case-single__item .case-date li span {
    font-weight: 400;
-   color: var(--primary-color);
+   color: var(--active-red);
 }
 .case-single__item .case-challenge-list {
    max-width: 780px;
@@ -5154,7 +5154,7 @@ svg path{
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   z-index: 1;
 }
 
@@ -5467,4 +5467,19 @@ svg path{
 
 .faq-a:hover {
   color: var(--primary-color);
+}
+
+.run-btn {
+  background-color: var(--active-red);
+  color: var(--white);
+  text-align: center;
+  padding: 8px 15px;
+}
+
+.run-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.card-body-api-title:hover {
+  color: var(--active-red);
 }

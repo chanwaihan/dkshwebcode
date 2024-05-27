@@ -72,7 +72,7 @@
 }
 
 .card textarea {
-   height: 150px;
+   height: 350px;
    resize: vertical;
    word-break: normal;
    word-wrap: normal;
@@ -92,7 +92,8 @@
    margin-top: 10px;
    height: 250px;
    overflow: auto;
-   background: #1a1a1a;
+   color: var(--white);
+   background: #41444e;
    width: 100%;
    padding: 5px;
 }

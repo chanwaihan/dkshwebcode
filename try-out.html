@@ -30,31 +30,12 @@
 </head>
 
 <body>
-  <!-- Preloader area start -->
-  <div class="loading">
-    <span class="text-capitalize">L</span>
-    <span>o</span>
-    <span>a</span>
-    <span>d</span>
-    <span>i</span>
-    <span>n</span>
-    <span>g</span>
-  </div>
-  <div id="preloader">
-  </div>
-  <!-- Preloader area end -->
-
-  <!-- Mouse cursor area start here -->
-  <div class="mouse-cursor cursor-outer"></div>
-  <div class="mouse-cursor cursor-inner"></div>
-  <!-- Mouse cursor area end here -->
-
   <!-- Header area start here -->
   <header class="header-area">
     <div class="container header__container">
       <div class="header__main">
         <a href="home.html" class="logo">
-          <img src="assets/images/logo/logo-light.svg" alt="logo">
+          <img src="assets/images/logo/logo-white.svg" id="logo-header" alt="logo">
         </a>
         <div class="main-menu">
           <nav>
@@ -69,10 +50,11 @@
               </li>
               <!-- Learn & Explore -->
               <li>
-                <a href="#0">Learn & Explore</a>
+                <a id="learn-explore" href="#0">Learn & Explore</a>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
                 <ul class="sub-menu">
                   <li>
-                    <a href="try-out.html">Try Out</a>
+                    <a href="#">Try Out</a>
                   </li>
                   <li>
                     <a href="tutorials.html">Tutorials</a>
@@ -89,10 +71,7 @@
             </ul>
           </nav>
         </div>
-        <div class="d-none d-lg-inline-block">
-          <a href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank" class="btn-one">Get Access <i
-              class="fa-regular fa-arrow-right-long"></i></a>
-        </div>
+        <a id="get-access" href="https://nova.dksh.com/a/catalog/request-items/48" target="_blank" class="btn-one">Get Access <i class="fa-regular fa-arrow-right-long"></i></a>
         <div class="bars d-block d-lg-none">
           <i id="openButton" class="fa-solid fa-bars"></i>
         </div>
@@ -105,18 +84,19 @@
   <div id="targetElement" class="sidebar-area sidebar__hide">
     <div class="sidebar__overlay"></div>
     <a href="home.html" class="logo mb-40">
-      <img src="assets/images/logo/logo.svg" alt="logo">
+      <img src="assets/images/logo/logo-white.svg" alt="logo">
     </a>
     <div class="mobile-menu overflow-hidden"></div>
     <ul class="info pt-40">
       <li>
-        <i class="fa-solid primary-color fa-user-circle"></i> <a href="#0">Grp TD SAP API</a>
+        <i class="fa-solid primary-color fa-user-circle"></i> <a href="https://nova.dksh.com/a/catalog/request-items/120" target=_blank">Grp TD SAP API</a>
       </li>
       <li class="py-2">
-        <i class="fa-solid primary-color fa-envelope"></i> <a href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a>
+        <i class="fa-solid primary-color fa-envelope"></i> <a
+          href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a>
       </li>
       <li>
-        <i class="fa-solid primary-color fa-location-arrow"></i> <a href="#0">DKSH CSSC</a>
+        <i class="fa-solid primary-color fa-location-arrow"></i> <a href="https://maps.app.goo.gl/T8qZSqXfGyPe1j1y5" target="_blank">DKSH CSSC</a>
       </li>
     </ul>
     <div class="social-icon mt-20">
@@ -140,10 +120,23 @@
 
   <!-- Try Out area start here -->
   <main>
-    <div class="content-outer">
+      <!-- Page banner area start here -->
+      <section class="banner__inner-page bg-image pt-150 pb-50 bg-image"
+      data-background="assets/images/banner/banner-inner-page.jpg">
+      <div class="container">
+          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Try Out</h2>
+          <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <a href="home.html">Home</a>
+            <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
+            <a href="#">Try Out</a>
+          </div>
+      </div>
+    </section>
+    <!-- Page banner area end here -->
+    <div class="content-outer pt-25 pb-25">
       <div class="sidebar">
         <div>
-          <h3>Select an API</h3>
+          <h6 class="pb-15">Select an API</h6>
           <ul id="try-out-apis">
             <!-- <li><button onclick="loadAPI(this)" data-category="Category_name">API_1</button></li> -->
           </ul>
@@ -157,27 +150,28 @@
         <div class="content-inner">
           <div class="card">
             <div class="card-header">
-              POST
+              <b>POST</b>
               <span class="badge bg-success fs-6" id="status-badge">Status 200</span>
             </div>
             <div class="card-body">
-              <a href="#">
-                <h5 class="card-title" id="api-title"></h5>
+              <a class="card-body-api-title" href="#">
+                <h6 class="card-title" id="api-title"></h6>
               </a>
-              <div>
+              <div class="pt-10">
                 <code class="url" id="api-url"></code>
-                <span class="form-label text-black mt-2">Try customizing the request body with different parameters.
+                <span class="form-label text-black pt-20">Try customizing the request body with different parameters.
                   Here are the few fields you can modify. Please note that the
                   response data is dummy data and is provided only for testing purposes.</span>
                 <ul id="parameter-options"></ul>
-                <div class="mb-3 mt-3">
-                  <label for="exampleFormControlTextarea1" class="form-label text-black">Request body</label>
+                <div class="mb-3 pt-40">
+                  <label for="exampleFormControlTextarea1" class="form-label text-black"><b>Request</b></label>
                   <textarea class="form-control" rows="3" id="api-request-body"></textarea>
                 </div>
-                <button class="btn btn-primary float-end" onclick="handleRun()">Run</button>
+                <button class="run-btn float-end" onclick="handleRun()">Run</button>
               </div>
-              <span class="mt-3">Reponse body</span>
-              <div id="api-response">
+              <div>
+                <span class="mt-3"><b>Reponse</b></span>
+                <div id="api-response"></div>
               </div>
             </div>
           </div>
@@ -189,26 +183,11 @@
 
   <!-- Footer area start here -->
   <footer class="footer-area secondary-bg">
-    <div class="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-      <img src="assets/images/shape/footer-regular-left.png" alt="shape">
-    </div>
-    <div class="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-      <img class="sway_Y__animation" src="assets/images/shape/footer-solid-left.png" alt="shape">
-    </div>
-    <div class="footer__shape-solid-right wow slideInRight" data-wow-delay="00ms" data-wow-duration="1500ms">
-      <img class="sway_Y__animation" src="assets/images/shape/footer-regular-right.png" alt="shape">
-    </div>
-    <div class="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-      <img src="assets/images/shape/footer-solid-right.png" alt="shape">
-    </div>
-    <div class="footer__shadow-shape">
-      <img src="assets/images/shape/footer-shadow-shape.png" alt="shadow">
-    </div>
-    <div class="container">
-      <div class="footer__wrp pt-100 pb-100">
+    <div class="container" id="footer-container">
+      <div class="footer__wrp pt-75 pb-75">
         <div class="footer__item item-big wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
           <a href="home.html" class="logo mb-30">
-            <img src="assets/images/logo/logo.svg" alt="image">
+            <img src="assets/images/logo/logo-white.svg" alt="image">
           </a>
           <p>Delivering Growth – in Asia and Beyond.<br>
             © DKSH Holding Ltd.</p>
@@ -229,7 +208,7 @@
           </div>
         </div>
         <div class="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <h3 class="footer-title">Quick Links</h3>
+          <h6 class="footer-title">Quick Links</h6>
           <ul>
             <li><a href="api-catalog.html"><i class="fa-regular fa-angles-right me-1"></i> API Catalog</a></li>
             <li><a href="api-analytics.html"><i class="fa-regular fa-angles-right me-1"></i> API Analytics</a></li>
@@ -238,7 +217,7 @@
           </ul>
         </div>
         <div class="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-          <h3 class="footer-title">Learn & Explore</h3>
+          <h6 class="footer-title">Learn & Explore</h6>
           <ul>
             <li><a href="try-out.html"><i class="fa-regular fa-angles-right me-1"></i> Try Out</a></li>
             <li><a href="tutorials.html"><i class="fa-regular fa-angles-right me-1"></i> Tutorials</a></li>
@@ -246,27 +225,27 @@
           </ul>
         </div>
         <div class="footer__item item-big wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-          <h3 class="footer-title">Contact Us</h3>
+          <h6 class="footer-title">Contact Us</h6>
           <ul class="footer-contact">
             <li>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
               <div class="info">
-                <h5>Group:</h5>
-                <p>Grp TD SAP API</p>
+                <h6 class="footer-info-title">Group:</h6>
+                <p><a href="https://nova.dksh.com/a/catalog/request-items/120" target=_blank">Grp TD SAP API</a></p>
               </div>
             </li>
             <li>
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <div class="info">
-                <h5>Email:</h5>
+                <h6 class="footer-info-title">Email:</h6>
                 <p><a href="mailto:KUL_CSSC_API@dksh.com">KUL_CSSC_API@dksh.com</a></p>
               </div>
             </li>
             <li>
               <i class="fa fa-location-arrow" aria-hidden="true"></i>
               <div class="info">
-                <h5>Location:</h5>
-                <p>DKSH CSSC</p>
+                <h6 class="footer-info-title">Location:</h6>
+                <p><a href="https://maps.app.goo.gl/T8qZSqXfGyPe1j1y5" target="_blank">DKSH CSSC</a></p>
               </div>
             </li>
           </ul>
@@ -277,8 +256,8 @@
   <!-- Footer area end here -->
 
   <!-- Back to top area start here -->
-  <div class="scroll-up">
-    <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+  <div class="scroll-up invisible">
+    <svg>
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>

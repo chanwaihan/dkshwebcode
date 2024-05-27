@@ -1,150 +1,5 @@
 [
    {
-      "category_name": "Product",
-      "title": "Product Get Full Product Detail",
-      "description": "Retrieve detailed product information including product classification, stock detail that supports multiple material numbers.",
-      "api_url": "https://dksh-test.apimanagement.ap21.hana.ondemand.com:443/prdtapi/productlist_s4hana/get",
-      "req_res": [
-         {
-            "onchange": {
-               "SalesOrganization": ["MY01", "MY03", "MY05"],
-               "DistributionChannel": ["02", "03", "04"],
-               "MaterialNumber": [""]
-            },
-            "request_body": {
-               "SalesOrganization": "MY01",
-               "DistributionChannel": "02",
-               "LanguageKey": "E",
-               "MaterialNumber": "",
-               "Plant": "",
-               "MaterialType": " ",
-               "MaterialGroup": "",
-               "MaterialGroup1": "",
-               "MaterialGroup2": "",
-               "MaterialGroup3": "",
-               "MaterialGroup4": "",
-               "MaterialGroup5": "",
-               "LastChangedDate": "",
-               "ClassNumber": "",
-               "DeletionFlag": "",
-               "CrossDistributionMaterialStatus": "",
-               "DistributionMaterialStatus": "",
-               "PlantMaterialStatus": "",
-               "StorageConditions": ""
-            },
-            "response": {
-               "ProductList": [
-                  {
-                     "MaterialNumber": "000000000100000106",
-                     "ProductName": "EVA HONEY BONUS PACK 600G"
-                  },
-                  {
-                     "MaterialNumber": "000000000100000107",
-                     "ProductName": "JW NUT CHOCO&amp;HAZELNUT 350G FOC CONTAINER"
-                  },
-                  {
-                     "MaterialNumber": "000000000100000112",
-                     "ProductName": "EVA STRAWBERRY JAM 450G (99SPEEDMART)"
-                  }
-               ]
-            }
-         },
-         {
-            "onchange": {
-               "SalesOrganization": ["MY01", "MY03", "MY05"],
-               "DistributionChannel": ["02", "03", "04"],
-               "MaterialNumber": ["100126397, 100010767"]
-            },
-            "request_body": {
-               "SalesOrganization": "MY01",
-               "DistributionChannel": "02",
-               "MaterialNumber": "100126397",
-               "LanguageKey": "E",
-               "Plant": "MY01",
-               "MaterialType": "",
-               "MaterialGroup": "",
-               "MaterialGroup1": "",
-               "MaterialGroup2": "",
-               "MaterialGroup3": "",
-               "MaterialGroup4": "",
-               "MaterialGroup5": "",
-               "LastChangedDate": "",
-               "ClassNumber": "",
-               "DeletionFlag": "",
-               "CrossDistributionMaterialStatus": "",
-               "DistributionMaterialStatus": "",
-               "PlantMaterialStatus": "",
-               "StorageConditions": "",
-               "BatchNumber": "",
-               "StorageLocation": ""
-            },
-            "response": {
-               "result": {
-                  "ProductList": [
-                     {
-                        "MaterialNumber": "000000000100010767",
-                        "ProductName": "LSH SESAME OIL 140ML"
-                     },
-                     {
-                        "MaterialNumber": "000000000100126397",
-                        "ProductName": "BOH 2 IN 1 TEAMIX 20'S SILVER SLEEVE"
-                     }
-                  ]
-               },
-               "ProductListReturn": {
-                  "Number": "000",
-                  "Type": "E",
-                  "Message": "No valid records found in SO details"
-               }
-            }
-         },
-         {
-            "onchange": {
-               "SalesOrganization": ["MY01", "MY03", "MY05"],
-               "DistributionChannel": ["02", "03", "04"],
-               "MaterialNumber": ["100126397"]
-            },
-            "request_body": {
-               "SalesOrganization": "MY01",
-               "DistributionChannel": "02",
-               "MaterialNumber": "100126397",
-               "LanguageKey": "E",
-               "Plant": "MY01",
-               "MaterialType": "",
-               "MaterialGroup": "",
-               "MaterialGroup1": "",
-               "MaterialGroup2": "",
-               "MaterialGroup3": "",
-               "MaterialGroup4": "",
-               "MaterialGroup5": "",
-               "LastChangedDate": "",
-               "ClassNumber": "",
-               "DeletionFlag": "",
-               "CrossDistributionMaterialStatus": "",
-               "DistributionMaterialStatus": "",
-               "PlantMaterialStatus": "",
-               "StorageConditions": "",
-               "BatchNumber": "",
-               "StorageLocation": ""
-            },
-            "response": {
-               "result": {
-                  "ProductList": {
-                     "MaterialNumber": "000000000100126397",
-                     "ProductName": "BOH 2 IN 1 TEAMIX 20'S SILVER SLEEVE"
-                  }
-               },
-               "ProductListReturn": {
-                  "Number": "000",
-                  "Type": "E",
-                  "Message": "No valid records found in SO details"
-               }
-            }
-         }
-      ],
-      "url": "/apis/product-get-full-product-detail.html"
-   },
-   {
       "category_name": "Customer",
       "title": "Customer Get Product Detail",
       "description": "Get Product Detail API allows you to retrieve product detail Stock, UOM, Price General, Price General Scale, FOC, FOC Scale.",
@@ -965,6 +820,151 @@
          }
       ],
       "url": "/apis/payment-retrieve-information.html"
+   },
+   {
+      "category_name": "Product",
+      "title": "Product Get Full Product Detail",
+      "description": "Retrieve detailed product information including product classification, stock detail that supports multiple material numbers.",
+      "api_url": "https://dksh-test.apimanagement.ap21.hana.ondemand.com:443/prdtapi/productlist_s4hana/get",
+      "req_res": [
+        {
+            "onchange": {
+              "SalesOrganization": ["MY01", "MY03", "MY05"],
+              "DistributionChannel": ["02", "03", "04"],
+              "MaterialNumber": [""]
+            },
+            "request_body": {
+              "SalesOrganization": "MY01",
+              "DistributionChannel": "02",
+              "LanguageKey": "E",
+              "MaterialNumber": "",
+              "Plant": "",
+              "MaterialType": " ",
+              "MaterialGroup": "",
+              "MaterialGroup1": "",
+              "MaterialGroup2": "",
+              "MaterialGroup3": "",
+              "MaterialGroup4": "",
+              "MaterialGroup5": "",
+              "LastChangedDate": "",
+              "ClassNumber": "",
+              "DeletionFlag": "",
+              "CrossDistributionMaterialStatus": "",
+              "DistributionMaterialStatus": "",
+              "PlantMaterialStatus": "",
+              "StorageConditions": ""
+            },
+            "response": {
+              "ProductList": [
+                  {
+                    "MaterialNumber": "000000000100000106",
+                    "ProductName": "EVA HONEY BONUS PACK 600G"
+                  },
+                  {
+                    "MaterialNumber": "000000000100000107",
+                    "ProductName": "JW NUT CHOCO&amp;HAZELNUT 350G FOC CONTAINER"
+                  },
+                  {
+                    "MaterialNumber": "000000000100000112",
+                    "ProductName": "EVA STRAWBERRY JAM 450G (99SPEEDMART)"
+                  }
+              ]
+            }
+        },
+        {
+            "onchange": {
+              "SalesOrganization": ["MY01", "MY03", "MY05"],
+              "DistributionChannel": ["02", "03", "04"],
+              "MaterialNumber": ["100126397, 100010767"]
+            },
+            "request_body": {
+              "SalesOrganization": "MY01",
+              "DistributionChannel": "02",
+              "MaterialNumber": "100126397",
+              "LanguageKey": "E",
+              "Plant": "MY01",
+              "MaterialType": "",
+              "MaterialGroup": "",
+              "MaterialGroup1": "",
+              "MaterialGroup2": "",
+              "MaterialGroup3": "",
+              "MaterialGroup4": "",
+              "MaterialGroup5": "",
+              "LastChangedDate": "",
+              "ClassNumber": "",
+              "DeletionFlag": "",
+              "CrossDistributionMaterialStatus": "",
+              "DistributionMaterialStatus": "",
+              "PlantMaterialStatus": "",
+              "StorageConditions": "",
+              "BatchNumber": "",
+              "StorageLocation": ""
+            },
+            "response": {
+              "result": {
+                  "ProductList": [
+                    {
+                        "MaterialNumber": "000000000100010767",
+                        "ProductName": "LSH SESAME OIL 140ML"
+                    },
+                    {
+                        "MaterialNumber": "000000000100126397",
+                        "ProductName": "BOH 2 IN 1 TEAMIX 20'S SILVER SLEEVE"
+                    }
+                  ]
+              },
+              "ProductListReturn": {
+                  "Number": "000",
+                  "Type": "E",
+                  "Message": "No valid records found in SO details"
+              }
+            }
+        },
+        {
+            "onchange": {
+              "SalesOrganization": ["MY01", "MY03", "MY05"],
+              "DistributionChannel": ["02", "03", "04"],
+              "MaterialNumber": ["100126397"]
+            },
+            "request_body": {
+              "SalesOrganization": "MY01",
+              "DistributionChannel": "02",
+              "MaterialNumber": "100126397",
+              "LanguageKey": "E",
+              "Plant": "MY01",
+              "MaterialType": "",
+              "MaterialGroup": "",
+              "MaterialGroup1": "",
+              "MaterialGroup2": "",
+              "MaterialGroup3": "",
+              "MaterialGroup4": "",
+              "MaterialGroup5": "",
+              "LastChangedDate": "",
+              "ClassNumber": "",
+              "DeletionFlag": "",
+              "CrossDistributionMaterialStatus": "",
+              "DistributionMaterialStatus": "",
+              "PlantMaterialStatus": "",
+              "StorageConditions": "",
+              "BatchNumber": "",
+              "StorageLocation": ""
+            },
+            "response": {
+              "result": {
+                  "ProductList": {
+                    "MaterialNumber": "000000000100126397",
+                    "ProductName": "BOH 2 IN 1 TEAMIX 20'S SILVER SLEEVE"
+                  }
+              },
+              "ProductListReturn": {
+                  "Number": "000",
+                  "Type": "E",
+                  "Message": "No valid records found in SO details"
+              }
+            }
+        }
+      ],
+      "url": "/apis/product-get-full-product-detail.html"
    },
    {
       "category_name": "Track & Trace",

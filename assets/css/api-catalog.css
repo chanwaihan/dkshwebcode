@@ -33,9 +33,9 @@
 }
 
 .case-two__content span {
-   background: var(--primary-color);
+   background: var(--active-red);
    color: white;
-   padding: 5px 8px;
+   padding: 5px 10px;
    margin-bottom: 5px;
    margin-left: 0px;
 }

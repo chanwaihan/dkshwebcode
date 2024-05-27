@@ -9,7 +9,7 @@ const getCatalog = async () => {
 const option = (value) => `<option value="${value}">${value}</option>`;
 
 const json_options = {
-   colors: { background: "#1a1a1a" },
+   colors: { background: "#41444e" },
    comments: {
       show: false
    }

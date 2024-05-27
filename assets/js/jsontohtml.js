@@ -1,42 +1,45 @@
 const defaultStyles = {
    fontSize: "14px",
-   font: "'Lucida Console', monospace",
+   font: "'Consolas', 'monaco', 'monospace'",
    space: "25px",
-   space_from_left: "50px",
+   space_from_left: "10px",
+   space_from_top: "10px",
+   space_from_bottom: "10px",
+   space_from_right: "10px",
    links: true,
    colors: {
-      background: "black",
-      keys: "#d54e50",
+      background: "#41444e",
+      keys: "#FFFFFF",
       values: {
-         number: "#FF8811",
-         string: "#b9ba1f",
-         boolean: "#EDA2F2",
+         number: "#A2FCA3",
+         string: "#A2FCA3",
+         boolean: "#FCC28C",
          function: "#FFC43D",
-         undefined: "#06D6A0",
-         null: "#B3B7EE",
-         other: "#FFC43D",
+         undefined: "#A2FCA3",
+         null: "#A2FCA3",
+         other: "#A2FCA3",
          curly_brace: "#FFFFFF",
          square_brace: "#FFFFFF",
          comma_colon_quotes: "#FFFFFF",
       },
    },
    comments: {
-      show: true,
+      show: false,
       color: "gray",
       space_from_left: "35px",
    },
    retractors: {
-      show: true,
+      show: false,
       color: "#8c8c8c",
       space_from_left: "37px",
    },
    line_numbers: {
-      show: true,
+      show: false,
       color: "#5c749c",
       space_from_left: "30px",
    },
    bracket_pair_lines: {
-      show: true,
+      show: false,
       color: "#3c3c3c",
       space_from_left: "6px",
       type: "solid",
@@ -330,6 +333,9 @@ function jsontohtml(data, options) {
   min-width:max-content;
   line-height:calc(${styles.fontSize} + 2px);
   padding-left:${styles.space_from_left};
+  padding-top:${styles.space_from_top};
+  padding-bottom:${styles.space_from_bottom};
+  padding-right:${styles.space_from_right};
   background:${styles.colors.background};
   font-size:${styles.fontSize} !important;
   ${styles.font ? `font-family:${styles.font}` : ""}

@@ -82,12 +82,13 @@ const showResponse = (data) => {
    const html = jsontohtml(data, {
       space_from_left: "10px",
       space: "15px",
-      fontSize: "12px",
+      font: "'Consolas', 'monaco', 'monospace'",
+      fontSize: "14px",
       line_numbers: { show: false },
       retractors: { space_from_left: "0px" },
       comments: { show: false },
       colors:{
-         background: "#1a1a1a"
+         background: "#41444e"
       }
    });
    const response_element = document.getElementById("api-response");

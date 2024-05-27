@@ -5,7 +5,7 @@ const changeChart = (chart) => {
       document.getElementById("Apis").style.background = "#EF233C";
       document.getElementById("Applications").style.background = "#ebebeb";
    } else {
-      let chart_html = `<iframe title="ApplicationSummary" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=85f7cfd0-95ca-4b3f-b43a-bf1b6ccf14d3&autoAuth=true&ctid=fe9c4641-3b53-43d0-af72-8f3e64d3aa05" frameborder="0" allowFullScreen="true"></iframe>`;
+      let chart_html = `<iframe title="ApplicationSummary" width="1800" height="700.25" src="https://app.powerbi.com/reportEmbed?reportId=85f7cfd0-95ca-4b3f-b43a-bf1b6ccf14d3&autoAuth=true&ctid=fe9c4641-3b53-43d0-af72-8f3e64d3aa05" frameborder="0" allowFullScreen="true"></iframe>`;
       document.getElementById("api-analytics-frame").innerHTML = chart_html;
       document.getElementById("Applications").style.background = "#EF233C";
       document.getElementById("Apis").style.background = "#ebebeb";
