@@ -118,7 +118,26 @@
 
     <main>
         <!-- Page banner area start here -->
-        <section class="banner__inner-page pt-50">
+        <section class="banner__inner-page bg-image pt-150 pb-50 bg-image"
+          data-background="assets/images/banner/banner-inner-page.jpg">
+          <div class="container">
+              <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">DKSH API Catalog</h2>
+              <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <a href="home.html">Home</a>
+                <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
+                <a href="#">API Catalog</a>
+              </div>
+          </div>
+          <div class="search-container pt-50">
+            <div class="form-outline" data-mdb-input-init>
+              <input type="search" id="form1" class="form-control" placeholder="Search APIs" aria-label="Search"
+                  onchange="getSearchedAPIs(this)" onkeydown="getSearchedAPIs(this)" />
+            </div>
+          </div>
+        </section>
+        <!-- Page banner area end here -->
+        <!-- Page banner area start here -->
+        <!-- <section class="banner__inner-page pt-50">
             <div class="container">
                 <h1 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">DKSH API Catalog</h1>
                 <div class="breadcrumb-list mt-3 mb-3" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -129,7 +148,7 @@
                         onchange="getSearchedAPIs(this)" onkeydown="getSearchedAPIs(this)" />
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Page banner area end here -->
 
         <!-- Case area start here -->

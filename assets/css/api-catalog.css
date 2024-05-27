@@ -91,3 +91,8 @@
         max-width: 95%;
     }
 }
+
+.search-container {
+  display: flex; /* Make the container a flexbox */
+  justify-content: center; /* Center elements horizontally */
+}
