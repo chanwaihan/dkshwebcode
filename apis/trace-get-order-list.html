@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Trace Order Get Status</title>
+   <title>Trace Get Order List</title>
    <!-- Favicon img -->
    <link rel="shortcut icon" href="../assets/images/favicon.png">
    <!-- Bootstarp min css -->
@@ -123,44 +123,42 @@
     <section class="banner__inner-page bg-image pt-150 pb-50 bg-image"
     data-background="../assets/images/banner/banner-inner-page.jpg">
       <div class="container">
-          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Trace Order Get Status</h4>
+          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Trace Get Order List</h4>
           <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
             <a href="../home.html">Home</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
             <a href="../api-catalog.html">API Catalog</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
-            <a href="#">Trace Order Get Status</a>
+            <a href="#">Trace Get Order List</a>
           </div>
       </div>
     </section>
     <!-- Page banner area end here -->
     <div class="container pt-25 pb-75" id="api-details">
       <div class="heading">
-        <a href="../try-out.html">
-          <h1 class="invisible" id="api_name">Trace Order Get Status</h1>
-          <h6>Overview</h6>
-        </a>
+        <h1 class="invisible" id="api_name">Trace Get Order List</h1>
+        <h6>Overview</h6>
       </div>
       <div class="content">
          <div class="text-content">
-            <div><p>Improve order tracking accuracy and visibility by efficiently monitoring the status of single or multiple sales orders, enhancing operational efficiency.</p>
-<p>This API allows consumer to get sales order status.</p></div>
+            <div>
+<p>This API allows you to retrieve sales order lists supporting multiple sales partner scenarios, enabling searches within specific date and time.</p></div>
          </div>
-         <h6 class="pt-20">Request</h6>
+         <h6 class="pt-25">Request</h6>
          <div class="request">
-            <select class="invisible" id="example-options" onchange="handleOptionOnChange()">
-               <option value="Request">Request</option>
+            <select id="example-options" onchange="handleOptionOnChange()">
+               <option value="SoldToParty">SoldToParty</option>
+<option value="ShipToParty">ShipToParty</option>
+<option value="PayerParty">PayerParty</option>
+<option value="PurchaseOrderByCustomer">PurchaseOrderByCustomer</option>
+<option value="DeliveryOrder">DeliveryOrder</option>
+<option value="Sales Area">Sales Area</option>
             </select>
             <div id="request-body-example"></div>
          </div>
-         <h6 class="pt-20">Response</h6>
+         <h6 class="pt-25">Response</h6>
          <div class="response">
             <div id="response-example"></div>
-         </div>
-         <div class="try-out-btn-container pt-50">
-          <p>Wondering how this API works? Try it out now.</p>
-          <br>
-          <a class="wow fadeInUp btn-one mt-0" data-delay="1s" href="../try-out.html">Try Out<i class="fa-regular fa-arrow-right-long"></i></a>
          </div>
       </div>
    </main>

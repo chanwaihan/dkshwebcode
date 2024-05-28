@@ -1739,10 +1739,13 @@ button {
 .accordion .accordion-button::after {
    display: none;
 }
+.accordion .accordion-button {
+  font-family: "Noto Sans Bold", Arial;
+}
 .accordion .accordion-button::before {
    position: absolute;
    content: "\f068";
-   font-family: "Noto Sans";
+   font-family: "Font Awesome 6 Pro";
    font-weight: 700;
    top: 20px;
    right: 25px;

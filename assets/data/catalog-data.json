@@ -105,7 +105,7 @@
    },
    {
       "category_name": "Customer",
-      "title": "Customer Sales Order Simulation",
+      "title": "Customer Simulate Sales Order",
       "description": "Enhance business efficiency with streamlined sales processes through order simulation, ensuring precise pricing, availability, and effective inventory management.",
       "request_body": [
          {
@@ -290,11 +290,11 @@
             }
          ]
       },
-      "url": "/apis/customer-sales-order-simulation.html"
+      "url": "/apis/customer-simulate-sales-order.html"
    },
    {
       "category_name": "Customer",
-      "title": "Customer Sales Order Create",
+      "title": "Customer Create Sales Order",
       "description": "Maximize business efficiency with streamlined sales processes, precise data transmission, and versatile order type creation, optimizing operations for growth.",
       "request_body": [
          {
@@ -1358,11 +1358,11 @@
             "Message": "Sales Order 1100000245 has been saved"
          }
       },
-      "url": "/apis/customer-sales-order-create.html"
+      "url": "/apis/customer-create-sales-order.html"
    },
    {
       "category_name": "Customer",
-      "title": "Customer Master Get Detail",
+      "title": "Customer Get Master Detail",
       "description": "Streamline operations with efficient customer data retrieval from SAP ERP, ensuring comprehensive access for enhanced management and efficiency.",
       "request_body": [
          {
@@ -1508,11 +1508,11 @@
             }
          ]
       },
-      "url": "/apis/customer-master-get-detail.html"
+      "url": "/apis/customer-get-master-detail.html"
    },
    {
       "category_name": "Customer",
-      "title": "Customer Product Master Get Price",
+      "title": "Customer Get Product Master Price",
       "description": "Maximize your business's potential with accurate and comprehensive product pricing and FOC details, empowering informed decision-making and optimized sales strategies.",
       "request_body": [
          {
@@ -1591,7 +1591,7 @@
          "resultCountProductDetailsFoc": "1",
          "resultCountProductDetailsFocScale": "1"
       },
-      "url": "/apis/customer-product-master-get-price.html"
+      "url": "/apis/customer-get-product-master-price.html"
    },
    {
       "category_name": "Customer",
@@ -1947,7 +1947,7 @@
    },
    {
       "category_name": "Customer",
-      "title": "Customer Product Master Get Stock",
+      "title": "Customer Get Product Master Stock",
       "description": "Streamline inventory management by retrieving up-to-date product master stock with sales area, sales partner and item data.",
       "request_body": [
          {
@@ -1983,7 +1983,7 @@
          ],
          "resultCountProductDetailsStock": "3"
       },
-      "url": "/apis/customer-product-master-get-stock.html"
+      "url": "/apis/customer-get-product-master-stock.html"
    },
    {
       "category_name": "Customer",
@@ -2023,7 +2023,7 @@
    },
    {
       "category_name": "Customer",
-      "title": "Customer Condition Record in Pricing Sales",
+      "title": "Customer Update Condition Record Pricing in Sales",
       "description": "Optimize pricing strategies to enhance sales growth by improving accuracy and streamlining maintenance of condition records.",
       "request_body": [
          {
@@ -2138,7 +2138,7 @@
             "Message": "Pricing MY7A17000101100240000000000110783878 updated."
          }
       },
-      "url": "/apis/customer-condition-record-in-pricing-sales.html"
+      "url": "/apis/customer-update-condition-record-pricing-in-sales.html"
    },
    {
       "category_name": "Customer",
@@ -4720,7 +4720,7 @@
    },
    {
       "category_name": "Payment",
-      "title": "Payment Posting Create",
+      "title": "Payment Create Posting",
       "description": "Automate payment processing and invoice clearing, streamlining settlement creation for efficient financial management and smoother operations.",
       "request_body": [
          {
@@ -4820,7 +4820,7 @@
             }
          ]
       },
-      "url": "/apis/payment-posting-create.html"
+      "url": "/apis/payment-create-posting.html"
    },
    {
       "category_name": "Payment",
@@ -5753,7 +5753,7 @@
    },
    {
       "category_name": "Track & Trace",
-      "title": "Trace Order Get Status",
+      "title": "Trace Get Order Status",
       "description": "Improve order tracking accuracy and visibility by efficiently monitoring the status of single or multiple sales orders, enhancing operational efficiency.",
       "request_body": [
          { "name": "Request", "body": { "SalesOrderList": "1017606250" } }
@@ -5802,11 +5802,11 @@
          },
          "resultCount": "1"
       },
-      "url": "/apis/trace-order-get-status.html"
+      "url": "/apis/trace-get-order-status.html"
    },
    {
       "category_name": "Track & Trace",
-      "title": "Trace Order List",
+      "title": "Trace Get Order List",
       "description": "Streamline sales order management by accessing lists supporting various partner scenarios, facilitating efficient searches within specified time frames.",
       "request_body": [
          {
@@ -5871,7 +5871,7 @@
          ],
          "resultCount": "1"
       },
-      "url": "/apis/trace-order-list.html"
+      "url": "/apis/trace-get-order-list.html"
    },
    {
       "category_name": "Supplier",
@@ -6807,7 +6807,7 @@
    },
    {
       "category_name": "Customer",
-      "title": "Customer Sales Order Get Detail",
+      "title": "Customer Get Sales Order Detail",
       "description": "Retrieve detailed sales order data, enabling comprehensive insights into customer transactions for informed decision-making and enhanced business performance.",
       "request_body": [
          {
@@ -8889,6 +8889,6 @@
             }
          }
       ],
-      "url": "/apis/customer-sales-order-get-detail.html"
+      "url": "/apis/customer-get-sales-order-detail.html"
    }
 ]

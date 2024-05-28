@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Customer Product Master Get Stock</title>
+   <title>Customer Create Sales Order</title>
    <!-- Favicon img -->
    <link rel="shortcut icon" href="../assets/images/favicon.png">
    <!-- Bootstarp min css -->
@@ -123,36 +123,48 @@
     <section class="banner__inner-page bg-image pt-150 pb-50 bg-image"
     data-background="../assets/images/banner/banner-inner-page.jpg">
       <div class="container">
-          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Customer Product Master Get Stock</h4>
+          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Customer Create Sales Order</h4>
           <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
             <a href="../home.html">Home</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
             <a href="../api-catalog.html">API Catalog</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
-            <a href="#">Customer Product Master Get Stock</a>
+            <a href="#">Customer Create Sales Order</a>
           </div>
       </div>
     </section>
     <!-- Page banner area end here -->
     <div class="container pt-25 pb-75" id="api-details">
       <div class="heading">
-        <h1 class="invisible" id="api_name">Customer Product Master Get Stock</h1>
+        <h1 class="invisible" id="api_name">Customer Create Sales Order</h1>
         <h6>Overview</h6>
       </div>
       <div class="content">
          <div class="text-content">
-            <div><p>Streamline inventory management by retrieving up-to-date product master stock with sales area, sales partner and item data.</p>
-<p>This API allows you to retrieve product master stock details. </p>
+            <div>
+<p>This API allows you to create sales order. A single sales order per call is allowed.</p>
+<p>The following are sales order types that can be created using this API.</p>
+<li>Standard Order</li>
+<li>One Time Customer</li>
+<li>Create with reference to Quotation</li>
+<li>Create with reference to Sales Order Number</li>
+<li>Consignment Sales Order</li>
+<li>Credit Return Sales Order</li>
 <p></p></div>
          </div>
-         <h4>Request</h4>
+         <h6 class="pt-25">Request</h6>
          <div class="request">
-            <select class="invisible" id="example-options" onchange="handleOptionOnChange()">
-               <option value="Request">Request</option>
+            <select id="example-options" onchange="handleOptionOnChange()">
+               <option value="StandardOrder">StandardOrder</option>
+<option value="One Time Customer">One Time Customer</option>
+<option value="Create with reference to Quotation">Create with reference to Quotation</option>
+<option value="Create with reference to Sales Order Number">Create with reference to Sales Order Number</option>
+<option value="Consignment Sales Order">Consignment Sales Order</option>
+<option value="Credit Return Sales Order">Credit Return Sales Order</option>
             </select>
             <div id="request-body-example"></div>
          </div>
-         <h4>Response</h4>
+         <h6 class="pt-25">Response</h6>
          <div class="response">
             <div id="response-example"></div>
          </div>

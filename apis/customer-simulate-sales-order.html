@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Customer Master Get Detail</title>
+   <title>Customer Simulate Sales Order</title>
    <!-- Favicon img -->
    <link rel="shortcut icon" href="../assets/images/favicon.png">
    <!-- Bootstarp min css -->
@@ -123,44 +123,42 @@
     <section class="banner__inner-page bg-image pt-150 pb-50 bg-image"
     data-background="../assets/images/banner/banner-inner-page.jpg">
       <div class="container">
-          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Customer Master Get Detail</h4>
+          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Customer Simulate Sales Order</h4>
           <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
             <a href="../home.html">Home</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
             <a href="../api-catalog.html">API Catalog</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
-            <a href="#">Customer Master Get Detail</a>
+            <a href="#">Customer Simulate Sales Order</a>
           </div>
       </div>
     </section>
     <!-- Page banner area end here -->
     <div class="container pt-25 pb-75" id="api-details">
       <div class="heading">
-        <h1 class="invisible" id="api_name">Customer Master Get Detail</h1>
+        <h1 class="invisible" id="api_name">Customer Simulate Sales Order</h1>
         <h6>Overview</h6>
       </div>
       <div class="content">
          <div class="text-content">
-            <div><p>Streamline operations with efficient customer data retrieval from SAP ERP, ensuring comprehensive access for enhanced management and efficiency.</p>
-<p>The data return in this API include:</p>
-<li>Customer General Data</li>
-<li>Customer Credit Data</li>
-<li>Customer Sales Organization Data</li>
-<li>Customer Partner Data</li>
-<p>PartnerFunction = AG ; BPCustomerNumber = Sold To Party</p>
-<p>PartnerFunction = RG ; BPCustomerNumber = Payer</p>
-<p>PartnerFunction = WE ; BPCustomerNumber = Ship-to party</p>
-<p>PartnerFunction = RE ; BPCustomerNumber = Bill-to party</p>
+            <div>
+<p>This API allows you to simulate sales orders and check stock availability from SAP ERP. </p>
+<p>The data returned in this API include:</p>
+<li>Sales Order Simulate Item</li>
+<li>Sales Order Simulate FOC</li>
+<li>Sales Order Simulate Header FOC</li>
+<li>Sales Order Simulate Pricing</li>
+<li>Sales Order Simulate Stock</li>
 <p></p></div>
          </div>
-         <h6 class="pt-20">Request</h6>
+         <h6 class="pt-25">Request</h6>
          <div class="request">
             <select class="invisible" id="example-options" onchange="handleOptionOnChange()">
                <option value="Request">Request</option>
             </select>
             <div id="request-body-example"></div>
          </div>
-         <h6 class="pt-20">Response</h6>
+         <h6 class="pt-25">Response</h6>
          <div class="response">
             <div id="response-example"></div>
          </div>

@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Customer Condition Record in Pricing Sales</title>
+   <title>Customer Get Master Detail</title>
    <!-- Favicon img -->
    <link rel="shortcut icon" href="../assets/images/favicon.png">
    <!-- Bootstarp min css -->
@@ -121,45 +121,51 @@
    <main>
     <!-- Page banner area start here -->
     <section class="banner__inner-page bg-image pt-150 pb-50 bg-image"
-      data-background="../assets/images/banner/banner-inner-page.jpg">
+    data-background="../assets/images/banner/banner-inner-page.jpg">
       <div class="container">
-          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Customer Condition Record in Pricing Sales</h4>
+          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Customer Get Master Detail</h4>
           <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
             <a href="../home.html">Home</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
             <a href="../api-catalog.html">API Catalog</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
-            <a href="#">Customer Condition Record in Pricing Sales</a>
+            <a href="#">Customer Get Master Detail</a>
           </div>
       </div>
     </section>
     <!-- Page banner area end here -->
     <div class="container pt-25 pb-75" id="api-details">
       <div class="heading">
-        <h1 class="invisible" id="api_name">Customer Condition Record in Pricing Sales</h1>
+        <h1 class="invisible" id="api_name">Customer Get Master Detail</h1>
         <h6>Overview</h6>
       </div>
       <div class="content">
          <div class="text-content">
-            <div><p>Optimize pricing strategies to enhance sales growth by improving accuracy and streamlining maintenance of condition records.</p>
-<p>This API allows consumer to update the condition record of the pricing.</p>
-<p>This API allows to create a single or multiple price update per call.</p>
-<p></p></div>
+            <div><p>This API allows you to retrieve master detail from SAP.</p>
+<p>The data returned in this API include:</p>
+<li>Customer General Data</li>
+<li>Customer Credit Data</li>
+<li>Customer Sales Organization Data</li>
+<li>Customer Partner Data</li>
+<p>The following are the partner function types:</p>
+<li>PartnerFunction = AG ; BPCustomerNumber = Sold To Party</li>
+<li>PartnerFunction = RG ; BPCustomerNumber = Payer</li>
+<li>PartnerFunction = WE ; BPCustomerNumber = Ship-to party</li>
+<li>PartnerFunction = RE ; BPCustomerNumber = Bill-to party</li>
+</div>
          </div>
-         <h6 class="pt-20">Request</h6>
+         <h6 class="pt-25">Request</h6>
          <div class="request">
-            <select id="example-options" onchange="handleOptionOnChange()">
-               <option value="Update Single Price Item">Update Single Price Item</option>
-<option value="Update Multiple Price Item">Update Multiple Price Item</option>
+            <select class="invisible" id="example-options" onchange="handleOptionOnChange()">
+               <option value="Request">Request</option>
             </select>
             <div id="request-body-example"></div>
          </div>
-         <h6 class="pt-20">Response</h6>
+         <h6 class="pt-25">Response</h6>
          <div class="response">
             <div id="response-example"></div>
          </div>
       </div>
-    </div>
    </main>
    <!-- Try Out area end here -->
 

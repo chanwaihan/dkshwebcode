@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Customer Sales Order Create</title>
+   <title>Customer Update Condition Record Pricing in Sales</title>
    <!-- Favicon img -->
    <link rel="shortcut icon" href="../assets/images/favicon.png">
    <!-- Bootstarp min css -->
@@ -121,55 +121,44 @@
    <main>
     <!-- Page banner area start here -->
     <section class="banner__inner-page bg-image pt-150 pb-50 bg-image"
-    data-background="../assets/images/banner/banner-inner-page.jpg">
+      data-background="../assets/images/banner/banner-inner-page.jpg">
       <div class="container">
-          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Customer Sales Order Create</h4>
+          <h4 id="banner-h4" class="wow fadeInUp text-white pb-10" data-wow-delay="00ms" data-wow-duration="1500ms">Customer Update Condition Record Pricing in Sales</h4>
           <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
             <a href="../home.html">Home</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
             <a href="../api-catalog.html">API Catalog</a>
             <span><i class="fa-regular fa-angles-right mx-2 text-white"></i></span>
-            <a href="#">Customer Sales Order Create</a>
+            <a href="#">Customer Update Condition Record Pricing in Sales</a>
           </div>
       </div>
     </section>
     <!-- Page banner area end here -->
     <div class="container pt-25 pb-75" id="api-details">
       <div class="heading">
-        <h1 class="invisible" id="api_name">Customer Sales Order Create</h1>
+        <h1 class="invisible" id="api_name">Customer Update Condition Record Pricing in Sales</h1>
         <h6>Overview</h6>
       </div>
-      <div class="content">
+      <div class="content pt-10">
          <div class="text-content">
-            <div><p>Maximize business efficiency with streamlined sales processes, precise data transmission, and versatile order type creation, optimizing operations for growth.</p>
-<p>This API allows consumer to create sales order. </p>
-<p>The following are sales order types that can be created using this API.</p>
-<li>Standard Order</li>
-<li>One Time Customer</li>
-<li>Create with reference to Quotation</li>
-<li>Create with reference to Sales Order Number</li>
-<li>Consignment Sales Order</li>
-<li>Credit Return Sales Order</li>
-<p>This API allows to create a single sales order per call.</p>
-<p></p></div>
+            <div>
+              <p>This API allows you to update the condition record of the pricing. A single or multiple price update is allowed per call.</p>
+            </div>
          </div>
-         <h6 class="pt-20">Request</h6>
+         <h6 class="pt-25">Request</h6>
          <div class="request">
             <select id="example-options" onchange="handleOptionOnChange()">
-               <option value="StandardOrder">StandardOrder</option>
-<option value="One Time Customer">One Time Customer</option>
-<option value="Create with reference to Quotation">Create with reference to Quotation</option>
-<option value="Create with reference to Sales Order Number">Create with reference to Sales Order Number</option>
-<option value="Consignment Sales Order">Consignment Sales Order</option>
-<option value="Credit Return Sales Order">Credit Return Sales Order</option>
+               <option value="Update Single Price Item">Update Single Price Item</option>
+<option value="Update Multiple Price Item">Update Multiple Price Item</option>
             </select>
             <div id="request-body-example"></div>
          </div>
-         <h6 class="pt-20">Response</h6>
+         <h6 class="pt-25">Response</h6>
          <div class="response">
             <div id="response-example"></div>
          </div>
       </div>
+    </div>
    </main>
    <!-- Try Out area end here -->
 
