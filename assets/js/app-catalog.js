@@ -1,7 +1,7 @@
 let catalogue;
 
 const getCatalog = async () => {
-   const response = await fetch("./assets/data/catalog-data.json");
+   const response = await fetch("../assets/data/catalog-data.json");
    const catalog = await response.json();
    return catalog;
 };
