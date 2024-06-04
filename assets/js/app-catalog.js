@@ -32,7 +32,7 @@ const catalog_item = (
    " "
 )}'">
                             <div class="case-two__description">
-                                <p>${description}</p>
+                                <p id="api-catalog-tile-description">${description}</p>
                             </div>
                             <div class="image case-two__image">
                                 <img src="assets/images/api/${item}.jpg" alt="image">

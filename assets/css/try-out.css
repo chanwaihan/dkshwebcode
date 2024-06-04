@@ -27,15 +27,6 @@
    line-height: 16px;
    width: 100%;
    text-align: left;
-   border-radius: 5px;
-}
-
-.sidebar div button:hover {
-   background-color: rgba(0, 0, 0, 0.1);
-}
-
-.sidebar div button:active {
-   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .content-outer .content {
@@ -96,4 +87,45 @@
    background: #41444e;
    width: 100%;
    padding: 5px;
+}
+
+@media (min-width: 1500px) {
+  .col-md-4#api-select-col {
+    width: 16.666667%;  /* Equivalent to col-md-2 */
+  }
+}
+
+@media (min-width: 1050px) and (max-width: 1499px) {
+  .col-md-4#api-select-col {
+    width: 24%;  /* Equivalent to col-md-2 */
+  }
+}
+
+@media (min-width: 768px) {
+  .col.px-0#api-content-col {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-outer {
+    padding-top: 0px;
+  }
+}
+
+#api-select-col {
+  padding-bottom: 20px;
+}
+
+.run-btn#try-out-run{
+  background-color: var(--active-red);
+  color: var(--white);
+  text-align: center;
+  padding: 15px 25px;
+  width: auto;
+  font-size: 16px;
+}
+
+.run-btn#try-out-run:hover {
+  background-color: var(--primary-color);
 }

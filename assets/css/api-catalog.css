@@ -26,6 +26,39 @@
   color: var(--primary-color) !important;
 }
 
+@media (max-width: 927px) { /* Target screens smaller than 768px */
+  .api_type_btn button {
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 800px) { /* Target screens smaller than 768px */
+  .api_type_btn button {
+    padding: 7px 7px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 677px) { /* Target even smaller screens */
+  .api_type_btn button {
+    padding: 10px 15px;
+    font-size: 0.8rem; /* Adjust font size for very small screens (optional) */
+  }
+}
+
+@media (max-width: 619px) { /* Target even smaller screens */
+  .api_type_btn button {
+    padding: 7px 7px;
+    font-size: 0.6rem; /* Adjust font size for very small screens (optional) */
+  }
+}
+
+@media (max-width: 420px) { /* Target even smaller screens */
+  .api_type_btn button {
+    padding: 5px 5px;
+    font-size: 0.5rem; /* Adjust font size for very small screens (optional) */
+  }
+}
+
 .case-area .api_type_btn div button{
    background-color: rgba(0, 0, 0, 0.1);
 }
@@ -99,4 +132,12 @@
 
 .form-outline {
   width: 93%;
+}
+
+.container#api-catalog-tiles {
+  max-width: 75%;
+}
+
+#api-catalog-tile-description {
+  margin-top: 100px;
 }

@@ -968,7 +968,7 @@
    },
    {
       "category_name": "Track & Trace",
-      "title": "Trace Order Get Status",
+      "title": "Trace Get Order Status",
       "description": "Monitoring single or multiple sales order numbers' status efficiently to enhance data accuracy for tracking visibility.",
       "api_url": "https://dksh-test.apimanagement.ap21.hana.ondemand.com:443/traceord/salesorderstatus_s4hana/get",
       "req_res": [
@@ -1637,7 +1637,7 @@
             }
          }
       ],
-      "url": "/apis/trace-order-get-status.html"
+      "url": "/apis/trace-get-order-status.html"
    },
    {
       "category_name": "Warehouse",
