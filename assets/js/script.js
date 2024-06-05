@@ -31,52 +31,6 @@ CSS TABLE OF CONTENTS
 
 (function ($) {
 	("use strict");
-	// Preloader area start here ***
-	paceOptions = {
-		ajax: true,
-		document: true,
-		eventLag: false,
-	};
-
-	Pace.on("done", function () {
-		$("#preloader").addClass("isdone");
-		$(".loading").addClass("isdone");
-	});
-	// Preloader area end here ***
-
-	// Mouse cursor area start here ***
-	function mousecursor() {
-		if ($("body")) {
-			const e = document.querySelector(".cursor-inner"),
-				t = document.querySelector(".cursor-outer");
-			let n,
-				i = 0,
-				o = !1;
-			(window.onmousemove = function (s) {
-				o ||
-					(t.style.transform =
-						"translate(" + s.clientX + "px, " + s.clientY + "px)"),
-					(e.style.transform =
-						"translate(" + s.clientX + "px, " + s.clientY + "px)"),
-					(n = s.clientY),
-					(i = s.clientX);
-			}),
-				$("body").on("mouseenter", "a, .cursor-pointer", function () {
-					e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
-				}),
-				$("body").on("mouseleave", "a, .cursor-pointer", function () {
-					($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
-						(e.classList.remove("cursor-hover"),
-						t.classList.remove("cursor-hover"));
-				}),
-				(e.style.visibility = "visible"),
-				(t.style.visibility = "visible");
-		}
-	}
-	$(function () {
-		mousecursor();
-	});
-	// Mouse cursor area end here ***
 
 	// Header area start here ***
 	// Mobile menu
@@ -116,37 +70,6 @@ CSS TABLE OF CONTENTS
 		root.setAttribute("data-theme", color);
 	}
 	// Dark mood area end here ***
-
-	// FullScreen search area end here ***
-	var $searchWrap = $(".search-wrap");
-	var $navSearch = $(".nav-search");
-	var $searchClose = $("#search-close");
-
-	$(".search-trigger").on("click", function (e) {
-		e.preventDefault();
-		$searchWrap.animate({ opacity: "toggle" }, 500);
-		$navSearch.add($searchClose).addClass("open");
-	});
-
-	$(".search-close").on("click", function (e) {
-		e.preventDefault();
-		$searchWrap.animate({ opacity: "toggle" }, 500);
-		$navSearch.add($searchClose).removeClass("open");
-	});
-
-	function closeSearch() {
-		$searchWrap.fadeOut(200);
-		$navSearch.add($searchClose).removeClass("open");
-	}
-
-	$(document.body).on("click", function (e) {
-		closeSearch();
-	});
-
-	$(".search-trigger, .main-search-input").on("click", function (e) {
-		e.stopPropagation();
-	});
-	// FullScreen search area end here ***
 
 	// Banner Two slider area end here ***
 	var sliderActive1 = ".banner__slider";
