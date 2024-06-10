@@ -201,11 +201,11 @@ button {
    background-color: transparent;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
    br {
       display: none;
    }
-}
+} */
 
 ::-moz-placeholder {
    color: var(--span);
