@@ -5429,6 +5429,18 @@ svg path{
   z-index: 2;
 }
 
+@media (max-width: 500px) {
+  #banner-h4 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  #banner-h4 {
+    font-size: 35px;
+  }
+}
+
 #get-access {
   height: 72px;
   padding-top: 0px;
