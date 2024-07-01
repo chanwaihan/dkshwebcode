@@ -5444,7 +5444,7 @@
             }
          },
          {
-            "name": "NOn PO Based Reversal",
+            "name": "Non PO Based Reversal",
             "body": {
                "InvoiceRequest": {
                   "InvoiceHeader": {
