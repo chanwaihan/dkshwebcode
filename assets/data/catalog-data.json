@@ -5844,21 +5844,7 @@
                "DateTo": "2021-12-31"
             }
          },
-         { "name": "DeliveryOrder", "body": { "DeliveryOrder": "1140000018" } },
-         {
-            "name": "Sales Area",
-            "body": {
-               "SalesOrganization": "ID01",
-               "DistributionChannel": "01",
-               "Division": "I0",
-               "SalesOffice": "I038",
-               "SalesOrderType": "ZOR",
-               "DateFrom": "2010-05-25",
-               "DateTo": "2023-01-01",
-               "TimeStampFrom": "12:00:00",
-               "TimeStampTo": "18:00:00"
-            }
-         }
+         { "name": "DeliveryOrder", "body": { "DeliveryOrder": "1140000018" } }
       ],
       "response": {
          "result": [
